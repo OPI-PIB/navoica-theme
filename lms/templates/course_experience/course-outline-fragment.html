@@ -1,0 +1,153 @@
+## mako
+
+<%page expression_filter="h"/>
+
+<%namespace name='static' file='../static_content.html'/>
+
+<%!
+from datetime import date
+from django.utils.translation import ugettext as _
+import re
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+<%
+course_sections = blocks.get('children')
+%>
+
+<div class="accordion level-0" id="tableOfContentAccordion">
+
+     % for section in course_sections:
+     <%
+        section_is_auto_opened = section.get('resume_block') is True
+     %>
+    <div class="card">
+        <div class="card-header" id="${ section['id'] }_heading">
+            <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse${re.sub('[+@:]','',section['id'])}"
+                    aria-expanded="${ 'true' if section_is_auto_opened else 'false' }"
+                    id="${ section['id'] }_id">
+                    ${ section['display_name'] }
+                        % if section.get('complete'):
+                            <span class="complete-checkmark fa fa-check"></span>
+                        % endif
+                </button>
+            </h2>
+        </div>
+        <div class="collapse ${'show' if section_is_auto_opened == True else ''}"
+            id="collapse${re.sub('[+@:]','',section['id'])}"
+            aria-labelledby="${ section['id'] }_heading"
+            data-parent="#tableOfContentAccordion"
+            style>
+            <div class="card-body">
+                <div class="accordion level-1" id="tableOfContentAccordion1">
+                % for subsection in section.get('children', []):
+                    <%
+                    gated_subsection = subsection['id'] in gated_content
+                    completed_prereqs = gated_content[subsection['id']]['completed_prereqs'] if gated_subsection else False
+                    subsection_is_auto_opened = subsection.get('resume_block') is True
+                    %>
+                    % if gated_subsection and not completed_prereqs:
+                        <a href="${ subsection['lms_web_url'] }">
+                                    <h2 class="mb-0">
+                                    <button class="subsection-text prerequisite-button"
+                                        id="${ subsection['id'] }">
+                                    <span class="menu-icon icon fa fa-lock"
+                                            aria-hidden="true">
+                                    </span>
+                                    <a href="javascript://"><strong>
+                                        ${ subsection['display_name'] }
+                                    </strong></a>
+                                    <div class="details prerequisite">
+                                        ${ _("Prerequisite: ") }
+                                            <%
+                                                prerequisite_id = gated_content[subsection['id']]['prerequisite']
+                                                prerequisite_name = xblock_display_names.get(prerequisite_id)
+                                            %>
+                                            ${ prerequisite_name }
+                                    </div>
+                    % else:
+                            <div class="card">
+                                <div class="card-header" id="heading">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                                    id="${ subsection['id'] }"
+                                                                    aria-expanded="${ 'true' if subsection_is_auto_opened else 'false' }"
+                                                                    data-target="#collapse${re.sub('[+@:]','',subsection['id'])}">
+                                                                    ${ subsection['display_name'] }
+                                            % if subsection.get('complete'):
+                                            <span class="complete-checkmark fa fa-check"></span>
+                                                % endif
+                    % endif
+                                            <div class="details">
+
+                                                ## There are behavior differences between rendering of subsections which have
+                                                ## exams (timed, graded, etc) and those that do not.
+                                                ##
+                                                ## Exam subsections expose exam status message field as well as a status icon
+                                                <%
+                                                if subsection.get('due') is None:
+                                                    # examples: Homework, Lab, etc.
+                                                    data_string = subsection.get('format')
+                                                else:
+                                                    if 'special_exam_info' in subsection:
+                                                        data_string = _('due {date}')
+                                                    else:
+                                                        data_string = _("{subsection_format} due {{date}}").format(subsection_format=subsection.get('format'))
+                                                %>
+                                                % if subsection.get('format') or 'special_exam_info' in subsection:
+                                                    <span class="subtitle">
+                                                    % if 'special_exam' in subsection:
+                                                    ## Display the exam status icon and status message
+                                                        <span
+                                                            class="menu-icon icon fa ${subsection['special_exam_info'].get('suggested_icon', 'fa-pencil-square-o')} ${subsection['special_exam_info'].get('status', 'eligible')}"
+                                                            aria-hidden="true"></span>
+                                                        <span class="subtitle-name">
+                                                            ${subsection['special_exam_info'].get('short_description', '')}
+                                                        </span>
+                                                        % if subsection.get('graded'):
+                                                            <span class="sr">&nbsp;${_("This content is graded")}</span>
+                                                        % endif
+                                                    % endif
+                                                    </span>
+                                                % endif
+                                            </div> <!-- /details -->
+                                            </button>
+                                        </h2>
+                                    </div>
+                        % if gated_subsection and not completed_prereqs:
+                            </a>
+                        % endif
+                            % if not gated_subsection or (gated_subsection and completed_prereqs):
+                                <div id="collapse${re.sub('[+@:]','',subsection['id'])}" class="collapse ${'show' if subsection_is_auto_opened == True else ''}" aria-labelledby="heading" data-parent="#tableOfContentAccordion1">
+                                        <div class="card-body">
+                                           <div class="list-group list-group-flush">
+
+                                                    % for vertical in subsection.get('children', []):
+                                                   <a class="list-group-item list-group-item-action"
+                                                                            href="${ vertical['lms_web_url'] }"
+                                                                            id="${ vertical['id'] }">
+                                                                            ${ vertical['display_name'] }
+
+                                                        % if vertical.get('complete'):
+                                                                                <span class="complete-checkmark fa fa-check"></span>
+                                                        % endif
+                                                                    </a>
+                                                    % endfor
+
+                                            </div>
+                                        </div>
+                                    </div>
+                            % endif
+                         </div>
+                % endfor
+                </div>
+            </div>
+        </div>
+    </div>
+    % endfor
+</div>
+
+<%static:webpack entry="CourseOutline">
+    new CourseOutline();
+</%static:webpack>

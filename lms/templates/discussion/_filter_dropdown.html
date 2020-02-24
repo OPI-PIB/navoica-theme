@@ -1,0 +1,81 @@
+<%page expression_filter="h"/>
+<%!
+from django.utils.translation import ugettext as _
+from lms.djangoapps.django_comment_client.constants import TYPE_ENTRY
+from openedx.core.djangolib.markup import HTML
+%>
+
+<%def name="render_dropdown(map, topic_list)">
+    % for child, c_type in map["children"]:
+        % if child in map["entries"] and c_type == TYPE_ENTRY:
+            ${HTML(render_entry(map["entries"], child, topic_list))}
+        %else:
+            ${HTML(render_category(map["subcategories"], child, topic_list))}
+        %endif
+    %endfor
+</%def>
+
+<%def name="render_entry(entries, entry, topic_list)">
+    <li
+        class="forum-nav-browse-menu-item"
+        data-discussion-id='${entries[entry]["id"]}'
+        id='${entries[entry]["id"]}'
+        data-divided="${str(entries[entry]['is_divided']).lower()}"
+        role="option"
+    >
+    %if entry:
+        <span class="forum-nav-browse-title">
+        %if topic_list:
+            <span class="sr">
+                ${', '.join(topic_list)},  
+            </span>
+        %endif
+        ${entry}
+        </span>
+    %endif
+    </li>
+</%def>
+
+<%def name="render_category(categories, category, topic_list)">
+    <li class="forum-nav-browse-menu-item"
+        id='${category | u}'
+        role="option"
+    >
+        <span class="forum-nav-browse-title">${category}</span>
+        <ul class="forum-nav-browse-submenu" role="presentation">
+            <% topic_list.append(category) %>
+            ${HTML(render_dropdown(categories[category], topic_list))}
+            <% topic_list.remove(category) %>
+        </ul>
+    </li>
+</%def>
+
+<div class="collapse-panel collapse show forum-nav-browse-menu-wrapper" style="display: none" aria-label="${_("Discussion topics list")}">
+    <header>
+        <h2>
+            <span class="d-none d-md-block">${_("Topics")}</span>
+        </h2>
+        <div class="btn-groups">
+            <div class="btn-group">
+                <button type="button" class="btn btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-start" >
+                    <form class="forum-nav-browse-filter input-group" autocomplete="off">
+                        <input type="text" id="_forum-nav-browse-filter-input" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-label="${_("Filter Topics")}" aria-owns="discussion_topics_listbox" class="forum-nav-browse-filter-input form-control form-control-sm border border-secondary" placeholder="${_("Filter Topics")}">
+                    </form>
+                </div>
+            </div>
+        </div>
+</header>
+    <ul class="forum-nav-browse-menu" role="listbox" id="discussion_topics_listbox">
+        <li class="forum-nav-browse-menu-item forum-nav-browse-menu-all" role="option" id="all_discussions">
+            <span class="forum-nav-browse-title">${_("All Discussions")}</span>
+        </li>
+        <li class="forum-nav-browse-menu-item forum-nav-browse-menu-following" role="option" id="posts_following">
+            <span class="icon fa fa-star" aria-hidden="true"></span>
+            <span class="forum-nav-browse-title">${_("Posts I'm Following")}</span>
+        </li>
+        ${HTML(render_dropdown(category_map, []))}
+    </ul>
+</div>
