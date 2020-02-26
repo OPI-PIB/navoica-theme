@@ -570,14 +570,14 @@ aside {
       &.selected {
         background-color: map_get($grays, "100");
         border-color: map_get($grays, "300");
-        color: $red;
+        color: $primary;
 
         .count-number {
           color: transparent;
           position: relative;
 
           &::before {
-            color: $red;
+            color: $primary;
             content: "\f00d";
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
@@ -894,7 +894,7 @@ article {
         }
 
         &-action {
-          color: $red;
+          color: $primary;
         }
 
         p {
@@ -986,7 +986,7 @@ article {
   .btn-outline-light {
     background: map_get($grays, "100");
     border-color: map_get($grays, "300");
-    color: $red;
+    color: $primary;
   }
 
   h2.unit-title {
@@ -1339,7 +1339,7 @@ article {
 
     .custom-switch {
       align-items: center;
-      color: $red;
+      color: $primary;
       display: flex;
       font-size: 14px;
       font-weight: $font-weight-semibold;
@@ -1351,8 +1351,8 @@ article {
       }
 
       .custom-control-input:checked + .custom-control-label::before {
-        background-color: $red;
-        border-color: $red;
+        background-color: $primary;
+        border-color: $primary;
       }
 
     }
@@ -1403,7 +1403,7 @@ article {
         }
 
         span {
-          color: $red;
+          color: $primary;
           display: inline-block;
           font-size: 14px;
           font-weight: 600;

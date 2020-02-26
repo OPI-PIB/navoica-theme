@@ -1,0 +1,95 @@
+// view - data download
+// --------------------
+.instructor-dashboard-wrapper-2 section.idash-section#data_download {
+  input {
+    margin-bottom: 1em;
+    line-height: 1.3em;
+  }
+
+  .reports-download-container {
+    .data-display-table {
+      .slickgrid {
+        height: 400px;
+      }
+    }
+
+    .report-downloads-table {
+      .slickgrid {
+        height: 300px;
+        padding: 1rem;
+      }
+      // Disable horizontal scroll bar when grid only has 1 column. Remove this CSS class when more columns added.
+      .slick-viewport {
+        overflow-x: hidden !important;
+      }
+    }
+  }
+}
+
+//view - course info
+//--------------------
+.instructor-dashboard-wrapper-2 section.idash-section#course_info {
+  .course-errors-wrapper {
+    margin-top: 2em;
+
+    h2 {
+      color: #d60000;
+    }
+
+    &.open {
+      .toggle-wrapper {
+        .triangle {
+          background-image: url('/static/images/bullet-open.png');
+        }
+      }
+
+      .course-errors-visibility-wrapper {
+        display: block;
+      }
+    }
+
+    .toggle-wrapper {
+      width: 300px;
+      cursor: pointer;
+
+      div {
+    //    @include float(left);
+      }
+
+      h2 {
+    //    @include float(left);
+      }
+
+      .triangle {
+     //   @include float(left);
+
+        width: 20px;
+        height: 20px;
+        background-image: url('/static/images/bullet-closed.png');
+        background-position: 8px 6px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .course-errors-visibility-wrapper {
+      display: none;
+      clear: both;
+
+      .course-error {
+        margin-bottom: 1em;
+
+      //  @include margin-left(0.5em);
+
+        code {
+          &.course-error-first {
+            color: #111;
+          }
+
+          &.course-error-second {
+            color: #111;
+          }
+        }
+      }
+    }
+  }
+}

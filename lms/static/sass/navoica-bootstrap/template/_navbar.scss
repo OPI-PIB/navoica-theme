@@ -121,7 +121,7 @@
     }
 
     .fa, .fas, .far {
-      color: #E41D37;
+      color: $primary;
     }
 
     &-collapse {
@@ -201,7 +201,7 @@
 
           .btn {
             align-items: center;
-            color: #E41D37;
+            color: $primary;
             font-size: 14px;
             height: auto;
             justify-content: flex-start;
@@ -218,8 +218,8 @@
             }
 
             &-primary {
-              background: #E41D37;
-              border-color: #E41D37;
+              background: $primary;
+              border-color: $primary;
               color: #FFF;
               margin-bottom: 8px;
 
@@ -334,7 +334,7 @@
             align-items: center;
             background: #FFF;
             border: 1px solid #adb5bd;
-            color: #E41D37;
+            color: $primary;
             display: flex;
             font-size: 14px;
             height: 32px;
@@ -349,8 +349,8 @@
             }
 
             &-primary {
-              background: #E41D37;
-              border-color: #E41D37;
+              background: $primary;
+              border-color: $primary;
               color: #FFF;
               margin-bottom: 0;
             }

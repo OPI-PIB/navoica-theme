@@ -466,7 +466,7 @@ main.container {
       &.selected {
         background-color: map_get($grays, "100");
         border-color: map_get($grays, "300");
-        //color: $red;
+        //color: $primary;
 
         .count-number {
           color: transparent;
@@ -644,7 +644,7 @@ main.container {
   }
 
   .fa, .fas, .far {
-    color: $red;
+    color: $primary;
   }
 
   &-collapse {
@@ -723,7 +723,7 @@ main.container {
         .btn {
           align-items: center;
           border: 0;
-          color: $red;
+          color: $primary;
           font-size: 16px;
           height: auto;
           justify-content: space-between;
@@ -739,7 +739,7 @@ main.container {
           }
 
           &-primary {
-            background: $red;
+            background: $primary;
             color: $white;
           }
 
@@ -845,7 +845,7 @@ main.container {
             align-items: center;
             background: $white;
             border: 1px solid map_get($grays, "500");
-            color: $red;
+            color: $primary;
             display: flex;
             font-size: 14px;
             height: 32px;
@@ -860,8 +860,8 @@ main.container {
             }
 
             &-primary {
-              background: $red;
-              border-color: $red;
+              background: $primary;
+              border-color: $primary;
               color: $white;
             }
 
@@ -1626,7 +1626,7 @@ body {
           }
 
           &-action {
-            color: $red;
+            color: $primary;
             display: block;
             padding: 0;
 
@@ -1909,7 +1909,7 @@ body {
   > .list-group-item {
     align-items: flex-start;
     box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
-    color: $red;
+    color: $primary;
     display: flex;
     flex: 1;
     flex-direction: row;

@@ -244,7 +244,7 @@ from six import string_types
                             <p class="mt-2 mx-auto text-center">
                                 % if course.organizer:
         <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-        <img src="${static.url('images/org/${course_organize}.png')}" height="80">
+        <img src="${static.url('images/org/{}.png'.format(course_organize))}" height="80">
       % endif
                             </p>
                         </div>
@@ -423,8 +423,8 @@ from six import string_types
                 </div>
                 <div class="course-details-content">
                   <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-                  <h6>Organizator:</h5>
-      <div>${course_organize}</div>
+                  <h6>${_("Organizer")}:</h5>
+                    <div>${course_organize}</div>
                 </div>
               </li>
              % endif

@@ -514,7 +514,7 @@ main.container {
       &.selected {
         background-color: map_get($grays, "100");
         border-color: map_get($grays, "300");
-        //color: $red;
+        //color: $primary;
 
         .count-number {
           color: transparent;

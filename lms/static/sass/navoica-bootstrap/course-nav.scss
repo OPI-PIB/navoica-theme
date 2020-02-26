@@ -570,14 +570,14 @@ aside {
       &.selected {
         background-color: map_get($grays, "100");
         border-color: map_get($grays, "300");
-        color: $red;
+        color: $primary;
 
         .count-number {
           color: transparent;
           position: relative;
 
           &::before {
-            color: $red;
+            color: $primary;
             content: "\f00d";
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
@@ -893,7 +893,7 @@ article {
         }
 
         &-action {
-          color: $red;
+          color: $primary;
         }
 
         p {
@@ -986,7 +986,7 @@ article {
   .btn-outline-light {
     background: map_get($grays, "100");
     border-color: map_get($grays, "300");
-    color: $red;
+    color: $primary;
   }
 
   h2.unit-title {

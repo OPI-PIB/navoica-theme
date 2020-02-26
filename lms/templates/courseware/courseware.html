@@ -1,3 +1,4 @@
+<%! main_css = "css/navoica-bootstrap/course-content.css" %>
 <%page expression_filter="h"/>
 <%inherit file="/main.html" />
 <%namespace name='static' file='/static_content.html'/>
@@ -49,7 +50,8 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
 
 <%block name="headextra">
 <%static:css group='style-course-vendor'/>
-<%static:css group='style-course'/>
+<%static:css group='style-vendor'/>
+<!--<%static:css group='style-course'/>-->
 ## Utility: Notes
 % if is_edxnotes_enabled(course, request.user):
 <%static:css group='style-student-notes'/>
@@ -118,13 +120,34 @@ ${HTML(fragment.foot_html())}
   <%include file="/courseware/course_navigation.html" args="active_page='courseware'" />
 % endif
 
-<div id="content" class="border-top">
+<ol id="content" class="border-top">
 
 <main class="container"
   % if getattr(course, 'language'):
     lang="${course.language}"
   % endif
   >
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            % if COURSE_OUTLINE_PAGE_FLAG.is_enabled(course.id):
+                <li class="breadcrumb-item">
+                    <a href="${course_url}">${course_home_page_title(course)}</a>
+                </li>
+            % endif
+            % if chapter:
+                <li class="breadcrumb-item">
+                    <a href="${course_url}#${unicode(chapter.location)}">${chapter.display_name_with_default}</a>
+                </li>
+            % endif
+            % if section:
+                <li class="breadcrumb-item">
+                    <a href="${course_url}#${unicode(section.location)}">${section.display_name_with_default}</a>
+                </li>
+            % endif
+             <li class="breadcrumb-item">${sequence_title}</li>
+        </ol>
+    </nav>
   <div class="course-wrapper" role="presentation">
 % if disable_accordion is UNDEFINED or not disable_accordion:
     <div class="course-index">
@@ -167,32 +190,6 @@ ${HTML(fragment.foot_html())}
     </div>
 % endif
     <section class="course-content" id="course-content">
-        <header class="page-header has-secondary">
-            <div class="page-header-main">
-                <nav aria-label="${_('Course')}" class="sr-is-focusable" tabindex="-1">
-                    <div class="has-breadcrumbs">
-                        <div class="breadcrumbs">
-                            % if COURSE_OUTLINE_PAGE_FLAG.is_enabled(course.id):
-                                <span class="nav-item nav-item-course">
-                                    <a href="${course_url}">${course_home_page_title(course)}</a>
-                                </span>
-                            % endif
-                            % if chapter:
-                                <span class="nav-item nav-item-chapter" data-course-position="${course.position}" data-chapter-position="${chapter.position}">
-                                    <a href="${course_url}#${unicode(chapter.location)}">${chapter.display_name_with_default}</a>
-                                </span>
-                            % endif
-                            % if section:
-                                <span class="nav-item nav-item-section">
-                                    <a href="${course_url}#${unicode(section.location)}">${section.display_name_with_default}</a>
-                                </span>
-                            % endif
-                            <span class="nav-item nav-item-sequence">${sequence_title}</span>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
 
         <main tabindex="-1" aria-label="Content">
             % if getattr(course, 'entrance_exam_enabled') and \

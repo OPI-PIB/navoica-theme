@@ -570,14 +570,14 @@ aside {
       &.selected {
         background-color: map_get($grays, "100");
         border-color: map_get($grays, "300");
-        color: $red;
+        color: $primary;
 
         .count-number {
           color: transparent;
           position: relative;
 
           &::before {
-            color: $red;
+            color: $primary;
             content: "\f00d";
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
@@ -835,7 +835,7 @@ article {
         }
 
         &-action {
-          color: $red;
+          color: $primary;
         }
 
         p {
@@ -1095,7 +1095,7 @@ article {
     }
 
     .required label::after {
-      color: $red;
+      color: $primary;
       content: '\f069';
       font-family: "Font Awesome 5 Free";
       font-size: 10px;
@@ -1293,8 +1293,8 @@ article {
 
 .btn-outline-light {
   background: #f8f9fa;
-  border-color: #E41D37;
-  color: #E41D37;
+  border-color: $primary;
+  color: $primary;
 }
 
 aside.sidebar {

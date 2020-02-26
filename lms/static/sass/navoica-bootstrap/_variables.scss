@@ -44,9 +44,9 @@ $grays: map-merge(
 //$indigo: #6610f2 !default;
 //$purple: #6f42c1 !default;
 //$pink: #e83e8c !default;
-//$red: #dc3545 !default;
-//$red: #D0353F !default;
-$red: #E41D37 !default;
+//$primary: #dc3545 !default;
+//$primary: #D0353F !default;
+$blue: #008b8b !default;
 //$orange: #fd7e14 !default;
 //$yellow: #ffc107 !default;
 //$green: #28a745 !default;
@@ -61,7 +61,7 @@ $red: #E41D37 !default;
 //                        "indigo": $indigo,
 //                        "purple": $purple,
 //                        "pink": $pink,
-//                        "red": $red,
+//                        "red": $primary,
 //                        "orange": $orange,
 //                        "yellow": $yellow,
 //                        "green": $green,
@@ -75,13 +75,13 @@ $red: #E41D37 !default;
 //);
 
 //$primary: $blue !default;
-$primary: $red !default;
+$primary: $blue !default;
 //$secondary: $gray-600 !default;
 $secondary: $gray-500 !default;
 //$success: $green !default;
 //$info: $cyan !default;
 //$warning: $yellow !default;
-//$danger: $red !default;
+//$danger: $primary !default;
 $light: $gray-100 !default;
 //$dark: $gray-800 !default;
 //

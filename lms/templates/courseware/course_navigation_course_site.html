@@ -1,0 +1,67 @@
+## mako
+
+<%page args="active_page=None" expression_filter="h" />
+<%namespace name='static' file='/static_content.html'/>
+
+<%!
+    from courseware.tabs import get_course_tab_list
+    from django.conf import settings
+    from django.core.urlresolvers import reverse
+    from django.utils.translation import ugettext as _
+    from courseware.courses import get_course_about_section
+%>
+
+<%
+    if active_page is None and active_page_context is not UNDEFINED:
+    # If active_page is not passed in as an argument, it may be in the context as active_page_context
+        active_page = active_page_context
+
+    if course is not None:
+        include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and (course.enable_proctored_exams or course.enable_timed_exams)
+%>
+
+% if include_special_exams is not UNDEFINED and include_special_exams:
+    <%static:js group='proctoring'/>
+    % for template_name in ["proctored-exam-status"]:
+        <script type="text/template" id="${template_name}-tpl">
+            <%static:include path="courseware/${template_name}.underscore" />
+        </script>
+    % endfor
+    <div class="proctored_exam_status"></div>
+% endif
+
+% if disable_tabs is UNDEFINED or not disable_tabs:
+    <%
+        tab_list = get_course_tab_list(request, course)
+    %>
+    <header class="bg-light">
+        <div class="jumbotron">
+            <div class="container">
+                <div class="d-flex">
+                    <article>
+                        <h1 class="display-2">${course.display_name_with_default}</h1>
+                        <p class="lead mt-3">${_("Course edition")}: <strong>${course.id.run}</strong></p>
+                        <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
+                    </article>
+                    <aside>
+                        <header>
+                            <h2>${_("Organizer")}:</h2>
+                        </header>
+                        <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+                            <div class="organizer-logo">
+                                <p class="mt-2 mx-auto text-center">
+                                    % if course.organizer:
+                                    <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
+                                        <img src="${static.url('navoica-theme/images/org/{}.png'.format(course_organize))}" height="80"
+                                             class="d-block mt-4">
+                                    % endif
+                                </p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <%include file="/courseware/course_navigation_template.html" args="active_page='courseware'" />
+            </div>
+        </div>
+    </header>
+%endif
