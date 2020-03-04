@@ -1,6 +1,34 @@
-@import "variables";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+// Custom.scss
+// Include parts of Bootstrap
 
-a {
-  color: $red;
-}
+
+
+// Required
+
+@import "../../../bootstrap-4.4.1/scss/functions";
+@import "../../../bootstrap-4.4.1/scss/variables";
+@import "../../../bootstrap-4.4.1/scss/mixins";
+
+
+
+// Our variable overrides (variables only!)
+
+@import "theme/variables/color";
+@import "theme/variables/grid";
+@import "theme/variables/navbar";
+@import "theme/variables/spacing";
+@import "theme/variables/typography";
+
+
+
+// Bootstrap and its default variables
+
+@import "vendors/bootstrap";
+
+
+
+// Our own styles
+
+@import "theme/components/card";
+
+@import "templates/templates";

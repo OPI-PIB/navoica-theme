@@ -1,0 +1,17 @@
+@include media-breakpoint-up(xs) {
+  $body-bg: map_get($grays, "100");
+}
+
+@include media-breakpoint-up(sm) {
+  $body-bg: map_get($grays, "200");
+}
+
+@include media-breakpoint-up(md) {
+  $body-bg: map_get($grays, "300");
+}
+
+@include media-breakpoint-up(lg) {
+  $body-bg: map_get($grays, "400");
+}
+
+
