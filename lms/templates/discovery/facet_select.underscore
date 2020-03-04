@@ -1,6 +1,6 @@
 <% if (number==0) { %>
 	<option data-facet="<%- facet %>" data-value="" data-text="<%- name %>" class="facet-option discovery-button <%- selected ? 'selected' : '' %>" <%- selected ? 'selected' : '' %> value="">
-        <%- gettext('Wybierz') %>
+        <%- gettext('Choose') %>
     </option>
 <% } %>
     <option data-facet="<%- facet %>" data-value="<%- term %>" data-text="<%- name %>" class="facet-option discovery-button <%- selected ? 'selected' : '' %>" <%- selected ? 'selected' : '' %> value="<%- term %>">

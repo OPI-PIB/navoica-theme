@@ -1,6 +1,6 @@
 ## mako
 
-<%page args="active_page=None" expression_filter="h" />
+<%page args="active_page=None, title=None" expression_filter="h" />
 <%namespace name='static' file='/static_content.html'/>
 
 <%!
@@ -15,7 +15,8 @@
     if active_page is None and active_page_context is not UNDEFINED:
     # If active_page is not passed in as an argument, it may be in the context as active_page_context
         active_page = active_page_context
-
+    if title is None:
+        title = ""
     if course is not None:
         include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and (course.enable_proctored_exams or course.enable_timed_exams)
 %>
@@ -37,6 +38,7 @@
     <header class="bg-light">
         <div class="jumbotron">
             <div class="container">
+                <h2 class="display-2 text-center">${title}</h2>
                 <%include file="/courseware/course_navigation_template.html" args="active_page=active_page" />
             </div>
         </div>
