@@ -1,0 +1,104 @@
+@include media-breakpoint-up(xs) {
+  html {
+    height: 100vh;
+  }
+
+  body {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: stretch;
+    padding-top: $navbar-height;
+  }
+
+  #page {
+    align-items: stretch;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #page-nav {
+    background: $pink;
+    height: $navbar-height;
+  }
+
+  #page-header {
+    background: $blue;
+  }
+
+  #content-nav {
+    background: $yellow;
+  }
+
+  #page-content {
+    background: $orange;
+    flex: 1;
+  }
+
+  #page-footer {
+    background: $indigo;
+    margin-top: auto;
+  }
+
+  #footer-links {
+    background: $teal;
+  }
+
+  #main {
+    background-color: $green;
+  }
+
+  #sidebar {
+    background-color: $cyan;
+  }
+
+  #main .row {
+    @include make-row($grid-gutter-width * 2);
+  }
+
+}
+
+@include media-breakpoint-up(sm) {
+}
+
+@include media-breakpoint-up(md) {
+  #page-content {
+
+    > .container {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+  }
+
+  #main {
+    flex: 1;
+  }
+
+  #sidebar {
+    flex: 0 0 250px;
+    order: -1;
+
+    &.right {
+      order: unset;
+    }
+
+  }
+
+}
+
+@include media-breakpoint-up(lg) {
+  #sidebar {
+    &.right {
+      flex: 0 0 350px;
+    }
+  }
+
+}
+
+/*
+@import "a";
+@import "b";
+*/
