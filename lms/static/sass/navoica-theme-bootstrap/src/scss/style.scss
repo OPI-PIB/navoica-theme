@@ -13,11 +13,17 @@
 
 // Our variable overrides (variables only!)
 
-@import "theme/variables/color";
-@import "theme/variables/grid";
-@import "theme/variables/navbar";
-@import "theme/variables/spacing";
-@import "theme/variables/typography";
+@import "theme/components/card";
+@import "theme/components/navbar";
+
+@import "theme/content/typography";
+
+@import "theme/layout/grid";
+
+@import "theme/utilities/colors";
+@import "theme/utilities/spacing";
+
+@import "theme/variables/mixins";
 
 
 
@@ -31,4 +37,4 @@
 
 @import "theme/components/card";
 
-@import "templates/templates";
+@import "template/template";

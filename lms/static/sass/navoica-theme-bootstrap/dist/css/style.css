@@ -11693,12 +11693,12 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-/* line 2, src/scss/templates/_templates.scss */
+/* line 2, src/scss/template/_template.scss */
 html {
   height: 100vh;
 }
 
-/* line 6, src/scss/templates/_templates.scss */
+/* line 6, src/scss/template/_template.scss */
 body {
   align-items: stretch;
   display: flex;
@@ -11708,7 +11708,7 @@ body {
   padding-top: 56px;
 }
 
-/* line 15, src/scss/templates/_templates.scss */
+/* line 15, src/scss/template/_template.scss */
 #page {
   align-items: stretch;
   display: flex;
@@ -11717,50 +11717,50 @@ body {
   justify-content: flex-start;
 }
 
-/* line 23, src/scss/templates/_templates.scss */
+/* line 23, src/scss/template/_template.scss */
 #page-nav {
   background: #e83e8c;
   height: 56px;
 }
 
-/* line 28, src/scss/templates/_templates.scss */
+/* line 28, src/scss/template/_template.scss */
 #page-header {
   background: #007bff;
 }
 
-/* line 32, src/scss/templates/_templates.scss */
+/* line 32, src/scss/template/_template.scss */
 #content-nav {
   background: #ffc107;
 }
 
-/* line 36, src/scss/templates/_templates.scss */
+/* line 36, src/scss/template/_template.scss */
 #page-content {
   background: #fd7e14;
   flex: 1;
 }
 
-/* line 41, src/scss/templates/_templates.scss */
+/* line 41, src/scss/template/_template.scss */
 #page-footer {
   background: #6610f2;
   margin-top: auto;
 }
 
-/* line 46, src/scss/templates/_templates.scss */
+/* line 46, src/scss/template/_template.scss */
 #footer-links {
   background: #20c997;
 }
 
-/* line 50, src/scss/templates/_templates.scss */
+/* line 50, src/scss/template/_template.scss */
 #main {
   background-color: #28a745;
 }
 
-/* line 54, src/scss/templates/_templates.scss */
+/* line 54, src/scss/template/_template.scss */
 #sidebar {
   background-color: #17a2b8;
 }
 
-/* line 58, src/scss/templates/_templates.scss */
+/* line 58, src/scss/template/_template.scss */
 #main .row {
   display: flex;
   flex-wrap: wrap;
@@ -11769,28 +11769,28 @@ body {
 }
 
 @media (min-width: 700px) {
-  /* line 70, src/scss/templates/_templates.scss */
+  /* line 70, src/scss/template/_template.scss */
   #page-content > .container {
     display: flex;
     flex-flow: row nowrap;
   }
-  /* line 76, src/scss/templates/_templates.scss */
+  /* line 76, src/scss/template/_template.scss */
   #main {
     flex: 1;
   }
-  /* line 80, src/scss/templates/_templates.scss */
+  /* line 80, src/scss/template/_template.scss */
   #sidebar {
     flex: 0 0 250px;
     order: -1;
   }
-  /* line 84, src/scss/templates/_templates.scss */
+  /* line 84, src/scss/template/_template.scss */
   #sidebar.right {
     order: unset;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 94, src/scss/templates/_templates.scss */
+  /* line 94, src/scss/template/_template.scss */
   #sidebar.right {
     flex: 0 0 350px;
   }
