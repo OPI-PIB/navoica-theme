@@ -23,6 +23,12 @@
   #page-nav {
     background: $pink;
     height: $navbar-height;
+
+    > .container {
+      padding-left: $grid-vertical-padding;
+      padding-right: $grid-vertical-padding;
+    }
+
   }
 
   #page-header {

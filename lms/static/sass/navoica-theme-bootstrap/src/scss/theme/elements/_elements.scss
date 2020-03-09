@@ -1,0 +1,22 @@
+#skip-link {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+
+  .sr-only-focusable:focus{
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+.navbar-brand {
+  margin-right: $navbar-brand-height;
+
+  img {
+    height: $navbar-brand-height;
+    position: relative;
+    top: -2px;
+  }
+}
