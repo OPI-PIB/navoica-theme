@@ -1,14 +1,19 @@
 // Navbar
 //
 
-$navbar-padding-y: 0;
+$navbar-padding-y: .75rem;
 $navbar-padding-x: 0;
 
 $navbar-brand-height: 22px;
 $navbar-brand-padding-y: 0;
 
+$navbar-toggler-padding-y:          .5rem;
+$navbar-toggler-padding-x:          .75rem;
+$navbar-toggler-font-size:          $font-size-sm;
+$navbar-toggler-border-radius:      $btn-border-radius;
 
 
-// jpietrus
 
-$navbar-height: 56px;
+// MOOC
+
+$mooc-navbar-height: 3.5rem;

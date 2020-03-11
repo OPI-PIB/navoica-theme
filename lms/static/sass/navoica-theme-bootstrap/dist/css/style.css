@@ -2211,11 +2211,11 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.5rem 0.5rem;
+  height: calc(1em + 1rem + 2px);
+  padding: 0.5rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1;
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
@@ -2299,23 +2299,23 @@ select.form-control:focus::-ms-value {
   padding-bottom: calc(0.5rem + 1px);
   margin-bottom: 0;
   font-size: inherit;
-  line-height: 1.5;
+  line-height: 1;
 }
 
 /* line 96, ../bootstrap-4.4.1/scss/_forms.scss */
 .col-form-label-lg {
-  padding-top: calc(0.5rem + 1px);
-  padding-bottom: calc(0.5rem + 1px);
-  font-size: 1.25rem;
-  line-height: 1.5;
+  padding-top: calc(0.625rem + 1px);
+  padding-bottom: calc(0.625rem + 1px);
+  font-size: 1.125rem;
+  line-height: 1;
 }
 
 /* line 103, ../bootstrap-4.4.1/scss/_forms.scss */
 .col-form-label-sm {
-  padding-top: calc(0.25rem + 1px);
-  padding-bottom: calc(0.25rem + 1px);
+  padding-top: calc(0.5rem + 1px);
+  padding-bottom: calc(0.5rem + 1px);
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1;
 }
 
 /* line 116, ../bootstrap-4.4.1/scss/_forms.scss */
@@ -2325,7 +2325,7 @@ select.form-control:focus::-ms-value {
   padding: 0.5rem 0;
   margin-bottom: 0;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1;
   color: #212529;
   background-color: transparent;
   border: solid transparent;
@@ -2340,18 +2340,18 @@ select.form-control:focus::-ms-value {
 
 /* line 143, ../bootstrap-4.4.1/scss/_forms.scss */
 .form-control-sm {
-  height: calc(1.5em + 0.5rem + 2px);
-  padding: 0.25rem 0.5rem;
+  height: calc(1em + 1rem + 2px);
+  padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1;
 }
 
 /* line 151, ../bootstrap-4.4.1/scss/_forms.scss */
 .form-control-lg {
-  height: calc(1.5em + 1rem + 2px);
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  height: calc(1em + 1.25rem + 2px);
+  padding: 0.625rem 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1;
 }
 
 /* line 161, ../bootstrap-4.4.1/scss/_forms.scss */
@@ -2466,11 +2466,11 @@ textarea.form-control {
 /* line 33, ../bootstrap-4.4.1/scss/mixins/_forms.scss */
 .was-validated .form-control:valid, .form-control.is-valid {
   border-color: #28a745;
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1em + 1rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: right calc(0.25em + 0.25rem) center;
+  background-size: calc(0.5em + 0.5rem) calc(0.5em + 0.5rem);
 }
 
 /* line 87, ../bootstrap-4.4.1/scss/mixins/_forms.scss */
@@ -2481,8 +2481,8 @@ textarea.form-control {
 
 /* line 33, ../bootstrap-4.4.1/scss/mixins/_forms.scss */
 .was-validated textarea.form-control:valid, textarea.form-control.is-valid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  padding-right: calc(1em + 1rem);
+  background-position: top calc(0.25em + 0.25rem) right calc(0.25em + 0.25rem);
 }
 
 /* line 33, ../bootstrap-4.4.1/scss/mixins/_forms.scss */
@@ -2582,11 +2582,11 @@ textarea.form-control {
 /* line 33, ../bootstrap-4.4.1/scss/mixins/_forms.scss */
 .was-validated .form-control:invalid, .form-control.is-invalid {
   border-color: #dc3545;
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1em + 1rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: right calc(0.25em + 0.25rem) center;
+  background-size: calc(0.5em + 0.5rem) calc(0.5em + 0.5rem);
 }
 
 /* line 87, ../bootstrap-4.4.1/scss/mixins/_forms.scss */
@@ -2597,8 +2597,8 @@ textarea.form-control {
 
 /* line 33, ../bootstrap-4.4.1/scss/mixins/_forms.scss */
 .was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  padding-right: calc(1em + 1rem);
+  background-position: top calc(0.25em + 0.25rem) right calc(0.25em + 0.25rem);
 }
 
 /* line 33, ../bootstrap-4.4.1/scss/mixins/_forms.scss */
@@ -2747,7 +2747,7 @@ textarea.form-control {
           user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.75rem;
   font-size: 1rem;
   line-height: 1;
   border-radius: 0;
@@ -3459,17 +3459,17 @@ fieldset:disabled a.btn {
 
 /* line 109, ../bootstrap-4.4.1/scss/_buttons.scss */
 .btn-lg, .btn-group-lg > .btn {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1;
   border-radius: 0;
 }
 
 /* line 113, ../bootstrap-4.4.1/scss/_buttons.scss */
 .btn-sm, .btn-group-sm > .btn {
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1;
   border-radius: 0;
 }
 
@@ -3861,8 +3861,8 @@ input[type="button"].btn-block {
 
 /* line 69, ../bootstrap-4.4.1/scss/_button-group.scss */
 .dropdown-toggle-split {
-  padding-right: 0.375rem;
-  padding-left: 0.375rem;
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem;
 }
 
 /* line 73, ../bootstrap-4.4.1/scss/_button-group.scss */
@@ -3879,14 +3879,14 @@ input[type="button"].btn-block {
 
 /* line 84, ../bootstrap-4.4.1/scss/_button-group.scss */
 .btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
-  padding-right: 0.375rem;
-  padding-left: 0.375rem;
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem;
 }
 
 /* line 89, ../bootstrap-4.4.1/scss/_button-group.scss */
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 
 /* line 111, ../bootstrap-4.4.1/scss/_button-group.scss */
@@ -4023,11 +4023,11 @@ input[type="button"].btn-block {
 .input-group-text {
   display: flex;
   align-items: center;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.75rem;
   margin-bottom: 0;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1;
   color: #495057;
   text-align: center;
   white-space: nowrap;
@@ -4044,7 +4044,7 @@ input[type="button"].btn-block {
 /* line 128, ../bootstrap-4.4.1/scss/_input-group.scss */
 .input-group-lg > .form-control:not(textarea),
 .input-group-lg > .custom-select {
-  height: calc(1.5em + 1rem + 2px);
+  height: calc(1em + 1.25rem + 2px);
 }
 
 /* line 133, ../bootstrap-4.4.1/scss/_input-group.scss */
@@ -4054,15 +4054,15 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1;
 }
 
 /* line 145, ../bootstrap-4.4.1/scss/_input-group.scss */
 .input-group-sm > .form-control:not(textarea),
 .input-group-sm > .custom-select {
-  height: calc(1.5em + 0.5rem + 2px);
+  height: calc(1em + 1rem + 2px);
 }
 
 /* line 150, ../bootstrap-4.4.1/scss/_input-group.scss */
@@ -4072,9 +4072,9 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1;
 }
 
 /* line 162, ../bootstrap-4.4.1/scss/_input-group.scss */
@@ -4706,7 +4706,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0;
+  padding: 0.75rem 0;
 }
 
 /* line 28, ../bootstrap-4.4.1/scss/_navbar.scss */
@@ -4771,8 +4771,8 @@ input[type="button"].btn-block {
 
 /* line 118, ../bootstrap-4.4.1/scss/_navbar.scss */
 .navbar-toggler {
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
@@ -18780,15 +18780,38 @@ readers do not read off random characters that represent icons */
 }
 
 /* line 14, src/scss/theme/elements/_elements.scss */
+#page-nav {
+  /*
+
+    .collapsing {
+      display: none;
+      transition: none;
+      -webkit-transition: none;
+    }
+
+    .show {
+      position: absolute;
+      top: $mooc-navbar-height;
+    }
+
+    */
+}
+
+/* line 31, src/scss/theme/elements/_elements.scss */
 .navbar-brand {
   margin-right: 22px;
 }
 
-/* line 17, src/scss/theme/elements/_elements.scss */
+/* line 34, src/scss/theme/elements/_elements.scss */
 .navbar-brand img {
   height: 22px;
   position: relative;
   top: -2px;
+}
+
+/* line 43, src/scss/theme/elements/_elements.scss */
+.btn .fa, .btn .fab, .btn .fad, .btn .fal, .btn .far, .btn .fas {
+  font-size: calc(1em + -1px);
 }
 
 /* line 2, src/scss/template/_template.scss */
@@ -18803,10 +18826,9 @@ body {
   flex-direction: column;
   height: 100%;
   justify-content: stretch;
-  padding-top: 56px;
 }
 
-/* line 15, src/scss/template/_template.scss */
+/* line 14, src/scss/template/_template.scss */
 #page {
   align-items: stretch;
   display: flex;
@@ -18815,56 +18837,58 @@ body {
   justify-content: flex-start;
 }
 
-/* line 23, src/scss/template/_template.scss */
+/* line 22, src/scss/template/_template.scss */
 #page-nav {
   background: #e83e8c;
-  height: 56px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
-/* line 27, src/scss/template/_template.scss */
+/* line 29, src/scss/template/_template.scss */
 #page-nav > .container {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-/* line 34, src/scss/template/_template.scss */
+/* line 36, src/scss/template/_template.scss */
 #page-header {
   background: #007bff;
 }
 
-/* line 38, src/scss/template/_template.scss */
+/* line 40, src/scss/template/_template.scss */
 #content-nav {
   background: #ffc107;
 }
 
-/* line 42, src/scss/template/_template.scss */
+/* line 44, src/scss/template/_template.scss */
 #page-content {
   background: #fd7e14;
   flex: 1;
 }
 
-/* line 47, src/scss/template/_template.scss */
+/* line 49, src/scss/template/_template.scss */
 #page-footer {
   background: #6610f2;
   margin-top: auto;
 }
 
-/* line 52, src/scss/template/_template.scss */
+/* line 54, src/scss/template/_template.scss */
 #footer-links {
   background: #20c997;
 }
 
-/* line 56, src/scss/template/_template.scss */
+/* line 58, src/scss/template/_template.scss */
 #main {
   background-color: #28a745;
 }
 
-/* line 60, src/scss/template/_template.scss */
+/* line 62, src/scss/template/_template.scss */
 #sidebar {
   background-color: #17a2b8;
 }
 
-/* line 64, src/scss/template/_template.scss */
+/* line 66, src/scss/template/_template.scss */
 #main .row {
   display: flex;
   flex-wrap: wrap;
@@ -18873,28 +18897,28 @@ body {
 }
 
 @media (min-width: 700px) {
-  /* line 76, src/scss/template/_template.scss */
+  /* line 78, src/scss/template/_template.scss */
   #page-content > .container {
     display: flex;
     flex-flow: row nowrap;
   }
-  /* line 82, src/scss/template/_template.scss */
+  /* line 84, src/scss/template/_template.scss */
   #main {
     flex: 1;
   }
-  /* line 86, src/scss/template/_template.scss */
+  /* line 88, src/scss/template/_template.scss */
   #sidebar {
     flex: 0 0 250px;
     order: -1;
   }
-  /* line 90, src/scss/template/_template.scss */
+  /* line 92, src/scss/template/_template.scss */
   #sidebar.right {
     order: unset;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 100, src/scss/template/_template.scss */
+  /* line 102, src/scss/template/_template.scss */
   #sidebar.right {
     flex: 0 0 350px;
   }

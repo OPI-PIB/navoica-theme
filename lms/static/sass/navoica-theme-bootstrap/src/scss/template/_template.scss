@@ -9,7 +9,6 @@
     flex-direction: column;
     height: 100%;
     justify-content: stretch;
-    padding-top: $navbar-height;
   }
 
   #page {
@@ -22,7 +21,10 @@
 
   #page-nav {
     background: $pink;
-    height: $navbar-height;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    //height: $mooc-navbar-height;
 
     > .container {
       padding-left: $grid-vertical-padding;

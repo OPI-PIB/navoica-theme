@@ -17,7 +17,7 @@
 </nav>
 
 <div id="page" class="page">
-    <nav id="page-nav" class="navbar navbar-expand-lg fixed-top bg-white">
+    <nav id="page-nav" class="navbar navbar-expand-lg fixed-top bg-light">
         <div class="container">
 
             <a class="navbar-brand" href="a.html">
@@ -26,9 +26,9 @@
 
             <form class="form-inline">
                 <div class="input-group">
-                    <input type="search" class="form-control form-control-sm" placeholder="Wpisz nazwe kursu" aria-label="Nazwa kursu">
+                    <input type="search" class="form-control form-control-sm border-secondary" placeholder="Wpisz nazwe kursu" aria-label="Nazwa kursu">
                     <div class="input-group-append">
-                        <button class="btn btn-sm btn-outline-secondary" type="submit" id="course-search-button">
+                        <button class="btn btn-sm btn-outline-primary border-secondary" type="submit" id="course-search-button">
                             <span class="sr-only">Zatwierdz, aby wyszukac kursy</span>
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </button>
@@ -36,6 +36,16 @@
                 </div>
             </form>
 
+            <button type="button"
+                    class="btn btn-sm border-secondary navbar-toggler"
+                    data-toggle="collapse" data-target="#navbar-supported-content"
+                    aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Pokaż nawigację">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar-supported-content">
+                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+            </div>
 
             <!--
             <button type="button" class="btn btn-outline-primary navbar-toggler" data-toggle="collapse"
@@ -63,7 +73,7 @@
 
         </div>
     </nav>
-    <header id="page-header">
+    <header id="page-header" role="banner">
         <div class="container">
             <div class="jumbotron">
                 <h1>Hello, world!</h1>
