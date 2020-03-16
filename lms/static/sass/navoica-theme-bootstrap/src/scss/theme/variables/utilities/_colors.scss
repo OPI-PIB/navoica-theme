@@ -9,3 +9,8 @@ $danger: $pink;
 $theme-colors: (
         primary: $primary
 );
+
+// Links
+//
+
+$link-color: theme-color("primary");

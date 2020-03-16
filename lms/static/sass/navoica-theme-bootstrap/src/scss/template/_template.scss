@@ -19,94 +19,128 @@
     justify-content: flex-start;
   }
 
-  #page-nav {
+  #header {
     background: $pink;
     position: sticky;
-    position: -webkit-sticky;
     top: 0;
-    //height: $mooc-navbar-height;
 
     > .container {
+      justify-content: flex-start;
       padding-left: $grid-vertical-padding;
       padding-right: $grid-vertical-padding;
     }
 
   }
 
-  #page-header {
-    background: $blue;
-  }
-
-  #content-nav {
-    background: $yellow;
-  }
-
-  #page-content {
-    background: $orange;
-    flex: 1;
-  }
-
-  #page-footer {
-    background: $indigo;
-    margin-top: auto;
-  }
-
-  #footer-links {
-    background: $teal;
-  }
-
   #main {
     background-color: $green;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &-title {
+      background: $blue;
+    }
+
+    &-content {
+      background: $orange;
+      flex: 1;
+
+      .row {
+        @include make-row($grid-gutter-width * 2);
+      }
+
+    }
+
   }
 
   #sidebar {
     background-color: $cyan;
   }
 
-  #main .row {
-    @include make-row($grid-gutter-width * 2);
+
+  #main-nav {
+    background: $yellow;
+  }
+
+  #footer {
+    background: $indigo;
+    margin-top: auto;
+
+    &-links {
+      background: $teal;
+    }
+
   }
 
 }
 
 @include media-breakpoint-up(sm) {
+  #main {
+    background-color: lime;
+  }
+
 }
 
 @include media-breakpoint-up(md) {
-  #page-content {
-
-    > .container {
-      display: flex;
-      flex-flow: row nowrap;
-    }
-  }
-
   #main {
-    flex: 1;
-  }
 
-  #sidebar {
-    flex: 0 0 250px;
-    order: -1;
-
-    &.right {
-      order: unset;
+    &-title {
     }
+
+    &-content {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+
+      > .container {
+        align-items: stretch;
+        display: flex;
+        flex-grow: 1;
+        flex-flow: row nowrap;
+
+        #center {
+          flex-grow: 1;
+        }
+
+        #sidebar {
+          flex: 0 0 250px;
+          order: -1;
+
+          &.right {
+            order: unset;
+          }
+
+        }
+      }
+
+    }
+
 
   }
 
 }
 
 @include media-breakpoint-up(lg) {
-  #sidebar {
-    &.right {
-      flex: 0 0 350px;
+  #main {
+
+    &-content {
+
+      > .container {
+
+        #sidebar {
+
+          &.right {
+            flex: 0 0 350px;
+            order: unset;
+          }
+
+        }
+
+      }
+
     }
+
   }
 
 }
-
-/*
-@import "a";
-@import "b";
-*/

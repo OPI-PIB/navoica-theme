@@ -11,31 +11,35 @@
 
 }
 
-#page-nav {
-    /*
+#header {
 
-    .collapsing {
-      display: none;
-      transition: none;
-      -webkit-transition: none;
+  .form-inline {
+    flex: 1 1 auto;
+
+    .input-group {
+      flex: 0 1 300px;
     }
 
-    .show {
-      position: absolute;
-      top: $mooc-navbar-height;
-    }
-
-    */
-}
-
-.navbar-brand {
-  margin-right: $navbar-brand-height;
-
-  img {
-    height: $navbar-brand-height;
-    position: relative;
-    top: -2px;
   }
+
+  .collapse {
+
+    .btn {
+      margin-left: $btn-padding-x * .5;
+    }
+
+  }
+
+  .navbar-brand {
+
+    img {
+      height: $navbar-brand-height;
+      position: relative;
+      top: -2px;
+    }
+
+  }
+
 }
 
 .btn {

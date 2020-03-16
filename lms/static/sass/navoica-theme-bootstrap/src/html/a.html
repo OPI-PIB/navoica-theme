@@ -11,20 +11,20 @@
 <body class="html front not-logged-in">
 <nav id="skip-link">
     <div class="list-group">
-        <a href="#page-nav" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej nawigacji</a>
+        <a href="#page-header" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej nawigacji</a>
         <a href="#main" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej tresci</a>
     </div>
 </nav>
 
 <div id="page" class="page">
-    <nav id="page-nav" class="navbar navbar-expand-lg fixed-top bg-light">
+    <header id="header" class="navbar navbar-expand-md bg-light">
         <div class="container">
 
-            <a class="navbar-brand" href="a.html">
+            <a class="navbar-brand mr-3" href="a.html">
                 <img src="assets/logo-light-bg.svg" alt="Strona główna platformy Nawojka">
             </a>
 
-            <form class="form-inline">
+            <form class="form-inline mr-2">
                 <div class="input-group">
                     <input type="search" class="form-control form-control-sm border-secondary" placeholder="Wpisz nazwe kursu" aria-label="Nazwa kursu">
                     <div class="input-group-append">
@@ -37,14 +37,18 @@
             </form>
 
             <button type="button"
-                    class="btn btn-sm border-secondary navbar-toggler"
+                    class="btn btn-sm btn-outline-primary border-secondary navbar-toggler ml-auto"
                     data-toggle="collapse" data-target="#navbar-supported-content"
                     aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Pokaż nawigację">
                 <i class="fas fa-bars"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbar-supported-content">
-                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+                <nav class="nav">
+                    <a class="nav-link" href="courses.html">Katalog kursów</a>
+                    <a class="nav-link" href="/login">Zarejestruj się</a>
+                    <a class="nav-link" href="/register"><i class="fas fa-user"></i> Zaloguj się</a>
+                </nav>
             </div>
 
             <!--
@@ -72,21 +76,24 @@
             -->
 
         </div>
-    </nav>
-    <header id="page-header" role="banner">
-        <div class="container">
-            <div class="jumbotron">
-                <h1>Hello, world!</h1>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </div>
-        </div>
     </header>
-    <div id="page-content">
-        <main id="main">
-            <section>
+
+    <main id="main">
+        <section id="main-title">
+            <header>
                 <div class="container">
+                    <div class="jumbotron">
+                        <h1>Hello, world!</h1>
+                        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <section>
+            <div class="container">
                 <div class="dropdown">
                     <button type="button"
                             id="my-button" class="btn btn-primary dropdown-toggle"
@@ -101,63 +108,38 @@
                         <a class="dropdown-item" href="#page-footer">stopka</a>
                     </div>
                 </div>
-                    <h2>Section 1</h2>
-                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system,
-                        and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
-                        itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor
-                        again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which
-                        toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some
-                        advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a
-                        pain that produces no resultant pleasure?</p>
-                </div>
-            </section>
-            <section>
-                <div class="container">
-                    <h2>Section 2</h2>
-                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so
-                        blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through
-                        weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free
-                        hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every
-                        pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be
-                        repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure
-                        other greater pleasures, or else he endures pains to avoid worse pains. But I must explain to you how all this mistaken idea of denouncing pleasure and
-                        praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the
-                        master-builder of human happiness.</p>
-                </div>
-            </section>
-            <section>
-                <div class="container">
-                    <h2>Section 3</h2>
-                    <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter
-                        consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because
-                        occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes
-                        laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that
-                        has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and
-                        dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble
-                        that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking
-                        from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing
-                        prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the
-                        claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore
-                        always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid
-                        worse pains. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account
-                        of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or
-                        avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter</p>
-                </div>
-            </section>
-        </main>
+                <h2>Section 1</h2>
+                <p>But I must explain to you how all this mistaken idea.</p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Section 2</h2>
+                <p>On the other hand, we denounce with righteous indignation and dislike men.</p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Section 3</h2>
+                <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure.</p>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer id="footer">
+    <div id="footer-map">
+        <div class="container">
+            Site map
+        </div>
     </div>
-    <footer id="page-footer">
-        <div id="footer-map">
-            <div class="container">
-                Site map
-            </div>
+    <div id="footer-links">
+        <div class="container">
+            External links
         </div>
-        <div id="footer-links">
-            <div class="container">
-                External links
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
+
 </div>
 
 <script src="js/jquery-slim.min.js"></script>

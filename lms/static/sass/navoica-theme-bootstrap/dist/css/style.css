@@ -175,7 +175,7 @@ sup {
 
 /* line 186, ../bootstrap-4.4.1/scss/_reboot.scss */
 a {
-  color: #007bff;
+  color: #e41d37;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2736,7 +2736,7 @@ textarea.form-control {
 /* line 7, ../bootstrap-4.4.1/scss/_buttons.scss */
 .btn {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 600;
   color: #212529;
   text-align: center;
   vertical-align: middle;
@@ -3435,7 +3435,7 @@ fieldset:disabled a.btn {
 /* line 79, ../bootstrap-4.4.1/scss/_buttons.scss */
 .btn-link {
   font-weight: 400;
-  color: #007bff;
+  color: #e41d37;
   text-decoration: none;
 }
 
@@ -4706,7 +4706,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
 }
 
 /* line 28, ../bootstrap-4.4.1/scss/_navbar.scss */
@@ -18779,37 +18779,29 @@ readers do not read off random characters that represent icons */
   width: 100%;
 }
 
-/* line 14, src/scss/theme/elements/_elements.scss */
-#page-nav {
-  /*
-
-    .collapsing {
-      display: none;
-      transition: none;
-      -webkit-transition: none;
-    }
-
-    .show {
-      position: absolute;
-      top: $mooc-navbar-height;
-    }
-
-    */
+/* line 16, src/scss/theme/elements/_elements.scss */
+#header .form-inline {
+  flex: 1 1 auto;
 }
 
-/* line 31, src/scss/theme/elements/_elements.scss */
-.navbar-brand {
-  margin-right: 22px;
+/* line 19, src/scss/theme/elements/_elements.scss */
+#header .form-inline .input-group {
+  flex: 0 1 300px;
 }
 
-/* line 34, src/scss/theme/elements/_elements.scss */
-.navbar-brand img {
+/* line 27, src/scss/theme/elements/_elements.scss */
+#header .collapse .btn {
+  margin-left: 0.375rem;
+}
+
+/* line 35, src/scss/theme/elements/_elements.scss */
+#header .navbar-brand img {
   height: 22px;
   position: relative;
   top: -2px;
 }
 
-/* line 43, src/scss/theme/elements/_elements.scss */
+/* line 47, src/scss/theme/elements/_elements.scss */
 .btn .fa, .btn .fab, .btn .fad, .btn .fal, .btn .far, .btn .fas {
   font-size: calc(1em + -1px);
 }
@@ -18838,93 +18830,108 @@ body {
 }
 
 /* line 22, src/scss/template/_template.scss */
-#page-nav {
+#header {
   background: #e83e8c;
-  position: sticky;
   position: -webkit-sticky;
+  position: sticky;
   top: 0;
 }
 
-/* line 29, src/scss/template/_template.scss */
-#page-nav > .container {
+/* line 27, src/scss/template/_template.scss */
+#header > .container {
+  justify-content: flex-start;
   padding-left: 8px;
   padding-right: 8px;
 }
 
-/* line 36, src/scss/template/_template.scss */
-#page-header {
+/* line 35, src/scss/template/_template.scss */
+#main {
+  background-color: #28a745;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* line 41, src/scss/template/_template.scss */
+#main-title {
   background: #007bff;
 }
 
-/* line 40, src/scss/template/_template.scss */
-#content-nav {
-  background: #ffc107;
-}
-
-/* line 44, src/scss/template/_template.scss */
-#page-content {
+/* line 45, src/scss/template/_template.scss */
+#main-content {
   background: #fd7e14;
   flex: 1;
 }
 
 /* line 49, src/scss/template/_template.scss */
-#page-footer {
-  background: #6610f2;
-  margin-top: auto;
-}
-
-/* line 54, src/scss/template/_template.scss */
-#footer-links {
-  background: #20c997;
-}
-
-/* line 58, src/scss/template/_template.scss */
-#main {
-  background-color: #28a745;
-}
-
-/* line 62, src/scss/template/_template.scss */
-#sidebar {
-  background-color: #17a2b8;
-}
-
-/* line 66, src/scss/template/_template.scss */
-#main .row {
+#main-content .row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -16px;
   margin-left: -16px;
 }
 
+/* line 57, src/scss/template/_template.scss */
+#sidebar {
+  background-color: #17a2b8;
+}
+
+/* line 62, src/scss/template/_template.scss */
+#main-nav {
+  background: #ffc107;
+}
+
+/* line 66, src/scss/template/_template.scss */
+#footer {
+  background: #6610f2;
+  margin-top: auto;
+}
+
+/* line 70, src/scss/template/_template.scss */
+#footer-links {
+  background: #20c997;
+}
+
+@media (min-width: 400px) {
+  /* line 79, src/scss/template/_template.scss */
+  #main {
+    background-color: lime;
+  }
+}
+
 @media (min-width: 700px) {
-  /* line 78, src/scss/template/_template.scss */
-  #page-content > .container {
+  /* line 91, src/scss/template/_template.scss */
+  #main-content {
     display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  /* line 96, src/scss/template/_template.scss */
+  #main-content > .container {
+    align-items: stretch;
+    display: flex;
+    flex-grow: 1;
     flex-flow: row nowrap;
   }
-  /* line 84, src/scss/template/_template.scss */
-  #main {
-    flex: 1;
+  /* line 102, src/scss/template/_template.scss */
+  #main-content > .container #center {
+    flex-grow: 1;
   }
-  /* line 88, src/scss/template/_template.scss */
-  #sidebar {
+  /* line 106, src/scss/template/_template.scss */
+  #main-content > .container #sidebar {
     flex: 0 0 250px;
     order: -1;
   }
-  /* line 92, src/scss/template/_template.scss */
-  #sidebar.right {
+  /* line 110, src/scss/template/_template.scss */
+  #main-content > .container #sidebar.right {
     order: unset;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 102, src/scss/template/_template.scss */
-  #sidebar.right {
+  /* line 133, src/scss/template/_template.scss */
+  #main-content > .container #sidebar.right {
     flex: 0 0 350px;
+    order: unset;
   }
 }
-
-/*
-@import "a";
-@import "b";
-*/
