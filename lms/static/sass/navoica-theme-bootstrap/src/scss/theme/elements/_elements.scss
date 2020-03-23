@@ -1,51 +1,97 @@
-#skip-link {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 2000;
-
-  .sr-only-focusable:focus {
-    text-align: center;
+@include media-breakpoint-up(xs) {
+  #skip-link {
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 2000;
+
+    .sr-only-focusable:focus {
+      text-align: center;
+      width: 100%;
+    }
+
+  }
+
+  #header {
+
+    .navbar-brand {
+
+      img {
+        height: $navbar-brand-height;
+        position: relative;
+        top: -2px;
+      }
+
+    }
+
+  }
+
+  .btn {
+
+    .fa, .fab, .fad, .fal, .far, .fas {
+      font-size: add(1em, -1px);
+    }
+
+    .fa:first-child + span {
+      display: none;
+    }
+
   }
 
 }
 
-#header {
+#mooc-search-form {
+  flex: 1;
+  margin-left: $grid-gutter-width;
+  margin-right: $grid-gutter-width;
 
-  .form-inline {
-    flex: 1 1 auto;
+  .input-group {
+    flex: 1;
+  }
+
+}
+
+
+@include media-breakpoint-up(sm) {
+
+  #mooc-search-form {
 
     .input-group {
-      flex: 0 1 300px;
-    }
-
-  }
-
-  .collapse {
-
-    .btn {
-      margin-left: $btn-padding-x * .5;
-    }
-
-  }
-
-  .navbar-brand {
-
-    img {
-      height: $navbar-brand-height;
-      position: relative;
-      top: -2px;
+      flex: 0 1 $mooc-search-form-width-sm;
     }
 
   }
 
 }
 
-.btn {
+@include media-breakpoint-up(md) {
 
-  .fa, .fab, .fad, .fal, .far, .fas {
-    font-size: add(1em, -1px);
+  #header {
+
+    .btn {
+
+      .fa:first-child {
+        display: none;
+      }
+
+      .fa:first-child + span {
+        display: inline-block;
+      }
+
+    }
+
   }
+
+  #mooc-search-form {
+
+    .input-group {
+      flex: 0 1 $mooc-search-form-width-md;
+    }
+
+  }
+
+}
+
+@include media-breakpoint-up(lg) {
 
 }
