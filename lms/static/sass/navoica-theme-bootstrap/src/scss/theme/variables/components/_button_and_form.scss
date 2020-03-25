@@ -71,8 +71,8 @@ $input-padding-x-lg: $input-btn-padding-x-lg;
 $input-font-size-lg: $input-btn-font-size-lg;
 $input-line-height-lg: $input-btn-line-height-lg;
 
-$component-active-bg: color("red");
-$input-btn-focus-color: rgba($component-active-bg, .5);
+//$input-btn-focus-color: rgba($component-active-bg, .5);
+$input-btn-focus-color: $component-active-bg;
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
 $input-focus-box-shadow: $input-btn-focus-box-shadow;
 

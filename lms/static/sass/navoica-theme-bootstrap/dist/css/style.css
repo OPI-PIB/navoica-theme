@@ -1,10 +1,3 @@
-/*
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-*/
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -27,7 +20,7 @@ $gray-500: #adb5bd !default;
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #e41d37;
-  --secondary: #ced4da;
+  --secondary: #adb5bd;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -35,8 +28,7 @@ $gray-500: #adb5bd !default;
   --light: #f8f9fa;
   --dark: #343a40;
   --tertiary: #dee2e6;
-  --quaternary: #e9ecef;
-  --quinary: #f8f9fa;
+  --quaternary: #f8f9fa;
   --breakpoint-xs: 0;
   --breakpoint-sm: 400px;
   --breakpoint-md: 700px;
@@ -1909,7 +1901,7 @@ pre code {
 .table-secondary,
 .table-secondary > th,
 .table-secondary > td {
-  background-color: #f1f3f5;
+  background-color: #e8eaed;
 }
 
 /* line 14, ../bootstrap-4.4.1/scss/mixins/_table-row.scss */
@@ -1917,18 +1909,18 @@ pre code {
 .table-secondary td,
 .table-secondary thead th,
 .table-secondary tbody + tbody {
-  border-color: #e6e9ec;
+  border-color: #d4d9dd;
 }
 
 /* line 13, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 .table-hover .table-secondary:hover {
-  background-color: #e2e6ea;
+  background-color: #dadde2;
 }
 
 /* line 32, ../bootstrap-4.4.1/scss/mixins/_table-row.scss */
 .table-hover .table-secondary:hover > td,
 .table-hover .table-secondary:hover > th {
-  background-color: #e2e6ea;
+  background-color: #dadde2;
 }
 
 /* line 7, ../bootstrap-4.4.1/scss/mixins/_table-row.scss */
@@ -2117,7 +2109,7 @@ pre code {
 .table-quaternary,
 .table-quaternary > th,
 .table-quaternary > td {
-  background-color: #f9fafb;
+  background-color: #fdfdfe;
 }
 
 /* line 14, ../bootstrap-4.4.1/scss/mixins/_table-row.scss */
@@ -2125,43 +2117,17 @@ pre code {
 .table-quaternary td,
 .table-quaternary thead th,
 .table-quaternary tbody + tbody {
-  border-color: #f4f5f7;
+  border-color: #fbfcfc;
 }
 
 /* line 13, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 .table-hover .table-quaternary:hover {
-  background-color: #eaedf1;
+  background-color: #ececf6;
 }
 
 /* line 32, ../bootstrap-4.4.1/scss/mixins/_table-row.scss */
 .table-hover .table-quaternary:hover > td,
 .table-hover .table-quaternary:hover > th {
-  background-color: #eaedf1;
-}
-
-/* line 7, ../bootstrap-4.4.1/scss/mixins/_table-row.scss */
-.table-quinary,
-.table-quinary > th,
-.table-quinary > td {
-  background-color: #fdfdfe;
-}
-
-/* line 14, ../bootstrap-4.4.1/scss/mixins/_table-row.scss */
-.table-quinary th,
-.table-quinary td,
-.table-quinary thead th,
-.table-quinary tbody + tbody {
-  border-color: #fbfcfc;
-}
-
-/* line 13, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
-.table-hover .table-quinary:hover {
-  background-color: #ececf6;
-}
-
-/* line 32, ../bootstrap-4.4.1/scss/mixins/_table-row.scss */
-.table-hover .table-quinary:hover > td,
-.table-hover .table-quinary:hover > th {
   background-color: #ececf6;
 }
 
@@ -2337,7 +2303,7 @@ pre code {
   background-color: #fff;
   border-color: #80bdff;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(228, 29, 55, 0.5);
 }
 
 /* line 43, ../bootstrap-4.4.1/scss/_forms.scss */
@@ -2918,44 +2884,44 @@ fieldset:disabled a.btn {
 /* line 62, ../bootstrap-4.4.1/scss/_buttons.scss */
 .btn-secondary {
   color: #212529;
-  background-color: #ced4da;
-  border-color: #ced4da;
+  background-color: #adb5bd;
+  border-color: #adb5bd;
 }
 
 /* line 13, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 .btn-secondary:hover {
   color: #212529;
-  background-color: #b8c1ca;
-  border-color: #b1bbc4;
+  background-color: #98a2ac;
+  border-color: #919ca6;
 }
 
 /* line 18, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
 .btn-secondary:focus, .btn-secondary.focus {
   color: #212529;
-  background-color: #b8c1ca;
-  border-color: #b1bbc4;
-  box-shadow: 0 0 0 0.2rem rgba(180, 186, 191, 0.5);
+  background-color: #98a2ac;
+  border-color: #919ca6;
+  box-shadow: 0 0 0 0.2rem rgba(152, 159, 167, 0.5);
 }
 
 /* line 32, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
 .btn-secondary.disabled, .btn-secondary:disabled {
   color: #212529;
-  background-color: #ced4da;
-  border-color: #ced4da;
+  background-color: #adb5bd;
+  border-color: #adb5bd;
 }
 
 /* line 43, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle {
   color: #212529;
-  background-color: #b1bbc4;
-  border-color: #aab4bf;
+  background-color: #919ca6;
+  border-color: #8a95a1;
 }
 
 /* line 53, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(180, 186, 191, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(152, 159, 167, 0.5);
 }
 
 /* line 62, ../bootstrap-4.4.1/scss/_buttons.scss */
@@ -3262,62 +3228,19 @@ fieldset:disabled a.btn {
 /* line 62, ../bootstrap-4.4.1/scss/_buttons.scss */
 .btn-quaternary {
   color: #212529;
-  background-color: #e9ecef;
-  border-color: #e9ecef;
-}
-
-/* line 13, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
-.btn-quaternary:hover {
-  color: #212529;
-  background-color: #d3d9df;
-  border-color: #cbd3da;
-}
-
-/* line 18, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-quaternary:focus, .btn-quaternary.focus {
-  color: #212529;
-  background-color: #d3d9df;
-  border-color: #cbd3da;
-  box-shadow: 0 0 0 0.2rem rgba(203, 206, 209, 0.5);
-}
-
-/* line 32, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-quaternary.disabled, .btn-quaternary:disabled {
-  color: #212529;
-  background-color: #e9ecef;
-  border-color: #e9ecef;
-}
-
-/* line 43, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-quaternary:not(:disabled):not(.disabled):active, .btn-quaternary:not(:disabled):not(.disabled).active,
-.show > .btn-quaternary.dropdown-toggle {
-  color: #212529;
-  background-color: #cbd3da;
-  border-color: #c4ccd4;
-}
-
-/* line 53, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-quaternary:not(:disabled):not(.disabled):active:focus, .btn-quaternary:not(:disabled):not(.disabled).active:focus,
-.show > .btn-quaternary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(203, 206, 209, 0.5);
-}
-
-/* line 62, ../bootstrap-4.4.1/scss/_buttons.scss */
-.btn-quinary {
-  color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
 
 /* line 13, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
-.btn-quinary:hover {
+.btn-quaternary:hover {
   color: #212529;
   background-color: #e2e6ea;
   border-color: #dae0e5;
 }
 
 /* line 18, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-quinary:focus, .btn-quinary.focus {
+.btn-quaternary:focus, .btn-quaternary.focus {
   color: #212529;
   background-color: #e2e6ea;
   border-color: #dae0e5;
@@ -3325,23 +3248,23 @@ fieldset:disabled a.btn {
 }
 
 /* line 32, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-quinary.disabled, .btn-quinary:disabled {
+.btn-quaternary.disabled, .btn-quaternary:disabled {
   color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
 
 /* line 43, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-quinary:not(:disabled):not(.disabled):active, .btn-quinary:not(:disabled):not(.disabled).active,
-.show > .btn-quinary.dropdown-toggle {
+.btn-quaternary:not(:disabled):not(.disabled):active, .btn-quaternary:not(:disabled):not(.disabled).active,
+.show > .btn-quaternary.dropdown-toggle {
   color: #212529;
   background-color: #dae0e5;
   border-color: #d3d9df;
 }
 
 /* line 53, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-quinary:not(:disabled):not(.disabled):active:focus, .btn-quinary:not(:disabled):not(.disabled).active:focus,
-.show > .btn-quinary.dropdown-toggle:focus {
+.btn-quaternary:not(:disabled):not(.disabled):active:focus, .btn-quaternary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-quaternary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
 }
 
@@ -3385,25 +3308,25 @@ fieldset:disabled a.btn {
 
 /* line 68, ../bootstrap-4.4.1/scss/_buttons.scss */
 .btn-outline-secondary {
-  color: #ced4da;
-  border-color: #ced4da;
+  color: #adb5bd;
+  border-color: #adb5bd;
 }
 
 /* line 13, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 .btn-outline-secondary:hover {
   color: #212529;
-  background-color: #ced4da;
-  border-color: #ced4da;
+  background-color: #adb5bd;
+  border-color: #adb5bd;
 }
 
 /* line 74, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
 .btn-outline-secondary:focus, .btn-outline-secondary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(206, 212, 218, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(173, 181, 189, 0.5);
 }
 
 /* line 79, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
 .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
-  color: #ced4da;
+  color: #adb5bd;
   background-color: transparent;
 }
 
@@ -3411,14 +3334,14 @@ fieldset:disabled a.btn {
 .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-secondary.dropdown-toggle {
   color: #212529;
-  background-color: #ced4da;
-  border-color: #ced4da;
+  background-color: #adb5bd;
+  border-color: #adb5bd;
 }
 
 /* line 92, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
 .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(206, 212, 218, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(173, 181, 189, 0.5);
 }
 
 /* line 68, ../bootstrap-4.4.1/scss/_buttons.scss */
@@ -3689,25 +3612,25 @@ fieldset:disabled a.btn {
 
 /* line 68, ../bootstrap-4.4.1/scss/_buttons.scss */
 .btn-outline-quaternary {
-  color: #e9ecef;
-  border-color: #e9ecef;
+  color: #f8f9fa;
+  border-color: #f8f9fa;
 }
 
 /* line 13, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 .btn-outline-quaternary:hover {
   color: #212529;
-  background-color: #e9ecef;
-  border-color: #e9ecef;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
 }
 
 /* line 74, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
 .btn-outline-quaternary:focus, .btn-outline-quaternary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(233, 236, 239, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
 }
 
 /* line 79, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
 .btn-outline-quaternary.disabled, .btn-outline-quaternary:disabled {
-  color: #e9ecef;
+  color: #f8f9fa;
   background-color: transparent;
 }
 
@@ -3715,51 +3638,13 @@ fieldset:disabled a.btn {
 .btn-outline-quaternary:not(:disabled):not(.disabled):active, .btn-outline-quaternary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-quaternary.dropdown-toggle {
   color: #212529;
-  background-color: #e9ecef;
-  border-color: #e9ecef;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
 }
 
 /* line 92, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
 .btn-outline-quaternary:not(:disabled):not(.disabled):active:focus, .btn-outline-quaternary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-quaternary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(233, 236, 239, 0.5);
-}
-
-/* line 68, ../bootstrap-4.4.1/scss/_buttons.scss */
-.btn-outline-quinary {
-  color: #f8f9fa;
-  border-color: #f8f9fa;
-}
-
-/* line 13, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
-.btn-outline-quinary:hover {
-  color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
-}
-
-/* line 74, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-outline-quinary:focus, .btn-outline-quinary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-}
-
-/* line 79, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-outline-quinary.disabled, .btn-outline-quinary:disabled {
-  color: #f8f9fa;
-  background-color: transparent;
-}
-
-/* line 85, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-outline-quinary:not(:disabled):not(.disabled):active, .btn-outline-quinary:not(:disabled):not(.disabled).active,
-.show > .btn-outline-quinary.dropdown-toggle {
-  color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
-}
-
-/* line 92, ../bootstrap-4.4.1/scss/mixins/_buttons.scss */
-.btn-outline-quinary:not(:disabled):not(.disabled):active:focus, .btn-outline-quinary:not(:disabled):not(.disabled).active:focus,
-.show > .btn-outline-quinary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
 }
 
@@ -5824,19 +5709,19 @@ a.badge-primary:focus, a.badge-primary.focus {
 /* line 51, ../bootstrap-4.4.1/scss/_badge.scss */
 .badge-secondary {
   color: #212529;
-  background-color: #ced4da;
+  background-color: #adb5bd;
 }
 
 /* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 a.badge-secondary:hover, a.badge-secondary:focus {
   color: #212529;
-  background-color: #b1bbc4;
+  background-color: #919ca6;
 }
 
 /* line 11, ../bootstrap-4.4.1/scss/mixins/_badge.scss */
 a.badge-secondary:focus, a.badge-secondary.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(206, 212, 218, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(173, 181, 189, 0.5);
 }
 
 /* line 51, ../bootstrap-4.4.1/scss/_badge.scss */
@@ -5968,35 +5853,17 @@ a.badge-tertiary:focus, a.badge-tertiary.focus {
 /* line 51, ../bootstrap-4.4.1/scss/_badge.scss */
 .badge-quaternary {
   color: #212529;
-  background-color: #e9ecef;
+  background-color: #f8f9fa;
 }
 
 /* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 a.badge-quaternary:hover, a.badge-quaternary:focus {
   color: #212529;
-  background-color: #cbd3da;
-}
-
-/* line 11, ../bootstrap-4.4.1/scss/mixins/_badge.scss */
-a.badge-quaternary:focus, a.badge-quaternary.focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(233, 236, 239, 0.5);
-}
-
-/* line 51, ../bootstrap-4.4.1/scss/_badge.scss */
-.badge-quinary {
-  color: #212529;
-  background-color: #f8f9fa;
-}
-
-/* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
-a.badge-quinary:hover, a.badge-quinary:focus {
-  color: #212529;
   background-color: #dae0e5;
 }
 
 /* line 11, ../bootstrap-4.4.1/scss/mixins/_badge.scss */
-a.badge-quinary:focus, a.badge-quinary.focus {
+a.badge-quaternary:focus, a.badge-quaternary.focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
 }
@@ -6072,19 +5939,19 @@ a.badge-quinary:focus, a.badge-quinary.focus {
 
 /* line 48, ../bootstrap-4.4.1/scss/_alert.scss */
 .alert-secondary {
-  color: #6b6e71;
-  background-color: #f5f6f8;
-  border-color: #f1f3f5;
+  color: #5a5e62;
+  background-color: #eff0f2;
+  border-color: #e8eaed;
 }
 
 /* line 6, ../bootstrap-4.4.1/scss/mixins/_alert.scss */
 .alert-secondary hr {
-  border-top-color: #e2e6ea;
+  border-top-color: #dadde2;
 }
 
 /* line 10, ../bootstrap-4.4.1/scss/mixins/_alert.scss */
 .alert-secondary .alert-link {
-  color: #525557;
+  color: #424547;
 }
 
 /* line 48, ../bootstrap-4.4.1/scss/_alert.scss */
@@ -6208,35 +6075,18 @@ a.badge-quinary:focus, a.badge-quinary.focus {
 
 /* line 48, ../bootstrap-4.4.1/scss/_alert.scss */
 .alert-quaternary {
-  color: #797b7c;
-  background-color: #fbfbfc;
-  border-color: #f9fafb;
-}
-
-/* line 6, ../bootstrap-4.4.1/scss/mixins/_alert.scss */
-.alert-quaternary hr {
-  border-top-color: #eaedf1;
-}
-
-/* line 10, ../bootstrap-4.4.1/scss/mixins/_alert.scss */
-.alert-quaternary .alert-link {
-  color: #606162;
-}
-
-/* line 48, ../bootstrap-4.4.1/scss/_alert.scss */
-.alert-quinary {
   color: #818182;
   background-color: #fefefe;
   border-color: #fdfdfe;
 }
 
 /* line 6, ../bootstrap-4.4.1/scss/mixins/_alert.scss */
-.alert-quinary hr {
+.alert-quaternary hr {
   border-top-color: #ececf6;
 }
 
 /* line 10, ../bootstrap-4.4.1/scss/mixins/_alert.scss */
-.alert-quinary .alert-link {
+.alert-quaternary .alert-link {
   color: #686868;
 }
 
@@ -6525,21 +6375,21 @@ a.badge-quinary:focus, a.badge-quinary.focus {
 
 /* line 4, ../bootstrap-4.4.1/scss/mixins/_list-group.scss */
 .list-group-item-secondary {
-  color: #6b6e71;
-  background-color: #f1f3f5;
+  color: #5a5e62;
+  background-color: #e8eaed;
 }
 
 /* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 .list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
-  color: #6b6e71;
-  background-color: #e2e6ea;
+  color: #5a5e62;
+  background-color: #dadde2;
 }
 
 /* line 14, ../bootstrap-4.4.1/scss/mixins/_list-group.scss */
 .list-group-item-secondary.list-group-item-action.active {
   color: #fff;
-  background-color: #6b6e71;
-  border-color: #6b6e71;
+  background-color: #5a5e62;
+  border-color: #5a5e62;
 }
 
 /* line 4, ../bootstrap-4.4.1/scss/mixins/_list-group.scss */
@@ -6677,37 +6527,18 @@ a.badge-quinary:focus, a.badge-quinary.focus {
 
 /* line 4, ../bootstrap-4.4.1/scss/mixins/_list-group.scss */
 .list-group-item-quaternary {
-  color: #797b7c;
-  background-color: #f9fafb;
-}
-
-/* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
-.list-group-item-quaternary.list-group-item-action:hover, .list-group-item-quaternary.list-group-item-action:focus {
-  color: #797b7c;
-  background-color: #eaedf1;
-}
-
-/* line 14, ../bootstrap-4.4.1/scss/mixins/_list-group.scss */
-.list-group-item-quaternary.list-group-item-action.active {
-  color: #fff;
-  background-color: #797b7c;
-  border-color: #797b7c;
-}
-
-/* line 4, ../bootstrap-4.4.1/scss/mixins/_list-group.scss */
-.list-group-item-quinary {
   color: #818182;
   background-color: #fdfdfe;
 }
 
 /* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
-.list-group-item-quinary.list-group-item-action:hover, .list-group-item-quinary.list-group-item-action:focus {
+.list-group-item-quaternary.list-group-item-action:hover, .list-group-item-quaternary.list-group-item-action:focus {
   color: #818182;
   background-color: #ececf6;
 }
 
 /* line 14, ../bootstrap-4.4.1/scss/mixins/_list-group.scss */
-.list-group-item-quinary.list-group-item-action.active {
+.list-group-item-quaternary.list-group-item-action.active {
   color: #fff;
   background-color: #818182;
   border-color: #818182;
@@ -7675,14 +7506,14 @@ button.bg-primary:focus {
 
 /* line 6, ../bootstrap-4.4.1/scss/mixins/_background-variant.scss */
 .bg-secondary {
-  background-color: #ced4da !important;
+  background-color: #adb5bd !important;
 }
 
 /* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: #b1bbc4 !important;
+  background-color: #919ca6 !important;
 }
 
 /* line 6, ../bootstrap-4.4.1/scss/mixins/_background-variant.scss */
@@ -7771,25 +7602,13 @@ button.bg-tertiary:focus {
 
 /* line 6, ../bootstrap-4.4.1/scss/mixins/_background-variant.scss */
 .bg-quaternary {
-  background-color: #e9ecef !important;
+  background-color: #f8f9fa !important;
 }
 
 /* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 a.bg-quaternary:hover, a.bg-quaternary:focus,
 button.bg-quaternary:hover,
 button.bg-quaternary:focus {
-  background-color: #cbd3da !important;
-}
-
-/* line 6, ../bootstrap-4.4.1/scss/mixins/_background-variant.scss */
-.bg-quinary {
-  background-color: #f8f9fa !important;
-}
-
-/* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
-a.bg-quinary:hover, a.bg-quinary:focus,
-button.bg-quinary:hover,
-button.bg-quinary:focus {
   background-color: #dae0e5 !important;
 }
 
@@ -7860,7 +7679,7 @@ button.bg-quinary:focus {
 
 /* line 20, ../bootstrap-4.4.1/scss/utilities/_borders.scss */
 .border-secondary {
-  border-color: #ced4da !important;
+  border-color: #adb5bd !important;
 }
 
 /* line 20, ../bootstrap-4.4.1/scss/utilities/_borders.scss */
@@ -7900,11 +7719,6 @@ button.bg-quinary:focus {
 
 /* line 20, ../bootstrap-4.4.1/scss/utilities/_borders.scss */
 .border-quaternary {
-  border-color: #e9ecef !important;
-}
-
-/* line 20, ../bootstrap-4.4.1/scss/utilities/_borders.scss */
-.border-quinary {
   border-color: #f8f9fa !important;
 }
 
@@ -11711,12 +11525,12 @@ a.text-primary:hover, a.text-primary:focus {
 
 /* line 6, ../bootstrap-4.4.1/scss/mixins/_text-emphasis.scss */
 .text-secondary {
-  color: #ced4da !important;
+  color: #adb5bd !important;
 }
 
 /* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
 a.text-secondary:hover, a.text-secondary:focus {
-  color: #a2aeb9 !important;
+  color: #838f9b !important;
 }
 
 /* line 6, ../bootstrap-4.4.1/scss/mixins/_text-emphasis.scss */
@@ -11791,21 +11605,11 @@ a.text-tertiary:hover, a.text-tertiary:focus {
 
 /* line 6, ../bootstrap-4.4.1/scss/mixins/_text-emphasis.scss */
 .text-quaternary {
-  color: #e9ecef !important;
-}
-
-/* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
-a.text-quaternary:hover, a.text-quaternary:focus {
-  color: #bdc6cf !important;
-}
-
-/* line 6, ../bootstrap-4.4.1/scss/mixins/_text-emphasis.scss */
-.text-quinary {
   color: #f8f9fa !important;
 }
 
 /* line 17, ../bootstrap-4.4.1/scss/mixins/_hover.scss */
-a.text-quinary:hover, a.text-quinary:focus {
+a.text-quaternary:hover, a.text-quaternary:focus {
   color: #cbd3da !important;
 }
 
@@ -19357,7 +19161,7 @@ readers do not read off random characters that represent icons */
 #header .navbar-brand img {
   height: 22px;
   position: relative;
-  top: -2px;
+  top: -5px;
 }
 
 /* line 31, src/scss/theme/elements/_elements.scss */
