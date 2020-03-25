@@ -1,4 +1,10 @@
 @include media-breakpoint-up(xs) {
+
+  a:not(.btn):focus {
+    color: $link-color;
+    outline: $input-btn-focus-width solid $input-btn-focus-color;
+  }
+
   #skip-link {
     position: fixed;
     top: 0;
@@ -6,6 +12,8 @@
     z-index: 2000;
 
     .sr-only-focusable:focus {
+      padding-bottom: $grid-gutter-width;
+      padding-top: $grid-gutter-width;
       text-align: center;
       width: 100%;
     }
