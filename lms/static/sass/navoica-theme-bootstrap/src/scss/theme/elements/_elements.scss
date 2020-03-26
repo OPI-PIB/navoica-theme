@@ -1,6 +1,7 @@
 @include media-breakpoint-up(xs) {
 
-  a:not(.btn):focus {
+  a:not(.btn):focus,
+  a:not(.btn):hover {
     color: $link-color;
     outline: $input-btn-focus-width solid $input-btn-focus-color;
   }

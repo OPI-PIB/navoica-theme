@@ -29,20 +29,20 @@
 
                 <div class="dropdown">
                     <button id="mooc-courses"
-                            href="e.html"
                             class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
                             data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false" aria-label="Katalog kursów">
                         <i class="fa fa-book"></i>
                         <span class="d-none d-md-inline-block">Katalog kursów</span>
                     </button>
-                    <nav class="dropdown-menu" aria-labelledby="mooc-courses">
-                        <a class="dropdown-item" href="b.html">Wszystkie kursy</a>
-                        <a class="dropdown-item" href="c.html">Nauki komputerowe</a>
-                        <a class="dropdown-item" href="d.html">Nauki społeczne</a>
-                        <a class="dropdown-item" href="e.html">Nauki techniczne</a>
-                        <a class="dropdown-item" href="e.html">Zarządzanie i ekonomia</a>
-                    </nav>
+                    <div class="dropdown-menu" aria-labelledby="mooc-courses"
+                         role="menu">
+                        <a class="dropdown-item" href="b.html" role="menuitem">Wszystkie kursy</a>
+                        <a class="dropdown-item" href="c.html" role="menuitem">Nauki komputerowe</a>
+                        <a class="dropdown-item" href="d.html" role="menuitem">Nauki społeczne</a>
+                        <a class="dropdown-item" href="e.html" role="menuitem">Nauki techniczne</a>
+                        <a class="dropdown-item" href="e.html" role="menuitem">Zarządzanie i ekonomia</a>
+                    </div>
                 </div>
 
                 <form id="mooc-search-form" class="form-inline" role="search">
@@ -65,10 +65,12 @@
                         <i class="fa fa-user"></i>
                         <span class="d-none d-md-inline-block">Moja Navoica</span>
                     </button>
-                    <nav class="dropdown-menu dropdown-menu-right" aria-labelledby="mooc-my-mooc">
-                        <a class="dropdown-item" href="b.html">Zaloguj się</a>
-                        <a class="dropdown-item" href="c.html">Zarejestruj się</a>
-                    </nav>
+                    <div class="dropdown-menu dropdown-menu-right"
+                         aria-labelledby="mooc-my-mooc"
+                         role="menu">
+                        <a class="dropdown-item" href="b.html" role="menuitem">Zaloguj się</a>
+                        <a class="dropdown-item" href="c.html" role="menuitem">Wyloguj się</a>
+                    </div>
                 </div>
 
             </div>
@@ -124,20 +126,19 @@
             </div>
         </section>
     </main>
-</div>
 
-<footer id="footer">
-    <div id="footer-map">
-        <div class="container">
-            Site map
+    <footer id="footer">
+        <div id="footer-map">
+            <div class="container">
+                Site map
+            </div>
         </div>
-    </div>
-    <div id="footer-links">
-        <div class="container">
-            External links
+        <div id="footer-links">
+            <div class="container">
+                External links
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 </div>
 
