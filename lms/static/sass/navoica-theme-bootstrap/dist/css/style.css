@@ -19143,7 +19143,14 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-/* line 2, src/scss/theme/elements/_elements.scss */
+/* line 3, src/scss/theme/elements/_elements.scss */
+a:not(.btn):focus,
+a:not(.btn):hover {
+  color: #e41d37;
+  outline: 0.2rem solid rgba(228, 29, 55, 0.5);
+}
+
+/* line 9, src/scss/theme/elements/_elements.scss */
 #skip-link {
   position: fixed;
   top: 0;
@@ -19151,58 +19158,60 @@ readers do not read off random characters that represent icons */
   z-index: 2000;
 }
 
-/* line 8, src/scss/theme/elements/_elements.scss */
+/* line 15, src/scss/theme/elements/_elements.scss */
 #skip-link .sr-only-focusable:focus {
+  padding-bottom: 16px;
+  padding-top: 16px;
   text-align: center;
   width: 100%;
 }
 
-/* line 19, src/scss/theme/elements/_elements.scss */
+/* line 28, src/scss/theme/elements/_elements.scss */
 #header .navbar-brand img {
   height: 22px;
   position: relative;
   top: -5px;
 }
 
-/* line 31, src/scss/theme/elements/_elements.scss */
+/* line 40, src/scss/theme/elements/_elements.scss */
 .btn .fa, .btn .fab, .btn .fad, .btn .fal, .btn .far, .btn .fas {
   font-size: calc(1em + -1px);
 }
 
-/* line 35, src/scss/theme/elements/_elements.scss */
+/* line 44, src/scss/theme/elements/_elements.scss */
 .btn .fa:first-child + span {
   display: none;
 }
 
-/* line 43, src/scss/theme/elements/_elements.scss */
+/* line 52, src/scss/theme/elements/_elements.scss */
 #mooc-search-form {
   flex: 1;
   margin-left: 16px;
   margin-right: 16px;
 }
 
-/* line 48, src/scss/theme/elements/_elements.scss */
+/* line 57, src/scss/theme/elements/_elements.scss */
 #mooc-search-form .input-group {
   flex: 1;
 }
 
 @media (min-width: 400px) {
-  /* line 59, src/scss/theme/elements/_elements.scss */
+  /* line 68, src/scss/theme/elements/_elements.scss */
   #mooc-search-form .input-group {
     flex: 0 1 300px;
   }
 }
 
 @media (min-width: 700px) {
-  /* line 73, src/scss/theme/elements/_elements.scss */
+  /* line 82, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child {
     display: none;
   }
-  /* line 77, src/scss/theme/elements/_elements.scss */
+  /* line 86, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child + span {
     display: inline-block;
   }
-  /* line 87, src/scss/theme/elements/_elements.scss */
+  /* line 96, src/scss/theme/elements/_elements.scss */
   #mooc-search-form .input-group {
     flex: 0 1 350px;
   }
@@ -19237,16 +19246,17 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
-/* line 28, src/scss/template/_template.scss */
+/* line 29, src/scss/template/_template.scss */
 #header > .container {
   justify-content: flex-start;
   padding-left: 8px;
   padding-right: 8px;
 }
 
-/* line 36, src/scss/template/_template.scss */
+/* line 37, src/scss/template/_template.scss */
 #main {
   border-bottom: 1px solid #dee2e6;
   display: flex;
@@ -19254,12 +19264,12 @@ body {
   flex-grow: 1;
 }
 
-/* line 47, src/scss/template/_template.scss */
+/* line 48, src/scss/template/_template.scss */
 #main-content {
   flex: 1;
 }
 
-/* line 51, src/scss/template/_template.scss */
+/* line 52, src/scss/template/_template.scss */
 #main-content .row {
   display: flex;
   flex-wrap: wrap;
@@ -19267,49 +19277,49 @@ body {
   margin-left: -16px;
 }
 
-/* line 59, src/scss/template/_template.scss */
+/* line 60, src/scss/template/_template.scss */
 #sidebar {
   border-top: 1px solid #dee2e6;
 }
 
-/* line 69, src/scss/template/_template.scss */
+/* line 70, src/scss/template/_template.scss */
 #footer {
   margin-top: auto;
 }
 
 @media (min-width: 700px) {
-  /* line 94, src/scss/template/_template.scss */
+  /* line 95, src/scss/template/_template.scss */
   #main-content {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
   }
-  /* line 99, src/scss/template/_template.scss */
+  /* line 100, src/scss/template/_template.scss */
   #main-content > .container {
     align-items: stretch;
     display: flex;
     flex-grow: 1;
     flex-flow: row nowrap;
   }
-  /* line 105, src/scss/template/_template.scss */
+  /* line 106, src/scss/template/_template.scss */
   #main-content > .container #center {
     flex-grow: 1;
   }
-  /* line 109, src/scss/template/_template.scss */
+  /* line 110, src/scss/template/_template.scss */
   #main-content > .container #sidebar {
     border-top: 0;
     border-right: 1px solid #dee2e6;
     flex: 0 0 250px;
     order: -1;
   }
-  /* line 115, src/scss/template/_template.scss */
+  /* line 116, src/scss/template/_template.scss */
   #main-content > .container #sidebar.right {
     order: unset;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 138, src/scss/template/_template.scss */
+  /* line 139, src/scss/template/_template.scss */
   #main-content > .container #sidebar.right {
     border-left: 1px solid #dee2e6;
     border-right: 0;
