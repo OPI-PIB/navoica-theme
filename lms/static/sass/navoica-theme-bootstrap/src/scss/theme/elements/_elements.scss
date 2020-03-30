@@ -1,0 +1,106 @@
+@include media-breakpoint-up(xs) {
+
+  a:not(.btn):focus,
+  a:not(.btn):hover {
+    color: $link-color;
+    outline: $input-btn-focus-width solid $input-btn-focus-color;
+  }
+
+  #skip-link {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+
+    .sr-only-focusable:focus {
+      padding-bottom: $grid-gutter-width;
+      padding-top: $grid-gutter-width;
+      text-align: center;
+      width: 100%;
+    }
+
+  }
+
+  #header {
+
+    .navbar-brand {
+
+      img {
+        height: $navbar-brand-height;
+        position: relative;
+        top: -5px;
+      }
+
+    }
+
+  }
+
+  .btn {
+
+    .fa, .fab, .fad, .fal, .far, .fas {
+      font-size: add(1em, -1px);
+    }
+
+    .fa:first-child + span {
+      display: none;
+    }
+
+  }
+
+}
+
+#mooc-search-form {
+  flex: 1;
+  margin-left: $grid-gutter-width;
+  margin-right: $grid-gutter-width;
+
+  .input-group {
+    flex: 1;
+  }
+
+}
+
+
+@include media-breakpoint-up(sm) {
+
+  #mooc-search-form {
+
+    .input-group {
+      flex: 0 1 $mooc-search-form-width-sm;
+    }
+
+  }
+
+}
+
+@include media-breakpoint-up(md) {
+
+  #header {
+
+    .btn {
+
+      .fa:first-child {
+        display: none;
+      }
+
+      .fa:first-child + span {
+        display: inline-block;
+      }
+
+    }
+
+  }
+
+  #mooc-search-form {
+
+    .input-group {
+      flex: 0 1 $mooc-search-form-width-md;
+    }
+
+  }
+
+}
+
+@include media-breakpoint-up(lg) {
+
+}

@@ -13,26 +13,35 @@
 
 // Our variable overrides (variables only!)
 
-@import "theme/components/card";
-@import "theme/components/navbar";
+@import "theme/variables/content/typography";
 
-@import "theme/content/typography";
+@import "theme/variables/utilities/colors";
+@import "theme/variables/utilities/spacing";
+@import "theme/variables/layout/grid";
 
-@import "theme/layout/grid";
+@import "theme/variables/components/common";
+@import "theme/variables/components/button_and_form";
+@import "theme/variables/components/card";
+@import "theme/variables/components/dropdown";
+@import "theme/variables/components/navbar";
 
-@import "theme/utilities/colors";
-@import "theme/utilities/spacing";
-
-@import "theme/variables/mixins";
+@import "theme/variables/options/border";
 
 
 
-// Bootstrap and its default variables
+// Libraries
 
+// Bootstrap
 @import "vendors/bootstrap";
 
-
+// Fontawesome
+@import "vendors/fontawesome-free-5.12.1-web/scss/fontawesome";
+@import "vendors/fontawesome-free-5.12.1-web/scss/regular";
+@import "vendors/fontawesome-free-5.12.1-web/scss/solid";
+@import "vendors/fontawesome-free-5.12.1-web/scss/brands";
 
 // Our own styles
+
+@import "theme/elements/elements";
 
 @import "template/template";

@@ -9,26 +9,80 @@
 </head>
 
 <body class="html front not-logged-in">
-<a href="#page-content" class="sr-only">Skip to main content</a>
+<nav id="skip-link">
+    <div class="list-group">
+        <a href="#header" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej nawigacji</a>
+        <a href="#main" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej tresci</a>
+    </div>
+</nav>
+
 <div id="page" class="page">
-    <nav id="page-nav" class="navbar fixed-top">
+
+    <header id="header" class="bg-white">
         <div class="container">
-            Logo + input + dropdown
-        </div>
-    </nav>
-    <header id="page-header">
-        <div class="container">
-            <div id="page-title">
-                <h1>Hello, students!</h1>
+
+            <div class="navbar navbar-expand-md">
+
+                <a class="navbar-brand mr-3" href="a.html">
+                    <img src="assets/logo-light-bg.svg" alt="Strona główna platformy Nawojka">
+                </a>
+
+                <div>
+                    <a id="mooc-courses"
+                       href="b.html"
+                       class="btn btn-sm btn-outline-primary border-secondary">
+                        <i class="fa fa-book"></i>
+                        <span>Katalog kursów</span>
+                    </a>
+                </div>
+
+                <form id="mooc-search-form" class="form-inline" role="search">
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-sm border-secondary" placeholder="Nazwa kursu" aria-label="Nazwa kursu">
+                        <div class="input-group-append">
+                            <button class="btn btn-sm btn-outline-primary border-secondary" type="submit" id="course-search-button-2">
+                                <span class="sr-only">Zatwierdz, aby wyszukac kursy</span>
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="dropdown ml-auto">
+                    <button id="mooc-my-mooc"
+                            class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" aria-label="Moja Nawojka">
+                        <i class="fa fa-user"></i>
+                        <span>Moja Navoica</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right"
+                         aria-labelledby="mooc-my-mooc"
+                         role="menu">
+                        <a class="dropdown-item" href="a.html" role="menuitem">Pulpit</a>
+                        <a class="dropdown-item" href="b.html" role="menuitem">Profil</a>
+                        <a class="dropdown-item" href="c.html" role="menuitem">Konto</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="d.html" role="menuitem">Wyloguj się</a>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </header>
-    <div id="page-content">
-        <div class="container">
-            <main id="main">
-                <section>
-                    <h2>Main</h2>
-                    <hr>
+
+    <main id="main">
+        <section id="main-title">
+            <header>
+                <div class="container">
+                    <h1>Hello, courses!</h1>
+                </div>
+            </header>
+        </section>
+        <section id="main-content">
+            <div class="container">
+                <div id="center">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8">col-lg-8</div>
@@ -67,15 +121,16 @@
                         tylko
                         dzięki temu, że Nawojka miała brata bliźniaka, Jakuba, do którego była podobna jak kropla wody. Jakub – w przeciwieństwie do siostry – nie pałał szczególną
                         miłością do książek, a że Nawojka była niesamowicie zdolną uczennicą, Jakub nie miał nic przeciwko, aby siostra się pod niego podszywała.</p>
-                </section>
-            </main>
-            <aside id="sidebar" class="right wide">
-                <h2>Sidebar</h2>
-                <p>A lightweight, flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site.</p>
-            </aside>
-        </div>
-    </div>
-    <footer id="page-footer">
+                </div>
+                <aside id="sidebar" class="right">
+                    <h2>Sidebar</h2>
+                    <p>A lightweight, flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site.</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
         <div id="footer-map">
             <div class="container">
                 Site map
@@ -87,9 +142,10 @@
             </div>
         </div>
     </footer>
+
 </div>
 
-<script src="js/jquery.min.js"></script>
+<script src="js/jquery-slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 

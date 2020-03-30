@@ -9,108 +9,185 @@
 </head>
 
 <body class="html front not-logged-in">
-<a href="#page-content" class="sr-only">Skip to main content</a>
+<nav id="skip-link">
+    <div class="list-group">
+        <a href="#header" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej nawigacji</a>
+        <a href="#main" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej tresci</a>
+    </div>
+</nav>
+
 <div id="page" class="page">
-    <nav id="page-nav" class="navbar fixed-top">
+
+    <header id="header" class="bg-white">
         <div class="container">
-            Logo + input + dropdown
-        </div>
-    </nav>
-    <header id="page-header">
-        <div class="container">
-            <nav id="breadcrumb" aria-label="breadcrumb">
-                Home / Library / Data
-            </nav>
-        </div>
-        <div class="container">
-            <article>
-                <div id="page-title">
-                    <h1>The course investigates the framework for success in product management!</h1>
+
+            <div class="navbar navbar-expand-md">
+
+                <a class="navbar-brand mr-3" href="a.html">
+                    <img src="assets/logo-light-bg.svg" alt="Strona główna platformy Nawojka">
+                </a>
+
+                <div class="dropdown">
+                    <button id="mooc-courses"
+                            class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" aria-label="Katalog kursów">
+                        <i class="fa fa-book"></i>
+                        <span>Katalog kursów</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="mooc-courses"
+                         role="menu">
+                        <a class="dropdown-item" href="b.html" role="menuitem">Wszystkie kursy</a>
+                        <a class="dropdown-item" href="c.html" role="menuitem">Nauki komputerowe</a>
+                        <a class="dropdown-item" href="d.html" role="menuitem">Nauki społeczne</a>
+                        <a class="dropdown-item" href="e.html" role="menuitem">Nauki techniczne</a>
+                        <a class="dropdown-item" href="e.html" role="menuitem">Zarządzanie i ekonomia</a>
+                    </div>
                 </div>
-            </article>
-            <aside>
-                University of Maryland, College Park
-            </aside>
+
+                <form id="mooc-search-form" class="form-inline" role="search">
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-sm border-secondary" placeholder="Nazwa kursu" aria-label="Nazwa kursu">
+                        <div class="input-group-append">
+                            <button class="btn btn-sm btn-outline-primary border-secondary" type="submit" id="course-search-button-2">
+                                <span class="sr-only">Zatwierdz, aby wyszukac kursy</span>
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="dropdown ml-auto">
+                    <button id="mooc-my-mooc"
+                            class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" aria-label="Moja Nawojka">
+                        <i class="fa fa-user"></i>
+                        <span>Moja Navoica</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right"
+                         aria-labelledby="mooc-my-mooc"
+                         role="menu">
+                        <a class="dropdown-item" href="a.html" role="menuitem">Pulpit</a>
+                        <a class="dropdown-item" href="b.html" role="menuitem">Profil</a>
+                        <a class="dropdown-item" href="c.html" role="menuitem">Konto</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="d.html" role="menuitem">Wyloguj się</a>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </header>
-    <nav id="content-nav">
-        <div class="container">
-            Kurs | Dyskusja | Postęp | Prowadzący
-        </div>
-    </nav>
-    <div id="page-content">
-        <div class="container">
-            <main id="main">
-                <section>
 
-                    <h2>Libellus de Alchimia</h2>
+    <main id="main">
+        <section id="main-title">
+            <header>
+                <div class="container">
+                    <h1>The course investigates the framework for success in product management!</h1>
+                    <aside>
+                        University of Maryland, College Park
+                    </aside>
+                </div>
+            </header>
+        </section>
 
-                    <p>
-                        Albert Wielki, czyli święty Albert – ten sam, którego Dante umieścił w&nbsp;swej <i>„Boskiej
-                        Komedii”</i> w&nbsp;niebie obok św. Tomasza z&nbsp;Akwinu, biskup, jeden z&nbsp;najtęższych
-                        umysłów
-                        średniowiecza i&nbsp;patron górników (nasi jakoś wolą świętą Barbarę) – był też
-                        alchemikiem.
-                        To
-                        on wynalazł arszenik i&nbsp;jako pierwszy użył chemicznych terminów „zasada”, „tlenek
-                        ołowiu” i&nbsp;„siarczan
-                        żelaza”, a&nbsp;na dodatek napisał traktat <i>„Libellus de Alchimia”</i>. Zawarł w&nbsp;nim
-                        osiem
-                        zasad, których alchemik trzymać się powinien: 1) być dyskretnym i&nbsp;cichym, nikomu
-                        nie
-                        wyjawiając rezultatów swej pracy; 2) pracować w&nbsp;odosobnieniu, najlepiej we własnym
-                        domu; 3)
-                        dyskretnie wybierać dni i&nbsp;godziny, które na alchemię przeznacza; 4) w&nbsp;pracy
-                        być
-                        cierpliwym, gorliwym i&nbsp;wytrwałym; 5) trzymać się z&nbsp;góry ustalonych zasad; 6)
-                        używać
-                        naczyń tylko szklanych i&nbsp;z&nbsp;glazurowanej gliny; 7) być wystarczająco bogatym,
-                        by
-                        pokrywać wydatki związane z&nbsp;uprawianą sztuką; 8) trzymać się z&nbsp;dala od książąt
-                        i&nbsp;możnych.
-                    </p>
+        <nav id="main-nav">
+            <div class="container">
+                Kurs | Dyskusja | Postęp | Prowadzący
+            </div>
+        </nav>
 
-                    <p>
-                        Walka z&nbsp;tymi chorobami należy do najtrudniejszych wyzwań współczesnej nauki. Lata
-                        temu
-                        podjęli je uczeni Instytut Chemii Bioorganicznej <abbr title="Polska Akademia Nauk">PAN</abbr> w&nbsp;Poznaniu. I&nbsp;odkryli, że
-                        istnieje oddziaływanie między zjawiskiem tzw. interferencji <abbr title="Kwas rybonukleinowy">RNA</abbr> – czyli wyciszania lub
-                        wyłączania ekspresji genów (polegającej na przekazywaniu informacji zapisanych
-                        w&nbsp;<abbr title="Kwas deoksyrybonukleinowy">DNA</abbr> do
-                        komórek) – a&nbsp;zmutowanymi genami odpowiedzialnymi za chorobę Huntingtona oraz
-                        ataksję
-                        rdzeniowo-móżdżkową typu 1.&nbsp;Postanowili więc to wykorzystać, wyciszając ekspresję
-                        zmutowanych genów będących przyczyną obu chorób. Są przekonani, że stworzenie
-                        specjalnych
-                        syntetycznych substancji (reagentów) pomoże unieszkodliwiać fatalne geny.
-                    </p>
+        <section id="main-content">
 
-                    <h3>Podejście uczonego do własnych powołań</h3>
+            <div class="container">
 
-                    <p>
-                        By alchemia stała się chemią, musiały z&nbsp;niej zniknąć nie tylko marzenia o&nbsp;przerobieniu
-                        ołowiu na złoto, parapsychologia, mistycyzm, astrologia i&nbsp;zabobony, ale także
-                        podejście
-                        uczonego do własnych powołań – w&nbsp;średniowieczu dyktowane rozsądną obawą przed
-                        stosem,
-                        lecz
-                        później dla nauki wręcz paraliżujące.
-                    </p>
+                <div class="center">
 
-                    <p>
-                        I&nbsp;dobrze się stało, bo w&nbsp;badaniach nad cieczami jonowymi chemicy z&nbsp;kilku
-                        polskich
-                        ośrodków potrzebowali rozmachu, porządnych laboratoriów, tysięcy godzin „niedyskretnej”
-                        pracy,
-                        pewnego rozgłosu i&nbsp;pieniędzy większych niż własne. W&nbsp;efekcie doczekaliśmy się
-                        rozwiązań, które być może <strong>zrewolucjonizują kilka dziedzin życia</strong>.
-                    </p>
+                    <article>
+                        <h2>Libellus de Alchimia</h2>
 
-                </section>
-            </main>
-        </div>
-    </div>
-    <footer id="page-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <img alt="Alberto Magno" class="" src="https://dummyimage.com/pal" style="width: 100%;">
+                                </div>
+                                <div class="col-sm-8">
+                                    <p>
+                                        Albert Wielki, czyli święty Albert – ten sam, którego Dante umieścił w&nbsp;swej <i>„Boskiej
+                                        Komedii”</i> w&nbsp;niebie obok św. Tomasza z&nbsp;Akwinu, biskup, jeden z&nbsp;najtęższych
+                                        umysłów
+                                        średniowiecza i&nbsp;patron górników (nasi jakoś wolą świętą Barbarę) – był też
+                                        alchemikiem.
+                                        To
+                                        on wynalazł arszenik i&nbsp;jako pierwszy użył chemicznych terminów „zasada”, „tlenek
+                                        ołowiu” i&nbsp;„siarczan
+                                        żelaza”, a&nbsp;na dodatek napisał traktat <i>„Libellus de Alchimia”</i>. Zawarł w&nbsp;nim
+                                        osiem
+                                        zasad, których alchemik trzymać się powinien: 1) być dyskretnym i&nbsp;cichym, nikomu
+                                        nie
+                                        wyjawiając rezultatów swej pracy; 2) pracować w&nbsp;odosobnieniu, najlepiej we własnym
+                                        domu; 3)
+                                        dyskretnie wybierać dni i&nbsp;godziny, które na alchemię przeznacza; 4) w&nbsp;pracy
+                                        być
+                                        cierpliwym, gorliwym i&nbsp;wytrwałym; 5) trzymać się z&nbsp;góry ustalonych zasad; 6)
+                                        używać
+                                        naczyń tylko szklanych i&nbsp;z&nbsp;glazurowanej gliny; 7) być wystarczająco bogatym,
+                                        by
+                                        pokrywać wydatki związane z&nbsp;uprawianą sztuką; 8) trzymać się z&nbsp;dala od książąt
+                                        i&nbsp;możnych.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            Walka z&nbsp;tymi chorobami należy do najtrudniejszych wyzwań współczesnej nauki. Lata
+                            temu
+                            podjęli je uczeni Instytut Chemii Bioorganicznej <abbr title="Polska Akademia Nauk">PAN</abbr> w&nbsp;Poznaniu. I&nbsp;odkryli, że
+                            istnieje oddziaływanie między zjawiskiem tzw. interferencji <abbr title="Kwas rybonukleinowy">RNA</abbr> – czyli wyciszania lub
+                            wyłączania ekspresji genów (polegającej na przekazywaniu informacji zapisanych
+                            w&nbsp;<abbr title="Kwas deoksyrybonukleinowy">DNA</abbr> do
+                            komórek) – a&nbsp;zmutowanymi genami odpowiedzialnymi za chorobę Huntingtona oraz
+                            ataksję
+                            rdzeniowo-móżdżkową typu 1.&nbsp;Postanowili więc to wykorzystać, wyciszając ekspresję
+                            zmutowanych genów będących przyczyną obu chorób. Są przekonani, że stworzenie
+                            specjalnych
+                            syntetycznych substancji (reagentów) pomoże unieszkodliwiać fatalne geny.
+                        </p>
+
+                        <h3>Podejście uczonego do własnych powołań</h3>
+
+                        <p>
+                            By alchemia stała się chemią, musiały z&nbsp;niej zniknąć nie tylko marzenia o&nbsp;przerobieniu
+                            ołowiu na złoto, parapsychologia, mistycyzm, astrologia i&nbsp;zabobony, ale także
+                            podejście
+                            uczonego do własnych powołań – w&nbsp;średniowieczu dyktowane rozsądną obawą przed
+                            stosem,
+                            lecz
+                            później dla nauki wręcz paraliżujące.
+                        </p>
+
+                        <p>
+                            I&nbsp;dobrze się stało, bo w&nbsp;badaniach nad cieczami jonowymi chemicy z&nbsp;kilku
+                            polskich
+                            ośrodków potrzebowali rozmachu, porządnych laboratoriów, tysięcy godzin „niedyskretnej”
+                            pracy,
+                            pewnego rozgłosu i&nbsp;pieniędzy większych niż własne. W&nbsp;efekcie doczekaliśmy się
+                            rozwiązań, które być może <strong>zrewolucjonizują kilka dziedzin życia</strong>.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="footer">
         <div id="footer-map">
             <div class="container">
                 Site map
@@ -122,9 +199,10 @@
             </div>
         </div>
     </footer>
+
 </div>
 
-<script src="js/jquery.min.js"></script>
+<script src="js/jquery-slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 

@@ -1,0 +1,23 @@
+// Color system
+//
+
+$red: #e41d37;
+
+$primary: $red;
+$danger: $pink;
+
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary
+);
+
+$theme-colors: (
+        "secondary": gray("500"),
+        "tertiary": gray("300"),
+        "quaternary": gray("100")
+);
+
+// Links
+//
+
+$link-color: theme-color("primary");
