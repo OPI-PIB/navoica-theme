@@ -1,7 +1,6 @@
 @include media-breakpoint-up(xs) {
 
-  a:not(.btn):focus,
-  a:not(.btn):hover {
+  a:not(.btn):focus {
     color: $link-color;
     outline: $input-btn-focus-width solid $input-btn-focus-color;
   }
@@ -22,6 +21,11 @@
   }
 
   #header {
+
+    #nav {
+      display: flex;
+      flex: 1;
+    }
 
     .navbar-brand {
 

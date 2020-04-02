@@ -19144,13 +19144,12 @@ readers do not read off random characters that represent icons */
 }
 
 /* line 3, src/scss/theme/elements/_elements.scss */
-a:not(.btn):focus,
-a:not(.btn):hover {
+a:not(.btn):focus {
   color: #e41d37;
   outline: 0.2rem solid rgba(228, 29, 55, 0.5);
 }
 
-/* line 9, src/scss/theme/elements/_elements.scss */
+/* line 8, src/scss/theme/elements/_elements.scss */
 #skip-link {
   position: fixed;
   top: 0;
@@ -19158,7 +19157,7 @@ a:not(.btn):hover {
   z-index: 2000;
 }
 
-/* line 15, src/scss/theme/elements/_elements.scss */
+/* line 14, src/scss/theme/elements/_elements.scss */
 #skip-link .sr-only-focusable:focus {
   padding-bottom: 16px;
   padding-top: 16px;
@@ -19166,52 +19165,58 @@ a:not(.btn):hover {
   width: 100%;
 }
 
-/* line 28, src/scss/theme/elements/_elements.scss */
+/* line 25, src/scss/theme/elements/_elements.scss */
+#header #nav {
+  display: flex;
+  flex: 1;
+}
+
+/* line 32, src/scss/theme/elements/_elements.scss */
 #header .navbar-brand img {
   height: 22px;
   position: relative;
   top: -5px;
 }
 
-/* line 40, src/scss/theme/elements/_elements.scss */
+/* line 44, src/scss/theme/elements/_elements.scss */
 .btn .fa, .btn .fab, .btn .fad, .btn .fal, .btn .far, .btn .fas {
   font-size: calc(1em + -1px);
 }
 
-/* line 44, src/scss/theme/elements/_elements.scss */
+/* line 48, src/scss/theme/elements/_elements.scss */
 .btn .fa:first-child + span {
   display: none;
 }
 
-/* line 52, src/scss/theme/elements/_elements.scss */
+/* line 56, src/scss/theme/elements/_elements.scss */
 #mooc-search-form {
   flex: 1;
   margin-left: 16px;
   margin-right: 16px;
 }
 
-/* line 57, src/scss/theme/elements/_elements.scss */
+/* line 61, src/scss/theme/elements/_elements.scss */
 #mooc-search-form .input-group {
   flex: 1;
 }
 
 @media (min-width: 400px) {
-  /* line 68, src/scss/theme/elements/_elements.scss */
+  /* line 72, src/scss/theme/elements/_elements.scss */
   #mooc-search-form .input-group {
     flex: 0 1 300px;
   }
 }
 
 @media (min-width: 700px) {
-  /* line 82, src/scss/theme/elements/_elements.scss */
+  /* line 86, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child {
     display: none;
   }
-  /* line 86, src/scss/theme/elements/_elements.scss */
+  /* line 90, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child + span {
     display: inline-block;
   }
-  /* line 96, src/scss/theme/elements/_elements.scss */
+  /* line 100, src/scss/theme/elements/_elements.scss */
   #mooc-search-form .input-group {
     flex: 0 1 350px;
   }

@@ -9,10 +9,10 @@
 </head>
 
 <body class="html front not-logged-in">
-<nav id="skip-link">
+<nav id="skip-link" aria-label="Nawiguj do wybranych sekcji tej strony">
     <div class="list-group">
-        <a href="#header" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej nawigacji</a>
         <a href="#main" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej tresci</a>
+        <a href="#footer" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do stopki</a>
     </div>
 </nav>
 
@@ -27,42 +27,45 @@
                     <img src="assets/logo-light-bg.svg" alt="Strona główna platformy Nawojka">
                 </a>
 
-                <div>
-                    <a id="mooc-courses"
-                       href="c.html"
-                       class="btn btn-sm btn-outline-primary border-secondary">
-                        <i class="fa fa-book"></i>
-                        <span>Katalog kursów</span>
-                    </a>
-                </div>
+                <nav id="nav" aria-label="Nawiguj do wybranych stron platformy Nawojka">
+                    <div>
+                        <a id="mooc-courses"
+                           href="c.html"
+                           class="btn btn-sm btn-outline-primary border-secondary">
+                            <em class="fa fa-book"></em>
+                            <span>Katalog kursów</span>
+                        </a>
+                    </div>
 
-                <form id="mooc-search-form" class="form-inline" role="search">
-                    <div class="input-group">
-                        <input type="search" class="form-control form-control-sm border-secondary" placeholder="Nazwa kursu" aria-label="Nazwa kursu">
-                        <div class="input-group-append">
-                            <button class="btn btn-sm btn-outline-primary border-secondary" type="submit" id="course-search-button-2">
-                                <span class="sr-only">Zatwierdz, aby wyszukac kursy</span>
-                                <i class="fas fa-search" aria-hidden="true"></i>
-                            </button>
+                    <form id="mooc-search-form" class="form-inline" role="search" aria-label="Wyszukuj bezpłatne kursy online na platformie Nawojka">
+                        <div class="input-group">
+                            <input id="mooc-search-course-name" type="search" class="form-control form-control-sm border-secondary" aria-label="Nazwa kursu lub słowa kluczowe opisujące kurs">
+                            <div class="input-group-append">
+                                <button class="btn btn-sm btn-outline-primary border-secondary" type="submit" id="course-search-button">
+                                    <span class="sr-only">Wyszukaj kursy</span>
+                                    <em class="fas fa-search" aria-hidden="true"></em>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="dropdown ml-auto">
+                        <button id="mooc-my-mooc"
+                                class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" aria-label="Moja Nawojka">
+                            <em class="fa fa-user"></em>
+                            <span>Moja Navoica</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right"
+                             aria-labelledby="mooc-my-mooc"
+                             role="menu">
+                            <a class="dropdown-item" href="b.html" role="menuitem">Zaloguj się</a>
+                            <a class="dropdown-item" href="c.html" role="menuitem">Zarejestruj się</a>
                         </div>
                     </div>
-                </form>
 
-                <div class="dropdown ml-auto">
-                    <button id="mooc-my-mooc"
-                            class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" aria-label="Moja Nawojka">
-                        <i class="fa fa-user"></i>
-                        <span>Moja Navoica</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right"
-                         aria-labelledby="mooc-my-mooc"
-                         role="menu">
-                        <a class="dropdown-item" href="b.html" role="menuitem">Zaloguj się</a>
-                        <a class="dropdown-item" href="c.html" role="menuitem">Wyloguj się</a>
-                    </div>
-                </div>
+                </nav>
 
             </div>
 

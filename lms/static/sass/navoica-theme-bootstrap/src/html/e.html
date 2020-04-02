@@ -9,10 +9,10 @@
 </head>
 
 <body class="html front not-logged-in">
-<nav id="skip-link">
+<nav id="skip-link" aria-label="Nawiguj do wybranych sekcji tej strony">
     <div class="list-group">
-        <a href="#header" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej nawigacji</a>
         <a href="#main" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej tresci</a>
+        <a href="#footer" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do stopki</a>
     </div>
 </nav>
 
@@ -27,54 +27,56 @@
                     <img src="assets/logo-light-bg.svg" alt="Strona główna platformy Nawojka">
                 </a>
 
-                <div class="dropdown">
-                    <button id="mooc-courses"
-                            class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" aria-label="Katalog kursów">
-                        <i class="fa fa-book"></i>
-                        <span>Katalog kursów</span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="mooc-courses"
-                         role="menu">
-                        <a class="dropdown-item" href="b.html" role="menuitem">Wszystkie kursy</a>
-                        <a class="dropdown-item" href="c.html" role="menuitem">Nauki komputerowe</a>
-                        <a class="dropdown-item" href="d.html" role="menuitem">Nauki społeczne</a>
-                        <a class="dropdown-item" href="e.html" role="menuitem">Nauki techniczne</a>
-                        <a class="dropdown-item" href="e.html" role="menuitem">Zarządzanie i ekonomia</a>
-                    </div>
-                </div>
-
-                <form id="mooc-search-form" class="form-inline" role="search">
-                    <div class="input-group">
-                        <input type="search" class="form-control form-control-sm border-secondary" placeholder="Nazwa kursu" aria-label="Nazwa kursu">
-                        <div class="input-group-append">
-                            <button class="btn btn-sm btn-outline-primary border-secondary" type="submit" id="course-search-button-2">
-                                <span class="sr-only">Zatwierdz, aby wyszukac kursy</span>
-                                <i class="fas fa-search" aria-hidden="true"></i>
-                            </button>
+                <nav id="nav" aria-label="Nawiguj do wybranych stron platformy Nawojka">
+                    <div class="dropdown">
+                        <button id="mooc-courses"
+                                class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" aria-label="Katalog kursów">
+                            <em class="fa fa-book"></em>
+                            <span>Katalog kursów</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="mooc-courses"
+                             role="menu">
+                            <a class="dropdown-item" href="b.html" role="menuitem">Wszystkie kursy</a>
+                            <a class="dropdown-item" href="c.html" role="menuitem">Nauki komputerowe</a>
+                            <a class="dropdown-item" href="d.html" role="menuitem">Nauki społeczne</a>
+                            <a class="dropdown-item" href="e.html" role="menuitem">Nauki techniczne</a>
                         </div>
                     </div>
-                </form>
 
-                <div class="dropdown ml-auto">
-                    <button id="mooc-my-mooc"
-                            class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" aria-label="Moja Nawojka">
-                        <i class="fa fa-user"></i>
-                        <span>Moja Navoica</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right"
-                         aria-labelledby="mooc-my-mooc"
-                         role="menu">
-                        <a class="dropdown-item" href="a.html" role="menuitem">Pulpit</a>
-                        <a class="dropdown-item" href="b.html" role="menuitem">Profil</a>
-                        <a class="dropdown-item" href="c.html" role="menuitem">Konto</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="d.html" role="menuitem">Wyloguj się</a>
+                    <form id="mooc-search-form" class="form-inline" role="search" aria-label="Wyszukuj bezpłatne kursy online na platformie Nawojka">
+                        <div class="input-group">
+                            <input id="mooc-search-course-name" type="search" class="form-control form-control-sm border-secondary" aria-label="Nazwa kursu lub słowa kluczowe opisujące kurs">
+                            <div class="input-group-append">
+                                <button class="btn btn-sm btn-outline-primary border-secondary" type="submit" id="course-search-button">
+                                    <span class="sr-only">Wyszukaj kursy</span>
+                                    <em class="fas fa-search" aria-hidden="true"></em>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="dropdown ml-auto">
+                        <button id="mooc-my-mooc"
+                                class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" aria-label="Moja Nawojka">
+                            <em class="fa fa-user"></em>
+                            <span>Moja Navoica</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right"
+                             aria-labelledby="mooc-my-mooc"
+                             role="menu">
+                            <a class="dropdown-item" href="a.html" role="menuitem">Pulpit</a>
+                            <a class="dropdown-item" href="b.html" role="menuitem">Profil</a>
+                            <a class="dropdown-item" href="c.html" role="menuitem">Konto</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="d.html" role="menuitem">Wyloguj się</a>
+                        </div>
                     </div>
-                </div>
+
+                </nav>
 
             </div>
 
@@ -93,7 +95,7 @@
             </header>
         </section>
 
-        <nav id="main-nav">
+        <nav id="main-nav" aria-label="Nawiguj do wybranych informacji o kursie">
             <div class="container">
                 Kurs | Dyskusja | Postęp | Prowadzący
             </div>
@@ -115,15 +117,15 @@
                                 </div>
                                 <div class="col-sm-8">
                                     <p>
-                                        Albert Wielki, czyli święty Albert – ten sam, którego Dante umieścił w&nbsp;swej <i>„Boskiej
-                                        Komedii”</i> w&nbsp;niebie obok św. Tomasza z&nbsp;Akwinu, biskup, jeden z&nbsp;najtęższych
+                                        Albert Wielki, czyli święty Albert – ten sam, którego Dante umieścił w&nbsp;swej <em>„Boskiej
+                                        Komedii”</em> w&nbsp;niebie obok św. Tomasza z&nbsp;Akwinu, biskup, jeden z&nbsp;najtęższych
                                         umysłów
                                         średniowiecza i&nbsp;patron górników (nasi jakoś wolą świętą Barbarę) – był też
                                         alchemikiem.
                                         To
                                         on wynalazł arszenik i&nbsp;jako pierwszy użył chemicznych terminów „zasada”, „tlenek
                                         ołowiu” i&nbsp;„siarczan
-                                        żelaza”, a&nbsp;na dodatek napisał traktat <i>„Libellus de Alchimia”</i>. Zawarł w&nbsp;nim
+                                        żelaza”, a&nbsp;na dodatek napisał traktat <em>„Libellus de Alchimia”</em>. Zawarł w&nbsp;nim
                                         osiem
                                         zasad, których alchemik trzymać się powinien: 1) być dyskretnym i&nbsp;cichym, nikomu
                                         nie

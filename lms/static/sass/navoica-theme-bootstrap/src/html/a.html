@@ -9,10 +9,10 @@
 </head>
 
 <body class="html front not-logged-in">
-<nav id="skip-link">
+<nav id="skip-link" aria-label="Nawiguj do wybranych sekcji tej strony">
     <div class="list-group">
-        <a href="#header" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej nawigacji</a>
         <a href="#main" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej tresci</a>
+        <a href="#footer" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do stopki</a>
     </div>
 </nav>
 
@@ -27,51 +27,41 @@
                     <img src="assets/logo-light-bg.svg" alt="Strona główna platformy Nawojka">
                 </a>
 
-                <div class="dropdown">
-                    <button id="mooc-courses"
-                            class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" aria-label="Katalog kursów">
-                        <i class="fa fa-book"></i>
-                        <span>Katalog kursów</span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="mooc-courses"
-                         role="menu">
-                        <a class="dropdown-item" href="b.html" role="menuitem">Wszystkie kursy</a>
-                        <a class="dropdown-item" href="c.html" role="menuitem">Nauki komputerowe</a>
-                        <a class="dropdown-item" href="d.html" role="menuitem">Nauki społeczne</a>
-                        <a class="dropdown-item" href="e.html" role="menuitem">Nauki techniczne</a>
-                        <a class="dropdown-item" href="e.html" role="menuitem">Zarządzanie i ekonomia</a>
-                    </div>
-                </div>
-
-                <form id="mooc-search-form" class="form-inline" role="search">
-                    <div class="input-group">
-                        <input type="search" class="form-control form-control-sm border-secondary" placeholder="Nazwa kursu" aria-label="Nazwa kursu">
-                        <div class="input-group-append">
-                            <button class="btn btn-sm btn-outline-primary border-secondary" type="submit" id="course-search-button-2">
-                                <span class="sr-only">Zatwierdz, aby wyszukac kursy</span>
-                                <i class="fas fa-search" aria-hidden="true"></i>
-                            </button>
+                <nav id="nav" aria-label="Nawiguj do wybranych stron platformy Nawojka">
+                    <div class="dropdown">
+                        <button id="mooc-courses"
+                                class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" aria-label="Katalog kursów">
+                            <em class="fa fa-book"></em>
+                            <span>Katalog kursów</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="mooc-courses"
+                             role="menu">
+                            <a class="dropdown-item" href="b.html" role="menuitem">Wszystkie kursy</a>
+                            <a class="dropdown-item" href="c.html" role="menuitem">Nauki komputerowe</a>
+                            <a class="dropdown-item" href="d.html" role="menuitem">Nauki społeczne</a>
+                            <a class="dropdown-item" href="e.html" role="menuitem">Nauki techniczne</a>
                         </div>
                     </div>
-                </form>
 
-                <div class="dropdown ml-auto">
-                    <button id="mooc-my-mooc"
-                            class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" aria-label="Moja Nawojka">
-                        <i class="fa fa-user"></i>
-                        <span>Moja Navoica</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right"
-                         aria-labelledby="mooc-my-mooc"
-                         role="menu">
-                        <a class="dropdown-item" href="b.html" role="menuitem">Zaloguj się</a>
-                        <a class="dropdown-item" href="c.html" role="menuitem">Wyloguj się</a>
+                    <div class="dropdown ml-auto">
+                        <button id="mooc-my-mooc"
+                                class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" aria-label="Moja Nawojka">
+                            <em class="fa fa-user"></em>
+                            <span>Moja Navoica</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right"
+                             aria-labelledby="mooc-my-mooc"
+                             role="menu">
+                            <a class="dropdown-item" href="b.html" role="menuitem">Zaloguj się</a>
+                            <a class="dropdown-item" href="c.html" role="menuitem">Zarejestruj się</a>
+                        </div>
                     </div>
-                </div>
+
+                </nav>
 
             </div>
 
@@ -83,11 +73,21 @@
             <header>
                 <div class="container">
                     <div class="jumbotron">
-                        <h1>Hello, world!</h1>
-                        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                        <p>It uses utility classes for <a href="https://www.behance.net/galleries/graphic-design/typography">typography</a> and spacing to space content out within
-                            the larger container.</p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                        <h1 id="main-title-header">Nauka dostępna</h1>
+                        <p id="main-title-description" class="lead">Bezpłatne kursy online oferowane przez polskie uczelnie i instytucje</p>
+
+                        <form id="mooc-search-form" class="form-inline" role="search" aria-label="Wyszukuj bezpłatne kursy online na platformie Nawojka">
+                            <div class="input-group">
+                                <input id="mooc-search-course-name" type="search" class="form-control form-control border-secondary" aria-label="Nazwa kursu lub słowa kluczowe opisujące kurs">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary border-secondary" type="submit" id="course-search-button">
+                                        <span class="sr-only">Wyszukaj kursy</span>
+                                        <em class="fas fa-search" aria-hidden="true"></em>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </header>
@@ -95,34 +95,14 @@
 
         <section>
             <div class="container">
-                <div class="dropdown">
-                    <button type="button"
-                            id="my-button" class="btn btn-primary dropdown-toggle"
-                            aria-haspopup="true" aria-expanded="false"
-                            data-toggle="dropdown">
-                        Rozwijane menu
-                    </button>
-                    <div class="dropdown-menu"
-                         aria-labelledby="my-button">
-                        <a class="dropdown-item" href="#page-nav">nawigacja</a>
-                        <a class="dropdown-item" href="#page-content">treść</a>
-                        <a class="dropdown-item" href="#page-footer">stopka</a>
-                    </div>
-                </div>
-                <h2>Section 1</h2>
+                <h2>Nowe kursy</h2>
                 <p>But I must explain to you how all this mistaken idea.</p>
             </div>
         </section>
         <section>
             <div class="container">
-                <h2>Section 2</h2>
+                <h2>O platformie Navoica</h2>
                 <p>On the other hand, we denounce with righteous indignation and dislike men.</p>
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                <h2>Section 3</h2>
-                <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure.</p>
             </div>
         </section>
     </main>
