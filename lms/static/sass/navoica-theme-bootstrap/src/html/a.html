@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="html front not-logged-in">
+<body id="mooc-home" class="html front not-logged-in">
 <nav id="skip-link" aria-label="Nawiguj do wybranych sekcji tej strony">
     <div class="list-group">
         <a href="#main" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej tresci</a>
@@ -29,14 +29,14 @@
 
                 <nav id="nav" aria-label="Nawiguj do wybranych stron platformy Nawojka">
                     <div class="dropdown">
-                        <button id="mooc-courses"
+                        <button id="mooc-courses-button"
                                 class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
                                 data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" aria-label="Katalog kursów">
                             <em class="fa fa-book"></em>
                             <span>Katalog kursów</span>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="mooc-courses"
+                        <div class="dropdown-menu" aria-labelledby="mooc-courses-button"
                              role="menu">
                             <a class="dropdown-item" href="b.html" role="menuitem">Wszystkie kursy</a>
                             <a class="dropdown-item" href="c.html" role="menuitem">Nauki komputerowe</a>
@@ -93,10 +93,86 @@
             </header>
         </section>
 
-        <section>
+        <section id="mooc-courses-section" class="bg-light">
             <div class="container">
                 <h2>Nowe kursy</h2>
-                <p>But I must explain to you how all this mistaken idea.</p>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card d-flex h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">
+                                    <a href="b.html">Metody i narzędzia wizualizacji geodanych</a>
+                                </h3>
+                                <div class="card-subtitle">Wojskowa Akademia Techniczna im. Jarosława Dąbrowskiego</div>
+                                <figure class="card-figure">
+                                    <img class="card-img-top"
+                                         src="https://navoica.pl/asset-v1:WAT+GEO_01+2020_1+type@asset+block@VIS-logo.png"
+                                         alt="">
+                                </figure>
+                                <div class="card-meta">
+                                    <ul class="meta">
+                                        <li>kategoria: <strong>nauki komputerowe</strong></li>
+                                        <li>poziom: <strong>początkujący</strong></li>
+                                        <li>tryb nauki: <strong>w tempie własnym</strong></li>
+                                    </ul>
+                                    <div class="card-text">
+                                        <p>Kurs umożliwi poznanie prostych metod i narzędzi do wizualizacji danych przestrzennych.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card d-flex h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">
+                                    <a href="c.html">Zdjęcia satelitarne w szkole</a>
+                                </h3>
+                                <div class="card-subtitle">Centrum Nauki Kopernik</div>
+                                <figure class="card-figure">
+                                    <img class="card-img-top"
+                                         src="https://navoica.pl//asset-v1:CNK+CNK_1+2020_1+type@asset+block@logokursu.jpg"
+                                         alt="">
+                                </figure>
+                                <div class="card-meta">
+                                    <ul class="meta">
+                                        <li>kategoria: <strong>nauki komputerowe</strong></li>
+                                        <li>poziom: <strong>początkujący</strong></li>
+                                        <li>tryb nauki: <strong>w tempie własnym</strong></li>
+                                    </ul>
+                                    <div class="card-text">
+                                        <p>Kurs jest przeznaczony dla nauczycielek i nauczycieli zainteresowanych zastosowaniem zdjęć satelitarnych podczas lekcji szkolnych.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card d-flex h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">
+                                    <a href="d.html">Wykorzystanie technologii informacyjno-komunikacyjnych w pracy nauczyciela</a>
+                                </h3>
+                                <div class="card-subtitle">Uniwersytet im. Adama Mickiewicza w Poznaniu</div>
+                                <figure class="card-figure">
+                                    <img class="card-img-top"
+                                         src="https://navoica.pl/asset-v1:UAM+TIK_UAM+2020+type@asset+block@tik_w_edukacji_1.jpg"
+                                         alt="">
+                                </figure>
+                                <div class="card-meta">
+                                    <ul class="meta">
+                                        <li>kategoria: <strong>nauki społeczne</strong></li>
+                                        <li>poziom: <strong>początkujący</strong></li>
+                                        <li>tryb nauki: <strong>w tempie własnym</strong></li>
+                                    </ul>
+                                    <div class="card-text">
+                                        <p>Kurs zawiera informacje oraz praktyczne instrukcje wdrożeniowe, które pozwolą edukatorom na wszechstronne wykorzystanie technologii informacyjno-komunikacyjnych w dydaktyce.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
