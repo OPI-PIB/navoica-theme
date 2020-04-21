@@ -1,9 +1,5 @@
 @include media-breakpoint-up(xs) {
 
-  body {
-    font-size: $font-size-base * .875;
-  }
-
   a:not(.btn):focus {
     color: $link-color;
     outline: $input-btn-focus-width solid $input-btn-focus-color;
@@ -47,10 +43,10 @@
 
     .fa, .fab, .fad, .fal, .far, .fas {
       font-size: add(1em, -1px);
+      display: none;
     }
 
     .fa:first-child + span {
-      display: none;
     }
 
   }
@@ -110,9 +106,4 @@
 }
 
 @include media-breakpoint-up(lg) {
-
-  body {
-    font-size: $font-size-base;
-  }
-
 }

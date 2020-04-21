@@ -30,7 +30,7 @@
                 <nav id="nav" aria-label="Nawiguj do wybranych stron platformy Nawojka">
                     <div class="dropdown">
                         <button id="mooc-courses-button"
-                                class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                                class="btn btn-outline-primary border-secondary dropdown-toggle"
                                 data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" aria-label="Katalog kursów">
                             <em class="fa fa-book"></em>
@@ -47,7 +47,7 @@
 
                     <div class="dropdown ml-auto">
                         <button id="mooc-my-mooc"
-                                class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                                class="btn btn-outline-primary border-secondary dropdown-toggle"
                                 data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" aria-label="Moja Nawojka">
                             <em class="fa fa-user"></em>
@@ -69,117 +69,184 @@
     </header>
 
     <main id="main">
-        <section id="main-title">
-            <header>
+        <section id="mooc-main"
+                 aria-labelledby="mooc-main-header">
+            <header class="py-2 text-center">
                 <div class="container">
-                    <div class="jumbotron">
-                        <h1 id="main-title-header">Nauka dostępna</h1>
-                        <p id="main-title-description" class="lead">Bezpłatne kursy online oferowane przez polskie uczelnie i instytucje</p>
-
-                        <form id="mooc-search-form" class="form-inline" role="search" aria-label="Wyszukuj bezpłatne kursy online na platformie Nawojka">
-                            <div class="input-group">
-                                <input id="mooc-search-course-name" type="search" class="form-control form-control border-secondary" aria-label="Nazwa kursu lub słowa kluczowe opisujące kurs">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-primary border-secondary" type="submit" id="course-search-button">
-                                        <span class="sr-only">Wyszukaj kursy</span>
-                                        <em class="fas fa-search" aria-hidden="true"></em>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
+                    <h1 id="mooc-main-header" class="display-1">Nauka dostępna</h1>
+                    <p id="mooc-main-description" class="lead">Bezpłatne kursy online oferowane przez polskie uczelnie i instytucje</p>
                 </div>
             </header>
+            <div class="container">
+                <div class="jumbotron">
+                    <form id="mooc-search-form" class="form-inline" role="search" aria-label="Wyszukuj bezpłatne kursy online na platformie Nawojka">
+                        <div class="input-group">
+                            <input id="mooc-search-course-name" type="search" class="form-control form-control border-secondary"
+                                   aria-label="Nazwa kursu lub słowa kluczowe opisujące kurs">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-primary border-secondary" type="submit" id="course-search-button">
+                                    <span class="sr-only">Wyszukaj kursy</span>
+                                    <em class="fas fa-search" aria-hidden="true"></em>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
 
-        <section id="mooc-courses-section" class="bg-light">
+        <section id="mooc-courses-section" class="bg-light"
+                 aria-labelledby="mooc-courses-section-header">
+            <header class="py-2 text-center">
+                <div class="container">
+                    <h2 id="mooc-courses-section-header" class="display-2">Nowe kursy</h2>
+                </div>
+            </header>
             <div class="container">
-                <h2>Nowe kursy</h2>
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="card d-flex h-100">
-                            <div class="card-body d-flex flex-column">
+                        <div class="card">
+                            <div class="card-body">
                                 <h3 class="card-title">
                                     <a href="b.html">Metody i narzędzia wizualizacji geodanych</a>
                                 </h3>
                                 <div class="card-subtitle">Wojskowa Akademia Techniczna im. Jarosława Dąbrowskiego</div>
                                 <figure class="card-figure">
-                                    <img class="card-img-top"
+                                    <img class="card-img"
                                          src="https://navoica.pl/asset-v1:WAT+GEO_01+2020_1+type@asset+block@VIS-logo.png"
                                          alt="">
                                 </figure>
                                 <div class="card-meta">
-                                    <ul class="meta">
-                                        <li>kategoria: <strong>nauki komputerowe</strong></li>
+                                    <ul>
+                                        <li>kategoria: <strong>nauki komputerowe</strong> jeszcze Polska nie zginela poki my zyjemy</li>
                                         <li>poziom: <strong>początkujący</strong></li>
                                         <li>tryb nauki: <strong>w tempie własnym</strong></li>
                                     </ul>
-                                    <div class="card-text">
-                                        <p>Kurs umożliwi poznanie prostych metod i narzędzi do wizualizacji danych przestrzennych.</p>
-                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <p>Kurs umożliwi poznanie prostych metod i narzędzi do wizualizacji danych przestrzennych.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="card d-flex h-100">
-                            <div class="card-body d-flex flex-column">
+                        <div class="card">
+                            <div class="card-body">
                                 <h3 class="card-title">
                                     <a href="c.html">Zdjęcia satelitarne w szkole</a>
                                 </h3>
                                 <div class="card-subtitle">Centrum Nauki Kopernik</div>
                                 <figure class="card-figure">
-                                    <img class="card-img-top"
+                                    <img class="card-img"
                                          src="https://navoica.pl//asset-v1:CNK+CNK_1+2020_1+type@asset+block@logokursu.jpg"
                                          alt="">
                                 </figure>
                                 <div class="card-meta">
-                                    <ul class="meta">
+                                    <ul>
                                         <li>kategoria: <strong>nauki komputerowe</strong></li>
                                         <li>poziom: <strong>początkujący</strong></li>
                                         <li>tryb nauki: <strong>w tempie własnym</strong></li>
                                     </ul>
-                                    <div class="card-text">
-                                        <p>Kurs jest przeznaczony dla nauczycielek i nauczycieli zainteresowanych zastosowaniem zdjęć satelitarnych podczas lekcji szkolnych.</p>
-                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <p>Kurs jest przeznaczony dla nauczycielek i nauczycieli zainteresowanych zastosowaniem zdjęć satelitarnych podczas lekcji szkolnych.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="card d-flex h-100">
-                            <div class="card-body d-flex flex-column">
+                        <div class="card">
+                            <div class="card-body">
                                 <h3 class="card-title">
                                     <a href="d.html">Wykorzystanie technologii informacyjno-komunikacyjnych w pracy nauczyciela</a>
                                 </h3>
                                 <div class="card-subtitle">Uniwersytet im. Adama Mickiewicza w Poznaniu</div>
                                 <figure class="card-figure">
-                                    <img class="card-img-top"
+                                    <img class="card-img"
                                          src="https://navoica.pl/asset-v1:UAM+TIK_UAM+2020+type@asset+block@tik_w_edukacji_1.jpg"
                                          alt="">
                                 </figure>
                                 <div class="card-meta">
-                                    <ul class="meta">
+                                    <ul>
                                         <li>kategoria: <strong>nauki społeczne</strong></li>
                                         <li>poziom: <strong>początkujący</strong></li>
                                         <li>tryb nauki: <strong>w tempie własnym</strong></li>
                                     </ul>
-                                    <div class="card-text">
-                                        <p>Kurs zawiera informacje oraz praktyczne instrukcje wdrożeniowe, które pozwolą edukatorom na wszechstronne wykorzystanie technologii informacyjno-komunikacyjnych w dydaktyce.</p>
-                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <p>Kurs zawiera informacje oraz praktyczne instrukcje wdrożeniowe, które pozwolą edukatorom na wszechstronne wykorzystanie technologii informacyjno-komunikacyjnych w dydaktyce.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <footer class="py-2 text-center">
+                <div class="container">
+                    <a id="mooc-courses-all-button"
+                       href="b.html"
+                       class="btn btn-lg btn-primary">Wyświetl wszystkie kursy</a>
+                </div>
+            </footer>
         </section>
-        <section>
+
+        <section id="mooc-about-platform"
+                 aria-labelledby="mooc-about-platform-header">
+            <header class="py-2 text-center">
+                <div class="container">
+                    <h2 id="mooc-about-platform-header" class="display-2">O platformie Navoica</h2>
+                </div>
+            </header>
             <div class="container">
-                <h2>O platformie Navoica</h2>
-                <p>On the other hand, we denounce with righteous indignation and dislike men.</p>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column h-100">
+                            <img class="card-img-top"
+                                 src="https://navoica.pl/static/images/navoica-wirtualne-kursy.png"
+                                 alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Bogata oferta wirtualnych kursów</h3>
+                                <div class="card-text">
+                                    <p>Kurs umożliwi poznanie prostych metod i narzędzi do wizualizacji danych przestrzennych.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column h-100">
+                            <img class="card-img-top"
+                                 src="https://navoica.pl/static/images/navoica-platforma-ksztalcenia.png"
+                                 alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Ogólnodostępna platforma kształcenia</h3>
+                                <div class="card-text">
+                                    <p>Kurs jest przeznaczony dla nauczycielek i nauczycieli zainteresowanych zastosowaniem zdjęć satelitarnych podczas lekcji szkolnych.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column h-100">
+                            <img class="card-img-top"
+                                 src="https://navoica.pl/static/images/navoica-siec-wspolpracy.png"
+                                 alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Sieć współpracy uczelni i instytucji</h3>
+                                <div class="card-text">
+                                    <p>Kurs zawiera informacje oraz praktyczne instrukcje wdrożeniowe, które pozwolą edukatorom na wszechstronne wykorzystanie technologii informacyjno-komunikacyjnych w dydaktyce.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <footer class="py-2 text-center">
+                <div class="container">
+                    <a id="mooc-about-platform-button"
+                       href="b.html"
+                       class="btn btn-lg btn-outline-primary border-secondary">Dowiedz się więcej o Navoice</a>
+                </div>
+            </footer>
         </section>
     </main>
 

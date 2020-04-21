@@ -460,29 +460,29 @@ h6, .h6 {
 
 /* line 29, ../bootstrap-4.4.1/scss/_type.scss */
 .display-1 {
-  font-size: 6rem;
-  font-weight: 300;
+  font-size: 1.75rem;
+  font-weight: 500;
   line-height: 1.2;
 }
 
 /* line 34, ../bootstrap-4.4.1/scss/_type.scss */
 .display-2 {
-  font-size: 5.5rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 500;
   line-height: 1.2;
 }
 
 /* line 39, ../bootstrap-4.4.1/scss/_type.scss */
 .display-3 {
-  font-size: 4.5rem;
-  font-weight: 300;
+  font-size: 1.3125rem;
+  font-weight: 700;
   line-height: 1.2;
 }
 
 /* line 44, ../bootstrap-4.4.1/scss/_type.scss */
 .display-4 {
-  font-size: 3.5rem;
-  font-weight: 300;
+  font-size: 1.125rem;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -636,8 +636,8 @@ pre code {
 /* line 7, ../bootstrap-4.4.1/scss/_grid.scss */
 .container {
   width: 100%;
-  padding-right: 4px;
-  padding-left: 4px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -652,8 +652,8 @@ pre code {
 /* line 13, ../bootstrap-4.4.1/scss/_grid.scss */
 .container-fluid, .container-lg {
   width: 100%;
-  padding-right: 4px;
-  padding-left: 4px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -669,8 +669,8 @@ pre code {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -4px;
-  margin-left: -4px;
+  margin-right: -0.25rem;
+  margin-left: -0.25rem;
 }
 
 /* line 51, ../bootstrap-4.4.1/scss/_grid.scss */
@@ -695,8 +695,8 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 4px;
-  padding-left: 4px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
 }
 
 /* line 31, ../bootstrap-4.4.1/scss/mixins/_grid-framework.scss */
@@ -3785,7 +3785,7 @@ input[type="button"].btn-block {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #212529;
   text-align: left;
   list-style: none;
@@ -5372,7 +5372,7 @@ input[type="button"].btn-block {
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 0.5rem;
 }
 
 /* line 46, ../bootstrap-4.4.1/scss/_card.scss */
@@ -5398,12 +5398,12 @@ input[type="button"].btn-block {
 
 /* line 64, ../bootstrap-4.4.1/scss/_card.scss */
 .card-link + .card-link {
-  margin-left: 1.25rem;
+  margin-left: 0.5rem;
 }
 
 /* line 73, ../bootstrap-4.4.1/scss/_card.scss */
 .card-header {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.5rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -5416,23 +5416,23 @@ input[type="button"].btn-block {
 
 /* line 91, ../bootstrap-4.4.1/scss/_card.scss */
 .card-footer {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.5rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 /* line 106, ../bootstrap-4.4.1/scss/_card.scss */
 .card-header-tabs {
-  margin-right: -0.625rem;
+  margin-right: -0.25rem;
   margin-bottom: -0.75rem;
-  margin-left: -0.625rem;
+  margin-left: -0.25rem;
   border-bottom: 0;
 }
 
 /* line 113, ../bootstrap-4.4.1/scss/_card.scss */
 .card-header-pills {
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: -0.25rem;
+  margin-left: -0.25rem;
 }
 
 /* line 119, ../bootstrap-4.4.1/scss/_card.scss */
@@ -19143,18 +19143,115 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-/* line 3, src/scss/theme/elements/_elements.scss */
+/* line 3, src/scss/theme/components/_card.scss */
+.card {
+  box-shadow: 0 4px 12px -2px #dee2e6, 0 -2px 4px -4px #dee2e6;
+  display: flex;
+  height: 100%;
+}
+
+/* line 9, src/scss/theme/components/_card.scss */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0.5rem;
+}
+
+/* line 15, src/scss/theme/components/_card.scss */
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.167;
+  margin: 0 0 .5rem;
+}
+
+/* line 22, src/scss/theme/components/_card.scss */
+.card-subtitle {
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 .5rem;
+}
+
+/* line 28, src/scss/theme/components/_card.scss */
+.card-figure {
+  display: block;
+  margin: 0 0 .5rem;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+/* line 35, src/scss/theme/components/_card.scss */
+.card-img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* line 43, src/scss/theme/components/_card.scss */
+.card-meta {
+  margin: 0 0 .5rem;
+}
+
+/* line 46, src/scss/theme/components/_card.scss */
+.card-meta ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 52, src/scss/theme/components/_card.scss */
+.card-meta li {
+  margin: 0;
+  padding: 0 0 0 1rem;
+}
+
+/* line 57, src/scss/theme/components/_card.scss */
+.card-meta li::before {
+  content: "\2022";
+  display: inline-block;
+  margin: 0 0 0 -1rem;
+  width: 1rem;
+}
+
+/* line 66, src/scss/theme/components/_card.scss */
+#mooc-courses-section .card-body {
+  font-size: .875rem;
+}
+
+@media (min-width: 1000px) {
+  /* line 84, src/scss/theme/components/_card.scss */
+  #mooc-courses-section .card-figure {
+    order: -1;
+  }
+}
+
+/* line 3, src/scss/theme/components/_dropdown.scss */
+#nav .dropdown-toggle, #nav .dropdown-menu {
+  font-size: .875rem;
+}
+
+/* line 7, src/scss/theme/components/_reboot.scss */
 body {
   font-size: 0.875rem;
 }
 
-/* line 7, src/scss/theme/elements/_elements.scss */
+@media (min-width: 1000px) {
+  /* line 15, src/scss/theme/components/_reboot.scss */
+  body {
+    font-size: 1rem;
+  }
+}
+
+/* line 3, src/scss/theme/elements/_elements.scss */
 a:not(.btn):focus {
   color: #e41d37;
   outline: 0.2rem solid rgba(228, 29, 55, 0.5);
 }
 
-/* line 12, src/scss/theme/elements/_elements.scss */
+/* line 8, src/scss/theme/elements/_elements.scss */
 #skip-link {
   position: fixed;
   top: 0;
@@ -19162,75 +19259,64 @@ a:not(.btn):focus {
   z-index: 2000;
 }
 
-/* line 18, src/scss/theme/elements/_elements.scss */
+/* line 14, src/scss/theme/elements/_elements.scss */
 #skip-link .sr-only-focusable:focus {
-  padding-bottom: 8px;
-  padding-top: 8px;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
   text-align: center;
   width: 100%;
 }
 
-/* line 29, src/scss/theme/elements/_elements.scss */
+/* line 25, src/scss/theme/elements/_elements.scss */
 #header #nav {
   display: flex;
   flex: 1;
 }
 
-/* line 36, src/scss/theme/elements/_elements.scss */
+/* line 32, src/scss/theme/elements/_elements.scss */
 #header .navbar-brand img {
   height: 22px;
   position: relative;
   top: -5px;
 }
 
-/* line 48, src/scss/theme/elements/_elements.scss */
+/* line 44, src/scss/theme/elements/_elements.scss */
 .btn .fa, .btn .fab, .btn .fad, .btn .fal, .btn .far, .btn .fas {
   font-size: calc(1em + -1px);
-}
-
-/* line 52, src/scss/theme/elements/_elements.scss */
-.btn .fa:first-child + span {
   display: none;
 }
 
-/* line 60, src/scss/theme/elements/_elements.scss */
+/* line 56, src/scss/theme/elements/_elements.scss */
 #mooc-search-form {
   flex: 1;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-/* line 65, src/scss/theme/elements/_elements.scss */
+/* line 61, src/scss/theme/elements/_elements.scss */
 #mooc-search-form .input-group {
   flex: 1;
 }
 
 @media (min-width: 400px) {
-  /* line 76, src/scss/theme/elements/_elements.scss */
+  /* line 72, src/scss/theme/elements/_elements.scss */
   #mooc-search-form .input-group {
     flex: 0 1 300px;
   }
 }
 
 @media (min-width: 700px) {
-  /* line 90, src/scss/theme/elements/_elements.scss */
+  /* line 86, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child {
     display: none;
   }
-  /* line 94, src/scss/theme/elements/_elements.scss */
+  /* line 90, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child + span {
     display: inline-block;
   }
-  /* line 104, src/scss/theme/elements/_elements.scss */
+  /* line 100, src/scss/theme/elements/_elements.scss */
   #mooc-search-form .input-group {
     flex: 0 1 350px;
-  }
-}
-
-@media (min-width: 1000px) {
-  /* line 114, src/scss/theme/elements/_elements.scss */
-  body {
-    font-size: 1rem;
   }
 }
 
@@ -19269,8 +19355,8 @@ body {
 /* line 29, src/scss/template/_template.scss */
 #header > .container {
   justify-content: flex-start;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 /* line 37, src/scss/template/_template.scss */
@@ -19290,8 +19376,8 @@ body {
 #main-content .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -8px;
-  margin-left: -8px;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }
 
 /* line 60, src/scss/template/_template.scss */

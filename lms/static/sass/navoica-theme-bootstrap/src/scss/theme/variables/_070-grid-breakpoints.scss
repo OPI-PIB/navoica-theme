@@ -23,5 +23,5 @@ $container-max-widths: (
 //
 // Set the number of columns and specify the width of the gutters.
 
-$grid-gutter-width: 8px;
-$grid-vertical-padding: 4px; // new one
+$grid-gutter-width: .5rem;
+$grid-vertical-padding: $grid-gutter-width * .5; // new one
