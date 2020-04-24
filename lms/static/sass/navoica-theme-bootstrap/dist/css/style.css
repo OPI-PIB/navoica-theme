@@ -5405,7 +5405,8 @@ input[type="button"].btn-block {
 .card-header {
   padding: 0.75rem 0.5rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  color: #212529;
+  background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -5417,7 +5418,7 @@ input[type="button"].btn-block {
 /* line 91, ../bootstrap-4.4.1/scss/_card.scss */
 .card-footer {
   padding: 0.75rem 0.5rem;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -5442,7 +5443,7 @@ input[type="button"].btn-block {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1.25rem;
+  padding: 0.5rem;
 }
 
 /* line 128, ../bootstrap-4.4.1/scss/_card.scss */
@@ -6201,7 +6202,7 @@ a.badge-quaternary:focus, a.badge-quaternary.focus {
 .list-group-item {
   position: relative;
   display: block;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 0.5rem;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -19147,17 +19148,34 @@ readers do not read off random characters that represent icons */
 .card {
   box-shadow: 0 4px 12px -2px #dee2e6, 0 -2px 4px -4px #dee2e6;
   display: flex;
+  font-size: .875rem;
   height: 100%;
 }
 
-/* line 9, src/scss/theme/components/_card.scss */
+/* line 10, src/scss/theme/components/_card.scss */
+.card-header {
+  background: #fff;
+  font-weight: 700;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 19, src/scss/theme/components/_card.scss */
+.card-figure-top {
+  display: block;
+  margin: .5rem .5rem 0;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+/* line 26, src/scss/theme/components/_card.scss */
 .card-body {
-  display: flex;
-  flex-direction: column;
   padding: 0.75rem 0.5rem;
 }
 
-/* line 15, src/scss/theme/components/_card.scss */
+/* line 30, src/scss/theme/components/_card.scss */
 .card-title {
   font-size: 1.125rem;
   font-weight: 700;
@@ -19165,14 +19183,14 @@ readers do not read off random characters that represent icons */
   margin: 0 0 .5rem;
 }
 
-/* line 22, src/scss/theme/components/_card.scss */
+/* line 37, src/scss/theme/components/_card.scss */
 .card-subtitle {
   font-weight: 700;
   line-height: 1.25;
   margin: 0 0 .5rem;
 }
 
-/* line 28, src/scss/theme/components/_card.scss */
+/* line 43, src/scss/theme/components/_card.scss */
 .card-figure {
   display: block;
   margin: 0 0 .5rem;
@@ -19180,7 +19198,7 @@ readers do not read off random characters that represent icons */
   position: relative;
 }
 
-/* line 35, src/scss/theme/components/_card.scss */
+/* line 50, src/scss/theme/components/_card.scss */
 .card-img {
   height: 100%;
   -o-object-fit: cover;
@@ -19190,39 +19208,74 @@ readers do not read off random characters that represent icons */
   width: 100%;
 }
 
-/* line 43, src/scss/theme/components/_card.scss */
-.card-meta {
+/* line 58, src/scss/theme/components/_card.scss */
+.card-text {
   margin: 0 0 .5rem;
 }
 
-/* line 46, src/scss/theme/components/_card.scss */
-.card-meta ul {
+/* line 61, src/scss/theme/components/_card.scss */
+.card-text p {
+  margin: 0 0 .5rem;
+}
+
+/* line 65, src/scss/theme/components/_card.scss */
+.card-text ul:not([class]) {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 52, src/scss/theme/components/_card.scss */
-.card-meta li {
+/* line 70, src/scss/theme/components/_card.scss */
+.card-text ul:not([class]) li {
   margin: 0;
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 .75rem;
 }
 
-/* line 57, src/scss/theme/components/_card.scss */
-.card-meta li::before {
+/* line 74, src/scss/theme/components/_card.scss */
+.card-text ul:not([class]) li::before {
   content: "\2022";
   display: inline-block;
-  margin: 0 0 0 -1rem;
-  width: 1rem;
+  margin: 0 0 0 -.75rem;
+  width: .75rem;
 }
 
-/* line 66, src/scss/theme/components/_card.scss */
+/* line 90, src/scss/theme/components/_card.scss */
+.card-link {
+  font-weight: 600;
+}
+
+/* line 95, src/scss/theme/components/_card.scss */
 #mooc-courses-section .card-body {
   font-size: .875rem;
 }
 
+@media (min-width: 400px) {
+  /* line 104, src/scss/theme/components/_card.scss */
+  .card-body {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  /* line 110, src/scss/theme/components/_card.scss */
+  .card-subtitle {
+    flex: 0 0 100%;
+  }
+  /* line 114, src/scss/theme/components/_card.scss */
+  .card-figure {
+    flex: 0 0 128px;
+    height: 72px;
+    margin: 0 .5rem .5rem 0;
+    padding-top: 0;
+    position: static;
+  }
+  /* line 122, src/scss/theme/components/_card.scss */
+  .card-img {
+    position: static;
+  }
+}
+
 @media (min-width: 1000px) {
-  /* line 84, src/scss/theme/components/_card.scss */
+  /* line 135, src/scss/theme/components/_card.scss */
   #mooc-courses-section .card-figure {
     order: -1;
   }
@@ -19231,6 +19284,11 @@ readers do not read off random characters that represent icons */
 /* line 3, src/scss/theme/components/_dropdown.scss */
 #nav .dropdown-toggle, #nav .dropdown-menu {
   font-size: .875rem;
+}
+
+/* line 2, src/scss/theme/components/_grid.scss */
+.row > [class*="col-"] {
+  margin-bottom: .5rem;
 }
 
 /* line 7, src/scss/theme/components/_reboot.scss */
