@@ -3,63 +3,47 @@
   .card {
     box-shadow: $card-box-shadow;
     display: flex;
-    font-size: .875rem;
+    flex-direction: column;
     height: 100%;
+    justify-content: flex-start;
+    padding: $card-spacer-y $card-spacer-x;
   }
 
   .card-header {
     background: $white;
-    font-weight: $font-weight-bold;
     overflow: hidden;
-    padding: $card-spacer-y $card-spacer-x;
+    padding: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .card-figure-top {
+  .card-figure {
     display: block;
-    margin: .5rem .5rem 0;
-    padding-top: 56.25%;
-    position: relative;
+    margin: 0;
   }
 
   .card-body {
-    padding: $card-spacer-y $card-spacer-x;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: $card-element-margin 0 0;
+    padding: 0;
   }
 
   .card-title {
-    font-size: 1.125rem;
-    font-weight: $font-weight-bold;
-    line-height: 1.167;
-    margin: 0 0 .5rem;
+    margin: 0 0 $card-element-margin;
   }
 
   .card-subtitle {
-    font-weight: $font-weight-bold;
-    line-height: 1.25;
-    margin: 0 0 .5rem;
-  }
-
-  .card-figure {
-    display: block;
-    margin: 0 0 .5rem;
-    padding-top: 56.25%;
-    position: relative;
-  }
-
-  .card-img {
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    margin: 0 0 $card-element-margin;
   }
 
   .card-text {
-    margin: 0 0 .5rem;
+    margin: 0 0 $card-element-margin;
 
     p {
-      margin: 0 0 .5rem;
+      margin: 0 0 $card-element-margin;
     }
 
     ul:not([class]) {
@@ -69,13 +53,13 @@
 
       li {
         margin: 0;
-        padding: 0 0 0 .75rem;
+        padding: 0 0 0 $card-element-margin;
 
         &::before {
           content: "\2022";
           display: inline-block;
-          margin: 0 0 0 -.75rem;
-          width: .75rem;
+          margin: 0 0 0 $card-element-margin;
+          width: $card-element-margin;
         }
 
       }
@@ -84,61 +68,99 @@
 
   }
 
+  .card-body {
+
+    .card-footer {
+      padding: 0;
+    }
+
+  }
+
   .card-footer {
+    border: 0;
+    padding: $card-spacer-y 0;
   }
 
   .card-link {
     font-weight: $font-weight-semibold;
   }
 
-  #mooc-courses-section {
-    .card-body {
-      font-size: .875rem;
-    }
-  }
-
 }
 
-// 400 <= viewport witdth < 700 (smartphone landscape)
-@include media-breakpoint-up(sm) {
-  .card-body {
+// 500 <= viewport witdth < 750 (smartphone landscape)
+@include media-breakpoint-between(sm, lg) {
+  .course-item {
     align-items: flex-start;
-    display: flex;
-    flex-flow: row wrap;
-  }
+    flex-direction: row;
+    flex-wrap: wrap;
 
-  .card-subtitle {
-    flex: 0 0 100%;
-  }
+    .card-figure {
+      flex: 0 0 25%;
+      margin: 0 $card-element-margin $card-element-margin 0;
+    }
 
-  .card-figure {
-    flex: 0 0 128px;
-    height: 72px;
-    margin: 0 .5rem .5rem 0;
-    padding-top: 0;
-    position: static;
-  }
+    .ratio {
+      padding-top: 0;
+      position: static;
 
-  .card-img {
-    position: static;
+      > .img-fluid {
+        position: static;
+      }
+
+    }
+
+    .card-body {
+      align-items: flex-start;
+      display: flex;
+      flex-flow: row wrap;
+      margin: 0;
+    }
+
+    .card-subtitle {
+      flex: 0 0 100%;
+    }
+
+    .card-figure + .card-text {
+      flex: 1;
+    }
+
+    .card-text {
+      flex: 0 0 100%;
+    }
+
+    .card-footer {
+      flex: 0 0 100%;
+      margin-top: 0;
+    }
+
   }
 
 }
 
-// 700 <= viewport witdth < 1000 (tablet portrait)
+
+// 750 <= viewport witdth < 1000 (tablet portrait)
 @include media-breakpoint-up(md) {
 }
 
 // 1000 <= viewport witdth < 1200 (tablet landscape)
 @include media-breakpoint-up(lg) {
-  #mooc-courses-section {
+  .course-item {
+
     .card-figure {
-      order: -1;
+      flex: 0 0 20%;
     }
+
   }
 
 }
 
 // viewport witdth >= 1200 (desktop)
 @include media-breakpoint-up(xl) {
+  .card-title {
+  }
+
+  .card-footer {
+    margin-top: auto;
+  }
+
 }

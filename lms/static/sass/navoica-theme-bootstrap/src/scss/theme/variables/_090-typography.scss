@@ -4,27 +4,51 @@
 
 $font-family-base: "Signika Negative", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+$font-scale-ratio: 1.125; // major second
+
 $font-size-base: 1rem;
-$font-size-lg: 1.125rem;
-$font-size-sm: 0.875rem;
+$font-size-lg: $font-size-base * $font-scale-ratio;
+$font-size-sm: $font-size-base / $font-scale-ratio;
 
 $font-weight-thin: 300;
 $font-weight-extralight: 300;
+$font-weight-lighter: 300;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
+$font-weight-bolder: 800;
 $font-weight-extrabold: 800;
 $font-weight-black: 900;
 
-// Major second scale (1.125)
-$display4-size: 1.1250 * $font-size-base;
-$display3-size: 1.3125 * $font-size-base;
-$display2-size: 1.5000 * $font-size-base;
-$display1-size: 1.7500 * $font-size-base;
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.4238;
 
-$display1-weight: $font-weight-medium;
-$display2-weight: $font-weight-medium;
-$display3-weight: $font-weight-bold;
-$display4-weight: $font-weight-bold;
+$h6-font-size: $font-size-sm; // 14.22px
+$h5-font-size: $font-size-base; // 16px
+$h4-font-size: $h5-font-size * $font-scale-ratio; // 18px
+$h3-font-size: $h4-font-size * $font-scale-ratio; // 20.25px
+$h2-font-size: $h3-font-size * $font-scale-ratio; // 22.78px
+$h1-font-size: $h2-font-size * $font-scale-ratio; // 25.63px
+
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: 1.1250;
+$h6-line-height: 1.3125;
+$h5-line-height: 1.3125;
+$h4-line-height: 1.1250;
+$h3-line-height: 1.1429;
+$h2-line-height: 1.1667;
+$h1-line-height: 1.0000;
+
+// Major second scale (1.125)
+$display4-size: 1.5000 * $font-size-base; // 24
+$display3-size: 1.7500 * $font-size-base; // 28
+$display2-size: 2.0000 * $font-size-base; // 32
+$display1-size: 2.2500 * $font-size-base; // 36
+$display0-size: 3.0000 * $font-size-base; // 48
+
+$display4-weight: $font-weight-light;
+$display3-weight: $font-weight-light;
+$display2-weight: $font-weight-light;
+$display1-weight: $font-weight-light;

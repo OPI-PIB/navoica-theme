@@ -28,8 +28,10 @@
 
     > .container {
       justify-content: flex-start;
-      padding-left: $grid-vertical-padding;
-      padding-right: $grid-vertical-padding;
+      padding-bottom: 0;
+      padding-top: 0;
+      //padding-left: $grid-vertical-padding;
+      //padding-right: $grid-vertical-padding;
     }
 
   }
@@ -75,6 +77,15 @@
       //background: $teal;
     }
 
+  }
+
+  .container:first-of-type {
+    /*
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    */
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
   }
 
 }
