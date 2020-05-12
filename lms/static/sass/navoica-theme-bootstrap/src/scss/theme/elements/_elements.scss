@@ -37,15 +37,29 @@
 }
 
 
+#mooc-courses,
+#mooc-about-platform {
+  padding: $spacer*3 0;
+
+  footer {
+    padding: $spacer 0 0;
+  }
+
+  header {
+    padding: 0 0 $spacer*3
+  }
+
+}
+
 // Elementy sekcji "Nowe kursy" na stronie glownej serwisu
 
-#mooc-courses-section {
+#mooc-courses {
 
   // viewport witdth >= 1000 (tablet landscape)
   @include media-breakpoint-up(lg) {
 
     .card-title.h2 {
-      font-size: $h2-font-size / $font-scale-ratio;
+      font-size: $h2-font-size / $scale-ratio-major-second;
     }
 
   }
@@ -64,11 +78,11 @@
     // viewport witdth < 500 (smartphone portrait)
     @include media-breakpoint-up(xs) {
       flex-flow: column;
-      margin-bottom: 1rem;
+      margin-bottom: $spacer;
       text-align: center;
 
       .mooc-about-platform-figure {
-        background: $gray-100;
+        //background: $gray-100;
         box-sizing: border-box;
         border-radius: 50%;
         display: block;
@@ -77,12 +91,12 @@
         position: relative;
         width: 160px;
 
-        > .img-fluid {
-          height: 50%;
-          left: 25%;
+        .img-fluid {
+          height: 70%;
+          left: 15%;
           position: absolute;
-          top: 23%;
-          width: 50%;
+          top: 12%;
+          width: 70%;
         }
 
       }
@@ -92,9 +106,8 @@
     // viewport witdth >= 500 (smartphone landscape)
     @include media-breakpoint-up(sm) {
 
-
       flex-flow: row wrap;
-      margin: 0 auto 2rem;
+      margin: 0 auto $spacer * 2;
       max-width: 100%;
       text-align: left;
 
@@ -114,10 +127,10 @@
 
     // viewport witdth >= 1000 (tablet landscape)
     @include media-breakpoint-up(lg) {
-      font-size: $font-size-base * $font-scale-ratio;
+      font-size: $font-size-base * $scale-ratio-major-second;
 
       .card-title.h2 {
-        font-size: $h2-font-size * $font-scale-ratio;
+        font-size: $h2-font-size * $scale-ratio-major-second;
       }
 
     }
@@ -136,7 +149,7 @@
       padding: 0 0 0 $spacer;
 
       .mooc-about-platform-figure {
-        margin-left: $spacer * 2;
+        margin-left: $spacer*2;
         margin-right: 0;
       }
 
