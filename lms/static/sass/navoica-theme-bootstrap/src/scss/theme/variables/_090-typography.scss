@@ -1,0 +1,59 @@
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-base: "Signika Negative", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// Major second scale
+$scale-ratio-major-second: 1.125; // major second
+
+// Minor third scale
+$scale-ratio-minor-third: 1.250; // major second
+
+$font-size-base: 1rem;
+$font-size-lg: $font-size-base * $scale-ratio-major-second;
+$font-size-sm: $font-size-base / $scale-ratio-major-second;
+
+$font-weight-thin: 300;
+$font-weight-extralight: 300;
+$font-weight-lighter: 300;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: 800;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.4238;
+
+// Major second scale (1.125)
+$h6-font-size: $font-size-sm; // 14.22px
+$h5-font-size: $font-size-base; // 16px
+$h4-font-size: $h5-font-size * $scale-ratio-major-second; // 18px
+$h3-font-size: $h4-font-size * $scale-ratio-major-second; // 20.25px
+$h2-font-size: $h3-font-size * $scale-ratio-major-second; // 22.78px
+$h1-font-size: $h2-font-size * $scale-ratio-major-second; // 25.63px
+
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: 1.1250;
+$h6-line-height: 1.3125;
+$h5-line-height: 1.3125;
+$h4-line-height: 1.1250;
+$h3-line-height: 1.1429;
+$h2-line-height: 1.1667;
+$h1-line-height: 1.0000;
+
+// Minor third scale (1.250)
+$display4-size: $h2-font-size; // 22.78px
+$display3-size: $display4-size * $scale-ratio-minor-third; // 27.34px
+$display2-size: $display3-size * $scale-ratio-minor-third; // 32.80px
+$display1-size: $display2-size * $scale-ratio-minor-third; // 39.36px
+$display0-size: $display1-size * $scale-ratio-minor-third; // 47.24px
+
+$display4-weight: $font-weight-light;
+$display3-weight: $font-weight-light;
+$display2-weight: $font-weight-light;
+$display1-weight: $font-weight-light;

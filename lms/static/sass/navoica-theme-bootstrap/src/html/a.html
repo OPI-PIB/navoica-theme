@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="html front not-logged-in">
+<body id="mooc-home" class="html front not-logged-in">
 <nav id="skip-link" aria-label="Nawiguj do wybranych sekcji tej strony">
     <div class="list-group">
         <a href="#main" class="list-group-item list-group-item-action sr-only sr-only-focusable">Przeskocz do glownej tresci</a>
@@ -29,14 +29,13 @@
 
                 <nav id="nav" aria-label="Nawiguj do wybranych stron platformy Nawojka">
                     <div class="dropdown">
-                        <button id="mooc-courses"
-                                class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                        <button id="mooc-courses-button"
+                                class="btn btn-outline-primary border-secondary dropdown-toggle"
                                 data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" aria-label="Katalog kursów">
-                            <em class="fa fa-book"></em>
                             <span>Katalog kursów</span>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="mooc-courses"
+                        <div class="dropdown-menu" aria-labelledby="mooc-courses-button"
                              role="menu">
                             <a class="dropdown-item" href="b.html" role="menuitem">Wszystkie kursy</a>
                             <a class="dropdown-item" href="c.html" role="menuitem">Nauki komputerowe</a>
@@ -47,7 +46,7 @@
 
                     <div class="dropdown ml-auto">
                         <button id="mooc-my-mooc"
-                                class="btn btn-sm btn-outline-primary border-secondary dropdown-toggle"
+                                class="btn btn-outline-primary border-secondary dropdown-toggle"
                                 data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" aria-label="Moja Nawojka">
                             <em class="fa fa-user"></em>
@@ -69,41 +68,211 @@
     </header>
 
     <main id="main">
-        <section id="main-title">
-            <header>
+        <section id="mooc-main"
+                 aria-labelledby="mooc-main-header">
+            <header class="text-center">
                 <div class="container">
-                    <div class="jumbotron">
-                        <h1 id="main-title-header">Nauka dostępna</h1>
-                        <p id="main-title-description" class="lead">Bezpłatne kursy online oferowane przez polskie uczelnie i instytucje</p>
-
-                        <form id="mooc-search-form" class="form-inline" role="search" aria-label="Wyszukuj bezpłatne kursy online na platformie Nawojka">
-                            <div class="input-group">
-                                <input id="mooc-search-course-name" type="search" class="form-control form-control border-secondary" aria-label="Nazwa kursu lub słowa kluczowe opisujące kurs">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-primary border-secondary" type="submit" id="course-search-button">
-                                        <span class="sr-only">Wyszukaj kursy</span>
-                                        <em class="fas fa-search" aria-hidden="true"></em>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
+                    <h1 id="mooc-main-header" class="display-1">Nauka dostępna</h1>
+                    <p id="mooc-main-description" class="lead">Bezpłatne kursy online oferowane przez polskie uczelnie i instytucje</p>
                 </div>
             </header>
+            <div class="container">
+                <div class="jumbotron">
+                    <form id="mooc-search-form" class="form-inline" role="search" aria-label="Wyszukuj bezpłatne kursy online na platformie Nawojka">
+                        <div class="input-group">
+                            <input id="mooc-search-course-name" type="search" class="form-control form-control border-secondary"
+                                   aria-label="Nazwa kursu lub słowa kluczowe opisujące kurs">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-primary border-secondary" type="submit" id="course-search-button">
+                                    <span class="sr-only">Wyszukaj kursy</span>
+                                    <em class="fas fa-search" aria-hidden="true"></em>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
 
-        <section>
+        <section id="mooc-courses" class="bg-light"
+                 aria-labelledby="mooc-courses-header">
+            <header class="text-center">
+                <div class="container">
+                    <h2 id="mooc-courses-header" class="display-2">Nowe kursy</h2>
+                </div>
+            </header>
             <div class="container">
-                <h2>Nowe kursy</h2>
-                <p>But I must explain to you how all this mistaken idea.</p>
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="card course-item">
+                            <figure class="card-figure ratio ratio-16-9 figure">
+                                <img class="card-img img-fluid"
+                                     src="https://images.unsplash.com/photo-1511745235279-2f7276d5ba65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                                     alt="">
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title h2">
+                                    <a href="b.html">Metody i narzędzia wizualizacji geodanych</a>
+                                </h3>
+                                <div class="card-subtitle h5">Wojskowa Akademia Techniczna im. Jarosława Dąbrowskiego</div>
+                                <div class="card-text">
+                                    <p>Kurs umożliwi poznanie prostych metod i narzędzi do wizualizacji danych przestrzennych.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div>
+                                        Rozpoczecie: <strong>4 maja 2020</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card course-item">
+                            <figure class="card-figure ratio ratio-16-9 figure">
+                                <img class="card-img img-fluid"
+                                     src="https://images.unsplash.com/photo-1531268987752-b48c6b456bb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                                     alt="">
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title h2">
+                                    <a href="b.html">Sukces to nie przypadek. Zbuduj swoje kompetencje przedsiębiorcze.</a>
+                                </h3>
+                                <div class="card-subtitle h5">Uniwersytet im. Adama Mickiewicza w Poznaniu</div>
+                                <div class="card-text">
+                                    <p>Kurs dedykowany pedagogom, nauczycielom oraz innym osobom pragnącym zdobyć kompetencje w zakresie przedsiębiorczości.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div>
+                                        Rozpoczecie: <strong>4 maja 2020</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card course-item">
+                            <figure class="card-figure ratio ratio-16-9 figure">
+                                <img class="card-img img-fluid"
+                                     src="https://images.unsplash.com/photo-1586815634274-bf5eb51055c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                                     alt="">
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title h2">
+                                    <a href="c.html">Zdjęcia satelitarne w szkole</a>
+                                </h3>
+                                <div class="card-subtitle h5">Centrum Nauki Kopernik</div>
+                                <div class="card-text">
+                                    <p>Kurs jest przeznaczony dla nauczycielek i nauczycieli zainteresowanych zastosowaniem zdjęć satelitarnych podczas lekcji szkolnych.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div>
+                                        Rozpoczecie: <strong>27 pazdziernika 2020</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card course-item">
+                            <figure class="card-figure ratio ratio-16-9 figure">
+                                <img class="card-img img-fluid"
+                                     src="https://images.unsplash.com/photo-1529776264670-2ed1e56cfe6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                                     alt="">
+                            </figure>
+                            <div class="card-body">
+                                <h3 class="card-title h2">
+                                    <a href="d.html">Wykorzystanie technologii informacyjno-komunikacyjnych w pracy nauczyciela</a>
+                                </h3>
+                                <div class="card-subtitle h5">Uniwersytet im. Adama Mickiewicza w Poznaniu</div>
+                                <div class="card-text">
+                                    <p>Kurs zawiera informacje oraz praktyczne instrukcje wdrożeniowe, które pozwolą edukatorom na wszechstronne wykorzystanie technologii
+                                        informacyjno-komunikacyjnych w dydaktyce.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div>
+                                        Rozpoczecie: <strong>18 maja 2020</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <footer class="text-center">
+                <div class="container">
+                    <a id="mooc-courses-all-button"
+                       href="b.html"
+                       class="btn btn-lg btn-primary">Wyświetl wszystkie kursy</a>
+                </div>
+            </footer>
         </section>
-        <section>
+
+        <section id="mooc-about-platform"
+                 aria-labelledby="mooc-about-platform-header">
+            <header class="text-center">
+                <div class="container">
+                    <h2 id="mooc-about-platform-header" class="display-2">O platformie Navoica</h2>
+                </div>
+            </header>
             <div class="container">
-                <h2>O platformie Navoica</h2>
-                <p>On the other hand, we denounce with righteous indignation and dislike men.</p>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <article class="mooc-about-platform-item"
+                                 aria-labelledby="mooc-about-platform-item-1-header">
+                            <figure class="figure mooc-about-platform-figure">
+                                <img class="img-fluid mooc-about-platform-img"
+                                     src="assets/iconfinder_506_growth__knowledge_growth_knowledge_education_4212908.png"
+                                     alt="">
+                            </figure>
+                            <div class="card-body">
+                                <h3 id="mooc-about-platform-item-1-header" class="card-title h2">Bogata oferta wirtualnych kursów</h3>
+                                <div class="card-text">
+                                    <p>Szeroki zakres tematyczny kursów o zróżnicowanym poziomie trudności. Każdy kursant znajdzie dla siebie interesujący kurs.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12">
+                        <article class="mooc-about-platform-item"
+                                 aria-labelledby="mooc-about-platform-item-2-header">
+                            <figure class="figure mooc-about-platform-figure">
+                                <img class="img-fluid mooc-about-platform-img"
+                                     src="assets/iconfinder_509_mouse_graduation_online_education_4212905.png"
+                                     alt="">
+                            </figure>
+                            <div class="card-body">
+                                <h3 id="mooc-about-platform-item-2-header" class="card-title h2">Ogólnodostępna platforma kształcenia</h3>
+                                <div class="card-text">
+                                    <p>Dzięki platformie internetowej Navoica dotrzemy do każdego, kto chce się uczyć – bez względu na wiek i&nbsp;miejsce zamieszkania.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12">
+                        <article class="mooc-about-platform-item"
+                                 aria-labelledby="mooc-about-platform-item-3-header">
+                            <figure class="figure mooc-about-platform-figure">
+                                <img class="img-fluid mooc-about-platform-img"
+                                     src="assets/iconfinder_519_laptop_hardware_arrow_education_4212895.png"
+                                     alt="">
+                            </figure>
+                            <div class="card-body">
+                                <h3 id="mooc-about-platform-item-3-header" class="card-title h2">Sieć współpracy uczelni i&nbsp;instytucji</h3>
+                                <div class="card-text">
+                                    <p>Nowy ekosystem kształcenia online skupia: uczelnie, instytucje naukowe, biznes i&nbsp;organizacje pozarządowe.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
+            <footer class="text-center">
+                <div class="container">
+                    <a id="mooc-about-platform-button"
+                       href="b.html"
+                       class="btn btn-lg btn-outline-primary border-secondary">Dowiedz się więcej o Navoice</a>
+                </div>
+            </footer>
         </section>
     </main>
 

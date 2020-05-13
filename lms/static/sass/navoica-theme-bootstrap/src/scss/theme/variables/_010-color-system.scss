@@ -3,7 +3,7 @@
 
 $red: #e41d37;
 
-$primary: $red;
+$primary: darken($red, 5%);
 $danger: $pink;
 
 $theme-colors: (
@@ -16,8 +16,3 @@ $theme-colors: (
         "tertiary": gray("300"),
         "quaternary": gray("100")
 );
-
-// Links
-//
-
-$link-color: theme-color("primary");

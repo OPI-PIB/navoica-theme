@@ -1,4 +1,167 @@
 @include media-breakpoint-up(xs) {
+  .ratio {
+    position: relative;
+  }
+
+  .ratio {
+    &-1-1 {
+      padding-top: 100%;
+    }
+
+    &-16-9 {
+      padding-top: calc(9 / 16 * 100%);
+    }
+
+    &-4-3 {
+      padding-top: calc(3 / 4 * 100%);
+    }
+
+    &-3-2 {
+      padding-top: calc(2 / 3 * 100%);
+    }
+
+    &-8-5 {
+      padding-top: calc(5 / 8 * 100%);
+    }
+
+    > .img-fluid {
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+  }
+
+}
+
+
+#mooc-courses,
+#mooc-about-platform {
+  padding: $spacer*3 0;
+
+  footer {
+    padding: $spacer 0 0;
+  }
+
+  header {
+    padding: 0 0 $spacer*3
+  }
+
+}
+
+// Elementy sekcji "Nowe kursy" na stronie glownej serwisu
+
+#mooc-courses {
+
+  // viewport witdth >= 1000 (tablet landscape)
+  @include media-breakpoint-up(lg) {
+
+    .card-title.h2 {
+      font-size: $h2-font-size / $scale-ratio-major-second;
+    }
+
+  }
+
+}
+
+
+// Elementy sekcji "O platformie Navoica" na stronie glownej serwisu
+
+#mooc-about-platform {
+
+  .mooc-about-platform-item {
+    display: flex;
+    padding: 0 $spacer 0 0;
+
+    // viewport witdth < 500 (smartphone portrait)
+    @include media-breakpoint-up(xs) {
+      flex-flow: column;
+      margin-bottom: $spacer;
+      text-align: center;
+
+      .mooc-about-platform-figure {
+        //background: $gray-100;
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: block;
+        height: 160px;
+        margin: 0 auto;
+        position: relative;
+        width: 160px;
+
+        .img-fluid {
+          height: 70%;
+          left: 15%;
+          position: absolute;
+          top: 12%;
+          width: 70%;
+        }
+
+      }
+
+    }
+
+    // viewport witdth >= 500 (smartphone landscape)
+    @include media-breakpoint-up(sm) {
+
+      flex-flow: row wrap;
+      margin: 0 auto $spacer * 2;
+      max-width: 100%;
+      text-align: left;
+
+      .mooc-about-platform-figure {
+        margin-right: $spacer * 2;
+      }
+
+      .card-title {
+      }
+
+    }
+
+    // viewport witdth >= 750 (tablet portrait)
+    @include media-breakpoint-up(md) {
+      max-width: 75%;
+    }
+
+    // viewport witdth >= 1000 (tablet landscape)
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-base * $scale-ratio-major-second;
+
+      .card-title.h2 {
+        font-size: $h2-font-size * $scale-ratio-major-second;
+      }
+
+    }
+
+    // viewport witdth >= 1200 (desktop)
+    @include media-breakpoint-up(xl) {
+      max-width: 60%;
+    }
+
+  }
+
+  @include media-breakpoint-up(sm) {
+
+    .row > div:nth-child(even) .mooc-about-platform-item {
+      flex-direction: row-reverse;
+      padding: 0 0 0 $spacer;
+
+      .mooc-about-platform-figure {
+        margin-left: $spacer*2;
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+}
+
+// Others
+
+@include media-breakpoint-up(xs) {
 
   a:not(.btn):focus {
     color: $link-color;
@@ -67,18 +230,6 @@
 
 @include media-breakpoint-up(sm) {
 
-  #mooc-search-form {
-
-    .input-group {
-      flex: 0 1 $mooc-search-form-width-sm;
-    }
-
-  }
-
-}
-
-@include media-breakpoint-up(md) {
-
   #header {
 
     .btn {
@@ -98,13 +249,21 @@
   #mooc-search-form {
 
     .input-group {
-      flex: 0 1 $mooc-search-form-width-md;
+      flex: 0 1 $mooc-search-form-width-sm;
     }
 
   }
 
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
+
+  #mooc-search-form {
+
+    .input-group {
+      flex: 0 1 $mooc-search-form-width-md;
+    }
+
+  }
 
 }

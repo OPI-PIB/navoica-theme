@@ -1,0 +1,10 @@
+// Body
+//
+
+// viewport witdth < 400 (smartphone portrait)
+@include media-breakpoint-up(xs) {
+  //$font-size-base: .875rem;
+  body {
+    font-size: $font-size-base;
+  }
+}

@@ -1,7 +1,7 @@
 // Custom.scss
+
+
 // Include parts of Bootstrap
-
-
 
 // Required
 
@@ -10,23 +10,46 @@
 @import "../../../bootstrap-4.4.1/scss/mixins";
 
 
-
 // Our variable overrides (variables only!)
 
-@import "theme/variables/content/typography";
-
-@import "theme/variables/utilities/colors";
-@import "theme/variables/utilities/spacing";
-@import "theme/variables/layout/grid";
-
-@import "theme/variables/components/common";
-@import "theme/variables/components/button_and_form";
-@import "theme/variables/components/card";
-@import "theme/variables/components/dropdown";
-@import "theme/variables/components/navbar";
-
-@import "theme/variables/options/border";
-
+@import "theme/variables/010-color-system";
+@import "theme/variables/020-options";
+@import "theme/variables/030-spacing";
+@import "theme/variables/040-body";
+@import "theme/variables/050-links";
+@import "theme/variables/060-paragraphs";
+@import "theme/variables/070-grid-breakpoints";
+@import "theme/variables/080-components";
+@import "theme/variables/090-typography";
+@import "theme/variables/100-tables";
+@import "theme/variables/110-buttons-forms";
+@import "theme/variables/120-buttons";
+@import "theme/variables/130-forms";
+@import "theme/variables/140-form-validation";
+@import "theme/variables/150-z-index";
+@import "theme/variables/160-navs";
+@import "theme/variables/170-navbar";
+@import "theme/variables/180-dropdowns";
+@import "theme/variables/190-pagination";
+@import "theme/variables/200-jumbotron";
+@import "theme/variables/210-cards";
+@import "theme/variables/220-tooltips";
+@import "theme/variables/230-popovers";
+@import "theme/variables/240-toasts";
+@import "theme/variables/250-badges";
+@import "theme/variables/260-modals";
+@import "theme/variables/270-alerts";
+@import "theme/variables/280-progress-bars";
+@import "theme/variables/290-list-group";
+@import "theme/variables/300-image-thumbnails";
+@import "theme/variables/310-figures";
+@import "theme/variables/320-breadcrumbs";
+@import "theme/variables/330-carousel";
+@import "theme/variables/340-spinners";
+@import "theme/variables/350-close";
+@import "theme/variables/360-code";
+@import "theme/variables/370-utilities";
+@import "theme/variables/380-printing";
 
 
 // Libraries
@@ -40,7 +63,15 @@
 @import "vendors/fontawesome-free-5.12.1-web/scss/solid";
 @import "vendors/fontawesome-free-5.12.1-web/scss/brands";
 
+
 // Our own styles
+
+// Components
+@import "theme/components/reboot";
+@import "theme/components/type";
+@import "theme/components/grid";
+@import "theme/components/card";
+@import "theme/components/dropdown";
 
 @import "theme/elements/elements";
 
