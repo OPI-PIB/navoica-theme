@@ -19510,14 +19510,37 @@ mark,
   padding: 0 0 3rem;
 }
 
-@media (min-width: 1000px) {
-  /* line 61, src/scss/theme/elements/_elements.scss */
+/* line 56, src/scss/theme/elements/_elements.scss */
+#mooc-main {
+  background-image: url(../assets/photo-keyboard.06fded964f3c.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 62, src/scss/theme/elements/_elements.scss */
+#mooc-main-jumbotron {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 3rem 0;
+}
+
+/* line 67, src/scss/theme/elements/_elements.scss */
+#mooc-main-jumbotron header {
+  padding: 0 0 3rem;
+}
+
+/* line 72, src/scss/theme/elements/_elements.scss */
+#mooc-main-jumbotron #mooc-main-header {
+  font-size: 3.47614rem;
+}
+
+@media (min-width: 1200px) {
+  /* line 86, src/scss/theme/elements/_elements.scss */
   #mooc-courses .card-title.h2 {
     font-size: 1.26563rem;
   }
 }
 
-/* line 74, src/scss/theme/elements/_elements.scss */
+/* line 99, src/scss/theme/elements/_elements.scss */
 #mooc-about-platform .mooc-about-platform-item {
   display: flex;
   padding: 0 1rem 0 0;
@@ -19526,7 +19549,7 @@ mark,
   text-align: center;
 }
 
-/* line 84, src/scss/theme/elements/_elements.scss */
+/* line 109, src/scss/theme/elements/_elements.scss */
 #mooc-about-platform .mooc-about-platform-item .mooc-about-platform-figure {
   box-sizing: border-box;
   border-radius: 50%;
@@ -19537,7 +19560,7 @@ mark,
   width: 160px;
 }
 
-/* line 94, src/scss/theme/elements/_elements.scss */
+/* line 119, src/scss/theme/elements/_elements.scss */
 #mooc-about-platform .mooc-about-platform-item .mooc-about-platform-figure .img-fluid {
   height: 70%;
   left: 15%;
@@ -19547,64 +19570,64 @@ mark,
 }
 
 @media (min-width: 500px) {
-  /* line 74, src/scss/theme/elements/_elements.scss */
+  /* line 99, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     flex-flow: row wrap;
     margin: 0 auto 2rem;
     max-width: 100%;
     text-align: left;
   }
-  /* line 114, src/scss/theme/elements/_elements.scss */
+  /* line 139, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item .mooc-about-platform-figure {
     margin-right: 2rem;
   }
 }
 
 @media (min-width: 750px) {
-  /* line 74, src/scss/theme/elements/_elements.scss */
+  /* line 99, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     max-width: 75%;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 74, src/scss/theme/elements/_elements.scss */
+  /* line 99, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     font-size: 1.125rem;
   }
-  /* line 132, src/scss/theme/elements/_elements.scss */
+  /* line 157, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item .card-title.h2 {
     font-size: 1.60181rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 74, src/scss/theme/elements/_elements.scss */
+  /* line 99, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     max-width: 60%;
   }
 }
 
 @media (min-width: 500px) {
-  /* line 147, src/scss/theme/elements/_elements.scss */
+  /* line 172, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .row > div:nth-child(even) .mooc-about-platform-item {
     flex-direction: row-reverse;
     padding: 0 0 0 1rem;
   }
-  /* line 151, src/scss/theme/elements/_elements.scss */
+  /* line 176, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .row > div:nth-child(even) .mooc-about-platform-item .mooc-about-platform-figure {
     margin-left: 2rem;
     margin-right: 0;
   }
 }
 
-/* line 166, src/scss/theme/elements/_elements.scss */
+/* line 191, src/scss/theme/elements/_elements.scss */
 a:not(.btn):focus {
   color: #cf1930;
   outline: 0.2rem solid rgba(207, 25, 48, 0.5);
 }
 
-/* line 171, src/scss/theme/elements/_elements.scss */
+/* line 196, src/scss/theme/elements/_elements.scss */
 #skip-link {
   position: fixed;
   top: 0;
@@ -19612,7 +19635,7 @@ a:not(.btn):focus {
   z-index: 2000;
 }
 
-/* line 177, src/scss/theme/elements/_elements.scss */
+/* line 202, src/scss/theme/elements/_elements.scss */
 #skip-link .sr-only-focusable:focus {
   padding-bottom: 8px;
   padding-top: 8px;
@@ -19620,58 +19643,58 @@ a:not(.btn):focus {
   width: 100%;
 }
 
-/* line 188, src/scss/theme/elements/_elements.scss */
+/* line 213, src/scss/theme/elements/_elements.scss */
 #header #nav {
   display: flex;
   flex: 1;
 }
 
-/* line 195, src/scss/theme/elements/_elements.scss */
+/* line 220, src/scss/theme/elements/_elements.scss */
 #header .navbar-brand img {
   height: 22px;
   position: relative;
   top: -5px;
 }
 
-/* line 207, src/scss/theme/elements/_elements.scss */
+/* line 232, src/scss/theme/elements/_elements.scss */
 .btn .fa, .btn .fab, .btn .fad, .btn .fal, .btn .far, .btn .fas {
   font-size: calc(1em + -1px);
 }
 
-/* line 211, src/scss/theme/elements/_elements.scss */
+/* line 236, src/scss/theme/elements/_elements.scss */
 .btn .fa:first-child + span {
   display: none;
 }
 
-/* line 219, src/scss/theme/elements/_elements.scss */
+/* line 244, src/scss/theme/elements/_elements.scss */
 #mooc-search-form {
   flex: 1;
   margin-left: 8px;
   margin-right: 8px;
 }
 
-/* line 224, src/scss/theme/elements/_elements.scss */
+/* line 249, src/scss/theme/elements/_elements.scss */
 #mooc-search-form .input-group {
   flex: 1;
 }
 
 @media (min-width: 500px) {
-  /* line 237, src/scss/theme/elements/_elements.scss */
+  /* line 262, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child {
     display: none;
   }
-  /* line 241, src/scss/theme/elements/_elements.scss */
+  /* line 266, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child + span {
     display: inline-block;
   }
-  /* line 251, src/scss/theme/elements/_elements.scss */
+  /* line 276, src/scss/theme/elements/_elements.scss */
   #mooc-search-form .input-group {
     flex: 0 1 300px;
   }
 }
 
 @media (min-width: 750px) {
-  /* line 263, src/scss/theme/elements/_elements.scss */
+  /* line 288, src/scss/theme/elements/_elements.scss */
   #mooc-search-form .input-group {
     flex: 0 1 350px;
   }

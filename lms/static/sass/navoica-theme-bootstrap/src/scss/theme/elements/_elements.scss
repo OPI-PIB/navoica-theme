@@ -51,12 +51,37 @@
 
 }
 
+// Elementy sekcji "Nauka dostępna" na stronie glownej serwisu
+
+#mooc-main {
+  background-image: url(../assets/photo-keyboard.06fded964f3c.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+#mooc-main-jumbotron {
+  background: rgba(255, 255, 255, .75);
+
+  padding: $spacer*3 0;
+
+  header {
+    padding: 0 0 $spacer*3
+
+  }
+
+  #mooc-main-header {
+    font-size: $display0-size;
+  }
+
+}
+
+
 // Elementy sekcji "Nowe kursy" na stronie glownej serwisu
 
 #mooc-courses {
 
-  // viewport witdth >= 1000 (tablet landscape)
-  @include media-breakpoint-up(lg) {
+  // viewport witdth >= 1200 (desktop)
+  @include media-breakpoint-up(xl) {
 
     .card-title.h2 {
       font-size: $h2-font-size / $scale-ratio-major-second;
