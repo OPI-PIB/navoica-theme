@@ -54,23 +54,56 @@
 // Elementy sekcji "Nauka dostępna" na stronie glownej serwisu
 
 #mooc-main {
-  background-image: url(../assets/photo-keyboard.06fded964f3c.jpg);
-  background-position: center center;
-  background-size: cover;
-}
+  position: relative;
 
-#mooc-main-jumbotron {
-  background: rgba(255, 255, 255, .75);
-
-  padding: $spacer*3 0;
-
-  header {
-    padding: 0 0 $spacer*3
-
+  &::before {
+    background-image: url(../assets/photo-keyboard.06fded964f3c.jpg);
+    background-position: center center;
+    background-size: cover;
+    bottom: 0;
+    content: "";
+    filter: grayscale(1);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
-  #mooc-main-header {
-    font-size: $display0-size;
+  #mooc-main-jumbotron {
+    background: rgba(255, 255, 255, .75);
+    background: linear-gradient(135deg, rgba(191, 24, 44, .9) 0%, rgba(228, 29, 55, .9) 100%);
+    background: linear-gradient(135deg, rgba(177, 14, 34, 0.85), rgba(138, 46, 97, 0.85));
+    padding: $spacer*4 0;
+    position: relative;
+
+    header {
+      color: $white;
+      padding: 0 0 $spacer*2;
+    }
+
+    @include media-breakpoint-up(xl) {
+      #mooc-main-header {
+        font-size: $display0-size;
+        letter-spacing: .02em;
+        margin-bottom: $spacer;
+        text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.13);
+        text-transform: uppercase;
+      }
+
+      #mooc-search-form {
+        flex: 1;
+        margin: 0 auto;
+        max-width: 75%;
+
+        .input-group {
+          background: rgba(0, 0, 0, 0.13);
+          padding: $spacer;
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -272,11 +305,11 @@
   }
 
   #mooc-search-form {
-
+    /*
     .input-group {
       flex: 0 1 $mooc-search-form-width-sm;
     }
-
+    */
   }
 
 }
@@ -284,11 +317,11 @@
 @include media-breakpoint-up(md) {
 
   #mooc-search-form {
-
+    /*
     .input-group {
       flex: 0 1 $mooc-search-form-width-md;
     }
-
+    */
   }
 
 }

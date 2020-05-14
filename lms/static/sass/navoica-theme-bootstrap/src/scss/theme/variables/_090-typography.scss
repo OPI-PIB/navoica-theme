@@ -51,9 +51,10 @@ $display4-size: $h2-font-size; // 22.78px
 $display3-size: $display4-size * $scale-ratio-minor-third; // 27.34px
 $display2-size: $display3-size * $scale-ratio-minor-third; // 32.80px
 $display1-size: $display2-size * $scale-ratio-minor-third; // 39.36px
-$display0-size: $display1-size * $scale-ratio-minor-third; // 47.24px
+$display0-size: $display1-size * $scale-ratio-minor-third * $scale-ratio-minor-third; // 47.24px
 
 $display4-weight: $font-weight-light;
 $display3-weight: $font-weight-light;
 $display2-weight: $font-weight-light;
 $display1-weight: $font-weight-light;
+$display0-weight: $font-weight-bold;
