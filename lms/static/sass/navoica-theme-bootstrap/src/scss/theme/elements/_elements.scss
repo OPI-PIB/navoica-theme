@@ -39,14 +39,45 @@
 
 #mooc-courses,
 #mooc-about-platform {
-  padding: $spacer*3 0;
 
-  footer {
-    padding: $spacer 0 0;
+  // viewport witdth < 500 (smartphone portrait)
+  @include media-breakpoint-up(xs) {
+    padding: $spacer*2 0;
+
+    footer {
+      padding: $spacer 0 0;
+    }
+
+    header {
+      padding: 0 0 $spacer;
+    }
+
   }
 
-  header {
-    padding: 0 0 $spacer*3
+  // viewport witdth >= 500 (smartphone landscape)
+  @include media-breakpoint-up(sm) {
+  }
+
+  // viewport witdth >= 750 (tablet portrait)
+  @include media-breakpoint-up(md) {
+    padding: $spacer*3 0;
+
+    footer {
+      padding: $spacer 0 0;
+    }
+
+    header {
+      padding: 0 0 $spacer*2
+    }
+
+  }
+
+  // viewport witdth >= 1000 (tablet landscape)
+  @include media-breakpoint-up(lg) {
+  }
+
+  // viewport witdth >= 1200 (desktop)
+  @include media-breakpoint-up(xl) {
   }
 
 }
@@ -71,24 +102,30 @@
 
   #mooc-main-jumbotron {
     background: rgba(255, 255, 255, .75);
-    background: linear-gradient(135deg, #bf182cee 0%, #e41d37dd 100%);
-    padding: $spacer*4 0;
+    //background: linear-gradient(135deg, #bf182cee 0%, #e41d37dd 100%);
     position: relative;
-
-    header {
-      color: $white;
-      padding: 0 0 $spacer*2;
-    }
 
     // viewport witdth < 500 (smartphone portrait)
     @include media-breakpoint-up(xs) {
+      padding: $spacer*2 0;
+
+      header {
+        //color: $white;
+        padding: 0 0 $spacer;
+      }
+
       #mooc-main-header {
-        font-size: $display1-size * $scale-ratio-minor-third;
+        font-size: $display1-size;
         letter-spacing: .02em;
         margin-bottom: $spacer;
-        text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+        text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.13);
         text-transform: uppercase;
       }
+
+      #mooc-main-description {
+        font-size: $display3-size / $scale-ratio-minor-third;
+      }
+
     }
 
     // viewport witdth >= 500 (smartphone landscape)
@@ -100,26 +137,34 @@
     // viewport witdth >= 750 (tablet portrait)
     @include media-breakpoint-up(md) {
       #mooc-main-header {
-        font-size: $display1-size * $scale-ratio-minor-third * $scale-ratio-minor-third;
+        font-size: $display1-size * $scale-ratio-minor-third;
       }
+
+      #mooc-main-description {
+        font-size: $display3-size;
+      }
+
     }
 
     // viewport witdth >= 1000 (tablet landscape)
     @include media-breakpoint-up(lg) {
+      padding: $spacer*3 0;
     }
 
     // viewport witdth >= 1200 (desktop)
     @include media-breakpoint-up(xl) {
+      padding: $spacer*4 0;
+
       #mooc-main-header {
+        font-size: $display1-size * $scale-ratio-minor-third * $scale-ratio-minor-third;
       }
 
       #mooc-search-form {
         flex: 1;
         margin: 0 auto;
-        //max-width: 75%;
 
         .input-group {
-          background: rgba(0, 0, 0, 0.13);
+          background: rgba(0, 0, 0, 0.08);
           padding: $spacer;
         }
 
@@ -192,13 +237,6 @@
       max-width: 100%;
       text-align: left;
 
-      .mooc-about-platform-figure {
-        margin-right: $spacer * 2;
-      }
-
-      .card-title {
-      }
-
     }
 
     // viewport witdth >= 750 (tablet portrait)
@@ -209,6 +247,10 @@
     // viewport witdth >= 1000 (tablet landscape)
     @include media-breakpoint-up(lg) {
       font-size: $font-size-base * $scale-ratio-major-second;
+
+      .mooc-about-platform-figure {
+        margin-right: $spacer * 2;
+      }
 
       .card-title.h2 {
         font-size: $h2-font-size * $scale-ratio-major-second;
