@@ -497,7 +497,7 @@ hr {
 /* line 67, ../bootstrap-4.4.1/scss/_type.scss */
 small,
 .small {
-  font-size: 80%;
+  font-size: 88.88889%;
   font-weight: 400;
 }
 
@@ -19232,7 +19232,7 @@ hr {
 /* line 84, src/scss/theme/components/_type.scss */
 small,
 .small {
-  font-size: 80%;
+  font-size: 88.88889%;
   font-weight: 400;
 }
 
@@ -19495,27 +19495,45 @@ mark,
 /* line 40, src/scss/theme/elements/_elements.scss */
 #mooc-courses,
 #mooc-about-platform {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
-/* line 44, src/scss/theme/elements/_elements.scss */
+/* line 47, src/scss/theme/elements/_elements.scss */
 #mooc-courses footer,
 #mooc-about-platform footer {
   padding: 1rem 0 0;
 }
 
-/* line 48, src/scss/theme/elements/_elements.scss */
+/* line 51, src/scss/theme/elements/_elements.scss */
 #mooc-courses header,
 #mooc-about-platform header {
-  padding: 0 0 3rem;
+  padding: 0 0 1rem;
 }
 
-/* line 56, src/scss/theme/elements/_elements.scss */
+@media (min-width: 750px) {
+  /* line 40, src/scss/theme/elements/_elements.scss */
+  #mooc-courses,
+  #mooc-about-platform {
+    padding: 3rem 0;
+  }
+  /* line 65, src/scss/theme/elements/_elements.scss */
+  #mooc-courses footer,
+  #mooc-about-platform footer {
+    padding: 1rem 0 0;
+  }
+  /* line 69, src/scss/theme/elements/_elements.scss */
+  #mooc-courses header,
+  #mooc-about-platform header {
+    padding: 0 0 2rem;
+  }
+}
+
+/* line 87, src/scss/theme/elements/_elements.scss */
 #mooc-main {
   position: relative;
 }
 
-/* line 59, src/scss/theme/elements/_elements.scss */
+/* line 90, src/scss/theme/elements/_elements.scss */
 #mooc-main::before {
   background-image: url(../assets/photo-keyboard.06fded964f3c.jpg);
   background-position: center center;
@@ -19528,57 +19546,79 @@ mark,
   top: 0;
 }
 
-/* line 72, src/scss/theme/elements/_elements.scss */
+/* line 103, src/scss/theme/elements/_elements.scss */
 #mooc-main #mooc-main-jumbotron {
   background: rgba(255, 255, 255, 0.75);
-  background: linear-gradient(135deg, #bf182cee 0%, #e41d37dd 100%);
-  padding: 4rem 0;
   position: relative;
+  padding: 2rem 0;
 }
 
-/* line 78, src/scss/theme/elements/_elements.scss */
+/* line 112, src/scss/theme/elements/_elements.scss */
 #mooc-main #mooc-main-jumbotron header {
-  color: #fff;
-  padding: 0 0 2rem;
+  padding: 0 0 1rem;
 }
 
-/* line 85, src/scss/theme/elements/_elements.scss */
+/* line 117, src/scss/theme/elements/_elements.scss */
 #mooc-main #mooc-main-jumbotron #mooc-main-header {
-  font-size: 3.47614rem;
+  font-size: 2.78091rem;
   letter-spacing: .02em;
   margin-bottom: 1rem;
-  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.13);
   text-transform: uppercase;
 }
 
+/* line 125, src/scss/theme/elements/_elements.scss */
+#mooc-main #mooc-main-jumbotron #mooc-main-description {
+  font-size: 1.42383rem;
+}
+
 @media (min-width: 750px) {
-  /* line 102, src/scss/theme/elements/_elements.scss */
+  /* line 139, src/scss/theme/elements/_elements.scss */
   #mooc-main #mooc-main-jumbotron #mooc-main-header {
-    font-size: 4.34518rem;
+    font-size: 3.47614rem;
+  }
+  /* line 143, src/scss/theme/elements/_elements.scss */
+  #mooc-main #mooc-main-jumbotron #mooc-main-description {
+    font-size: 1.77979rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* line 103, src/scss/theme/elements/_elements.scss */
+  #mooc-main #mooc-main-jumbotron {
+    padding: 3rem 0;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 116, src/scss/theme/elements/_elements.scss */
+  /* line 103, src/scss/theme/elements/_elements.scss */
+  #mooc-main #mooc-main-jumbotron {
+    padding: 4rem 0;
+  }
+  /* line 158, src/scss/theme/elements/_elements.scss */
+  #mooc-main #mooc-main-jumbotron #mooc-main-header {
+    font-size: 4.34518rem;
+  }
+  /* line 162, src/scss/theme/elements/_elements.scss */
   #mooc-main #mooc-main-jumbotron #mooc-search-form {
     flex: 1;
     margin: 0 auto;
   }
-  /* line 121, src/scss/theme/elements/_elements.scss */
+  /* line 166, src/scss/theme/elements/_elements.scss */
   #mooc-main #mooc-main-jumbotron #mooc-search-form .input-group {
-    background: rgba(0, 0, 0, 0.13);
+    background: rgba(0, 0, 0, 0.08);
     padding: 1rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 142, src/scss/theme/elements/_elements.scss */
+  /* line 187, src/scss/theme/elements/_elements.scss */
   #mooc-courses .card-title.h2 {
     font-size: 1.26563rem;
   }
 }
 
-/* line 155, src/scss/theme/elements/_elements.scss */
+/* line 200, src/scss/theme/elements/_elements.scss */
 #mooc-about-platform .mooc-about-platform-item {
   display: flex;
   padding: 0 1rem 0 0;
@@ -19587,7 +19627,7 @@ mark,
   text-align: center;
 }
 
-/* line 165, src/scss/theme/elements/_elements.scss */
+/* line 210, src/scss/theme/elements/_elements.scss */
 #mooc-about-platform .mooc-about-platform-item .mooc-about-platform-figure {
   box-sizing: border-box;
   border-radius: 50%;
@@ -19598,7 +19638,7 @@ mark,
   width: 160px;
 }
 
-/* line 175, src/scss/theme/elements/_elements.scss */
+/* line 220, src/scss/theme/elements/_elements.scss */
 #mooc-about-platform .mooc-about-platform-item .mooc-about-platform-figure .img-fluid {
   height: 70%;
   left: 15%;
@@ -19608,64 +19648,112 @@ mark,
 }
 
 @media (min-width: 500px) {
-  /* line 155, src/scss/theme/elements/_elements.scss */
+  /* line 200, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     flex-flow: row wrap;
     margin: 0 auto 2rem;
     max-width: 100%;
     text-align: left;
   }
-  /* line 195, src/scss/theme/elements/_elements.scss */
-  #mooc-about-platform .mooc-about-platform-item .mooc-about-platform-figure {
-    margin-right: 2rem;
-  }
 }
 
 @media (min-width: 750px) {
-  /* line 155, src/scss/theme/elements/_elements.scss */
+  /* line 200, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     max-width: 75%;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 155, src/scss/theme/elements/_elements.scss */
+  /* line 200, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     font-size: 1.125rem;
   }
-  /* line 213, src/scss/theme/elements/_elements.scss */
+  /* line 251, src/scss/theme/elements/_elements.scss */
+  #mooc-about-platform .mooc-about-platform-item .mooc-about-platform-figure {
+    margin-right: 2rem;
+  }
+  /* line 255, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item .card-title.h2 {
     font-size: 1.60181rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 155, src/scss/theme/elements/_elements.scss */
+  /* line 200, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     max-width: 60%;
   }
 }
 
 @media (min-width: 500px) {
-  /* line 228, src/scss/theme/elements/_elements.scss */
+  /* line 270, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .row > div:nth-child(even) .mooc-about-platform-item {
     flex-direction: row-reverse;
     padding: 0 0 0 1rem;
   }
-  /* line 232, src/scss/theme/elements/_elements.scss */
+  /* line 274, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .row > div:nth-child(even) .mooc-about-platform-item .mooc-about-platform-figure {
     margin-left: 2rem;
     margin-right: 0;
   }
 }
 
-/* line 247, src/scss/theme/elements/_elements.scss */
+/* line 287, src/scss/theme/elements/_elements.scss */
+#footer {
+  padding: 2rem 0;
+}
+
+@media (min-width: 750px) {
+  /* line 287, src/scss/theme/elements/_elements.scss */
+  #footer {
+    padding: 3rem 0;
+  }
+}
+
+/* line 315, src/scss/theme/elements/_elements.scss */
+#footer-map {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 319, src/scss/theme/elements/_elements.scss */
+#footer-map ol, #footer-map ul {
+  padding: 0;
+}
+
+/* line 323, src/scss/theme/elements/_elements.scss */
+#footer-map li {
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+@media (min-width: 750px) {
+  /* line 315, src/scss/theme/elements/_elements.scss */
+  #footer-map {
+    flex-direction: row;
+  }
+  /* line 341, src/scss/theme/elements/_elements.scss */
+  #footer-map > div {
+    margin-left: 4rem;
+    flex: 0 1 auto;
+  }
+  /* line 346, src/scss/theme/elements/_elements.scss */
+  #footer-map #footer-1 {
+    margin-left: 0;
+    margin-right: auto;
+    flex: 0 0 40%;
+  }
+}
+
+/* line 367, src/scss/theme/elements/_elements.scss */
 a:not(.btn):focus {
   color: #cf1930;
   outline: 0.2rem solid rgba(207, 25, 48, 0.5);
 }
 
-/* line 252, src/scss/theme/elements/_elements.scss */
+/* line 372, src/scss/theme/elements/_elements.scss */
 #skip-link {
   position: fixed;
   top: 0;
@@ -19673,7 +19761,7 @@ a:not(.btn):focus {
   z-index: 2000;
 }
 
-/* line 258, src/scss/theme/elements/_elements.scss */
+/* line 378, src/scss/theme/elements/_elements.scss */
 #skip-link .sr-only-focusable:focus {
   padding-bottom: 8px;
   padding-top: 8px;
@@ -19681,30 +19769,30 @@ a:not(.btn):focus {
   width: 100%;
 }
 
-/* line 269, src/scss/theme/elements/_elements.scss */
+/* line 389, src/scss/theme/elements/_elements.scss */
 #header #nav {
   display: flex;
   flex: 1;
 }
 
-/* line 276, src/scss/theme/elements/_elements.scss */
+/* line 396, src/scss/theme/elements/_elements.scss */
 #header .navbar-brand img {
   height: 22px;
   position: relative;
   top: -5px;
 }
 
-/* line 288, src/scss/theme/elements/_elements.scss */
+/* line 408, src/scss/theme/elements/_elements.scss */
 .btn .fa, .btn .fab, .btn .fad, .btn .fal, .btn .far, .btn .fas {
   font-size: calc(1em + -1px);
 }
 
-/* line 292, src/scss/theme/elements/_elements.scss */
+/* line 412, src/scss/theme/elements/_elements.scss */
 .btn .fa:first-child + span {
   display: none;
 }
 
-/* line 300, src/scss/theme/elements/_elements.scss */
+/* line 420, src/scss/theme/elements/_elements.scss */
 #mooc-search-form {
   flex: 1;
   /*
@@ -19713,21 +19801,21 @@ a:not(.btn):focus {
   */
 }
 
-/* line 307, src/scss/theme/elements/_elements.scss */
+/* line 427, src/scss/theme/elements/_elements.scss */
 #mooc-search-form .input-group {
   flex: 1;
 }
 
 @media (min-width: 500px) {
-  /* line 320, src/scss/theme/elements/_elements.scss */
+  /* line 440, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child {
     display: none;
   }
-  /* line 324, src/scss/theme/elements/_elements.scss */
+  /* line 444, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child + span {
     display: inline-block;
   }
-  /* line 332, src/scss/theme/elements/_elements.scss */
+  /* line 452, src/scss/theme/elements/_elements.scss */
   #mooc-search-form {
     /*
     .input-group {
@@ -19738,7 +19826,7 @@ a:not(.btn):focus {
 }
 
 @media (min-width: 750px) {
-  /* line 344, src/scss/theme/elements/_elements.scss */
+  /* line 464, src/scss/theme/elements/_elements.scss */
   #mooc-search-form {
     /*
     .input-group {
