@@ -283,7 +283,6 @@
 }
 
 
-
 #footer {
 
   // viewport witdth < 500 (smartphone portrait)
@@ -311,23 +310,32 @@
 }
 
 
-
 #footer-map {
-  display: flex;
-  flex-direction: column;
-
-  ol, ul{
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-    margin: 0 0 $spacer * .5;
-    padding: 0;
-  }
 
   // viewport witdth < 500 (smartphone portrait)
   @include media-breakpoint-up(xs) {
+    display: flex;
+    flex-direction: column;
+
+    > div {
+      margin-bottom: $spacer;
+    }
+
+    .fa-facebook {
+      color: #4267B2;
+      font-size: $display2-size;
+    }
+
+    ol, ul {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 0 $spacer * .5;
+      padding: 0;
+    }
+
   }
 
   // viewport witdth >= 500 (smartphone landscape)
@@ -339,14 +347,14 @@
     flex-direction: row;
 
     > div {
-      margin-left: $spacer * 4;
-      flex: 0 1 auto;
+      margin-left: $spacer * 2;
+      flex: 1;
     }
 
     #footer-1 {
-      margin-left: 0;
-      margin-right: auto;
-      flex: 0 0 40%;
+      border-right: 1px solid $gray-300;
+      padding-right: 2rem;
+      flex: 0 0 35%;
     }
 
   }
@@ -360,7 +368,45 @@
   }
 
 }
-  // Others
+
+#footer-links {
+
+  // viewport witdth < 500 (smartphone portrait)
+  @include media-breakpoint-up(xs) {
+    display: flex;
+    flex-direction: column;
+
+    > img {
+      margin-bottom: $spacer;
+      flex: 0 0 auto;
+    }
+
+  }
+
+  // viewport witdth >= 500 (smartphone landscape)
+  @include media-breakpoint-up(sm) {
+  }
+
+  // viewport witdth >= 750 (tablet portrait)
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  // viewport witdth >= 1000 (tablet landscape)
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  // viewport witdth >= 1200 (desktop)
+  @include media-breakpoint-up(xl) {
+  }
+
+}
+
+
+
+// Others
 
 @include media-breakpoint-up(xs) {
 
