@@ -4479,7 +4479,7 @@ input[type="button"].btn-block {
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: inherit;
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
@@ -19699,30 +19699,41 @@ mark,
   }
 }
 
-/* line 287, src/scss/theme/elements/_elements.scss */
+/* line 286, src/scss/theme/elements/_elements.scss */
 #footer {
   padding: 2rem 0;
 }
 
 @media (min-width: 750px) {
-  /* line 287, src/scss/theme/elements/_elements.scss */
+  /* line 286, src/scss/theme/elements/_elements.scss */
   #footer {
     padding: 3rem 0;
   }
 }
 
-/* line 315, src/scss/theme/elements/_elements.scss */
+/* line 313, src/scss/theme/elements/_elements.scss */
 #footer-map {
   display: flex;
   flex-direction: column;
 }
 
-/* line 319, src/scss/theme/elements/_elements.scss */
+/* line 320, src/scss/theme/elements/_elements.scss */
+#footer-map > div {
+  margin-bottom: 1rem;
+}
+
+/* line 324, src/scss/theme/elements/_elements.scss */
+#footer-map .fa-facebook {
+  color: #4267B2;
+  font-size: 2.22473rem;
+}
+
+/* line 329, src/scss/theme/elements/_elements.scss */
 #footer-map ol, #footer-map ul {
   padding: 0;
 }
 
-/* line 323, src/scss/theme/elements/_elements.scss */
+/* line 333, src/scss/theme/elements/_elements.scss */
 #footer-map li {
   list-style: none;
   margin: 0 0 0.5rem;
@@ -19730,30 +19741,53 @@ mark,
 }
 
 @media (min-width: 750px) {
-  /* line 315, src/scss/theme/elements/_elements.scss */
+  /* line 313, src/scss/theme/elements/_elements.scss */
   #footer-map {
     flex-direction: row;
   }
-  /* line 341, src/scss/theme/elements/_elements.scss */
+  /* line 349, src/scss/theme/elements/_elements.scss */
   #footer-map > div {
-    margin-left: 4rem;
-    flex: 0 1 auto;
+    margin-left: 2rem;
+    flex: 0 0 auto;
   }
-  /* line 346, src/scss/theme/elements/_elements.scss */
+  /* line 354, src/scss/theme/elements/_elements.scss */
   #footer-map #footer-1 {
     margin-left: 0;
     margin-right: auto;
-    flex: 0 0 40%;
+    flex: 0 1 40%;
   }
 }
 
-/* line 367, src/scss/theme/elements/_elements.scss */
+/* line 372, src/scss/theme/elements/_elements.scss */
+#footer-links {
+  align-items: flex-start;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+/* line 382, src/scss/theme/elements/_elements.scss */
+#footer-links > img {
+  margin-bottom: 1rem;
+  flex: 0 0 auto;
+}
+
+@media (min-width: 1000px) {
+  /* line 372, src/scss/theme/elements/_elements.scss */
+  #footer-links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* line 415, src/scss/theme/elements/_elements.scss */
 a:not(.btn):focus {
   color: #cf1930;
   outline: 0.2rem solid rgba(207, 25, 48, 0.5);
 }
 
-/* line 372, src/scss/theme/elements/_elements.scss */
+/* line 420, src/scss/theme/elements/_elements.scss */
 #skip-link {
   position: fixed;
   top: 0;
@@ -19761,7 +19795,7 @@ a:not(.btn):focus {
   z-index: 2000;
 }
 
-/* line 378, src/scss/theme/elements/_elements.scss */
+/* line 426, src/scss/theme/elements/_elements.scss */
 #skip-link .sr-only-focusable:focus {
   padding-bottom: 8px;
   padding-top: 8px;
@@ -19769,30 +19803,30 @@ a:not(.btn):focus {
   width: 100%;
 }
 
-/* line 389, src/scss/theme/elements/_elements.scss */
+/* line 437, src/scss/theme/elements/_elements.scss */
 #header #nav {
   display: flex;
   flex: 1;
 }
 
-/* line 396, src/scss/theme/elements/_elements.scss */
+/* line 444, src/scss/theme/elements/_elements.scss */
 #header .navbar-brand img {
   height: 22px;
   position: relative;
   top: -5px;
 }
 
-/* line 408, src/scss/theme/elements/_elements.scss */
+/* line 456, src/scss/theme/elements/_elements.scss */
 .btn .fa, .btn .fab, .btn .fad, .btn .fal, .btn .far, .btn .fas {
   font-size: calc(1em + -1px);
 }
 
-/* line 412, src/scss/theme/elements/_elements.scss */
+/* line 460, src/scss/theme/elements/_elements.scss */
 .btn .fa:first-child + span {
   display: none;
 }
 
-/* line 420, src/scss/theme/elements/_elements.scss */
+/* line 468, src/scss/theme/elements/_elements.scss */
 #mooc-search-form {
   flex: 1;
   /*
@@ -19801,21 +19835,21 @@ a:not(.btn):focus {
   */
 }
 
-/* line 427, src/scss/theme/elements/_elements.scss */
+/* line 475, src/scss/theme/elements/_elements.scss */
 #mooc-search-form .input-group {
   flex: 1;
 }
 
 @media (min-width: 500px) {
-  /* line 440, src/scss/theme/elements/_elements.scss */
+  /* line 488, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child {
     display: none;
   }
-  /* line 444, src/scss/theme/elements/_elements.scss */
+  /* line 492, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child + span {
     display: inline-block;
   }
-  /* line 452, src/scss/theme/elements/_elements.scss */
+  /* line 500, src/scss/theme/elements/_elements.scss */
   #mooc-search-form {
     /*
     .input-group {
@@ -19826,7 +19860,7 @@ a:not(.btn):focus {
 }
 
 @media (min-width: 750px) {
-  /* line 464, src/scss/theme/elements/_elements.scss */
+  /* line 512, src/scss/theme/elements/_elements.scss */
   #mooc-search-form {
     /*
     .input-group {
