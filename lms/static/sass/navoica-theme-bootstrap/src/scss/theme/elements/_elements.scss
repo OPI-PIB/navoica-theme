@@ -282,6 +282,137 @@
 
 }
 
+
+#footer {
+
+  // viewport witdth < 500 (smartphone portrait)
+  @include media-breakpoint-up(xs) {
+    padding: $spacer*2 0;
+  }
+
+  // viewport witdth >= 500 (smartphone landscape)
+  @include media-breakpoint-up(sm) {
+  }
+
+  // viewport witdth >= 750 (tablet portrait)
+  @include media-breakpoint-up(md) {
+    padding: $spacer*3 0;
+  }
+
+  // viewport witdth >= 1000 (tablet landscape)
+  @include media-breakpoint-up(lg) {
+  }
+
+  // viewport witdth >= 1200 (desktop)
+  @include media-breakpoint-up(xl) {
+  }
+
+}
+
+
+#footer-map {
+
+  // viewport witdth < 500 (smartphone portrait)
+  @include media-breakpoint-up(xs) {
+    display: flex;
+    flex-direction: column;
+
+    > div {
+      margin-bottom: $spacer;
+    }
+
+    .fa-facebook {
+      color: #4267B2;
+      font-size: $display2-size;
+    }
+
+    ol, ul {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 0 $spacer * .5;
+      padding: 0;
+    }
+
+  }
+
+  // viewport witdth >= 500 (smartphone landscape)
+  @include media-breakpoint-up(sm) {
+  }
+
+  // viewport witdth >= 750 (tablet portrait)
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+
+    > div {
+      margin-left: $spacer * 2;
+      flex: 0 0 auto;
+    }
+
+    #footer-1 {
+      margin-left: 0;
+      margin-right: auto;
+      flex: 0 1 40%;
+    }
+
+  }
+
+  // viewport witdth >= 1000 (tablet landscape)
+  @include media-breakpoint-up(lg) {
+  }
+
+  // viewport witdth >= 1200 (desktop)
+  @include media-breakpoint-up(xl) {
+  }
+
+}
+
+#footer-links {
+
+  // viewport witdth < 500 (smartphone portrait)
+  @include media-breakpoint-up(xs) {
+    align-items: flex-start;
+    border-top: 1px solid $gray-300;
+    display: flex;
+    flex-direction: column;
+    padding-top: $spacer;
+
+    > img {
+      margin-bottom: $spacer;
+      flex: 0 0 auto;
+    }
+
+  }
+
+  // viewport witdth >= 500 (smartphone landscape)
+  @include media-breakpoint-up(sm) {
+  }
+
+  // viewport witdth >= 750 (tablet portrait)
+  @include media-breakpoint-up(md) {
+  }
+
+  // viewport witdth >= 1000 (tablet landscape)
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: $spacer * 2;
+
+    > img {
+      margin-bottom: 0;
+    }
+  }
+
+  // viewport witdth >= 1200 (desktop)
+  @include media-breakpoint-up(xl) {
+  }
+
+}
+
+
+
 // Others
 
 @include media-breakpoint-up(xs) {
