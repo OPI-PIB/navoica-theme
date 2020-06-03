@@ -37,6 +37,36 @@
 }
 
 
+#header {
+
+  // viewport witdth < 500 (smartphone portrait)
+  @include media-breakpoint-up(xs) {
+    .mooc-lang-flag {
+      margin: 0 $spacer * .5 0 -2px;
+      position: relative;
+    }
+  }
+
+  // viewport witdth >= 500 (smartphone landscape)
+  @include media-breakpoint-up(sm) {
+  }
+
+  // viewport witdth >= 750 (tablet portrait)
+  @include media-breakpoint-up(md) {
+  }
+
+  // viewport witdth >= 1000 (tablet landscape)
+  @include media-breakpoint-up(lg) {
+  }
+
+  // viewport witdth >= 1200 (desktop)
+  @include media-breakpoint-up(xl) {
+  }
+
+}
+
+
+
 #mooc-courses,
 #mooc-about-platform {
 
