@@ -37,6 +37,60 @@
 }
 
 
+#header {
+
+  // viewport witdth < 750 (smartphone portrait)
+  @include media-breakpoint-down(md) {
+    .mooc-lang-flag {
+      margin: 0 $spacer 0 -2px;
+      position: relative;
+    }
+
+    #mooc-my-mooc::after {
+      border: 0;
+      margin: 0;
+    }
+
+    #mooc-my-mooc-menu {
+      border: 0;
+      border-top: 1px solid $gray-300;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      position: fixed;
+      right: 0;
+      top: $font-size-base * 3.5;
+    }
+  }
+
+  // viewport witdth > 0 (smartphone portrait)
+  @include media-breakpoint-up(xs) {
+    .mooc-lang-flag {
+      margin: 0 $spacer / 2 0 -2px;
+      position: relative;
+    }
+  }
+
+  // viewport witdth >= 500 (smartphone landscape)
+  @include media-breakpoint-up(sm) {
+  }
+
+  // viewport witdth >= 750 (tablet portrait)
+  @include media-breakpoint-up(md) {
+  }
+
+  // viewport witdth >= 1000 (tablet landscape)
+  @include media-breakpoint-up(lg) {
+  }
+
+  // viewport witdth >= 1200 (desktop)
+  @include media-breakpoint-up(xl) {
+  }
+
+}
+
+
+
 #mooc-courses,
 #mooc-about-platform {
 
