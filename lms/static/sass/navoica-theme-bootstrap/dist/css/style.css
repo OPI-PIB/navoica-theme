@@ -19327,42 +19327,43 @@ mark,
   justify-content: flex-start;
   margin: 0.75rem 0 0;
   padding: 0;
+  word-break: break-word;
 }
 
-/* line 34, src/scss/theme/components/_card.scss */
+/* line 35, src/scss/theme/components/_card.scss */
 .card-title {
   margin: 0 0 0.75rem;
 }
 
-/* line 38, src/scss/theme/components/_card.scss */
+/* line 39, src/scss/theme/components/_card.scss */
 .card-subtitle {
   margin: 0 0 0.75rem;
 }
 
-/* line 42, src/scss/theme/components/_card.scss */
+/* line 43, src/scss/theme/components/_card.scss */
 .card-text {
   margin: 0 0 0.75rem;
 }
 
-/* line 45, src/scss/theme/components/_card.scss */
+/* line 46, src/scss/theme/components/_card.scss */
 .card-text p {
   margin: 0 0 0.75rem;
 }
 
-/* line 49, src/scss/theme/components/_card.scss */
+/* line 50, src/scss/theme/components/_card.scss */
 .card-text ul:not([class]) {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 54, src/scss/theme/components/_card.scss */
+/* line 55, src/scss/theme/components/_card.scss */
 .card-text ul:not([class]) li {
   margin: 0;
   padding: 0 0 0 0.75rem;
 }
 
-/* line 58, src/scss/theme/components/_card.scss */
+/* line 59, src/scss/theme/components/_card.scss */
 .card-text ul:not([class]) li::before {
   content: "\2022";
   display: inline-block;
@@ -19370,63 +19371,63 @@ mark,
   width: 0.75rem;
 }
 
-/* line 73, src/scss/theme/components/_card.scss */
+/* line 74, src/scss/theme/components/_card.scss */
 .card-body .card-footer {
   padding: 0;
 }
 
-/* line 79, src/scss/theme/components/_card.scss */
+/* line 80, src/scss/theme/components/_card.scss */
 .card-footer {
   border: 0;
   padding: 0.5rem 0;
 }
 
-/* line 84, src/scss/theme/components/_card.scss */
+/* line 85, src/scss/theme/components/_card.scss */
 .card-link {
   font-weight: 600;
 }
 
 @media (min-width: 500px) and (max-width: 1199.98px) {
-  /* line 92, src/scss/theme/components/_card.scss */
+  /* line 93, src/scss/theme/components/_card.scss */
   .course-item {
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  /* line 97, src/scss/theme/components/_card.scss */
+  /* line 98, src/scss/theme/components/_card.scss */
   .course-item .card-figure {
     flex: 0 0 25%;
     margin: 0 0.75rem 0.75rem 0;
   }
-  /* line 102, src/scss/theme/components/_card.scss */
+  /* line 103, src/scss/theme/components/_card.scss */
   .course-item .ratio {
     padding-top: 0;
     position: static;
   }
-  /* line 106, src/scss/theme/components/_card.scss */
+  /* line 107, src/scss/theme/components/_card.scss */
   .course-item .ratio > .img-fluid {
     position: static;
   }
-  /* line 112, src/scss/theme/components/_card.scss */
+  /* line 113, src/scss/theme/components/_card.scss */
   .course-item .card-body {
     align-items: flex-start;
     display: flex;
     flex-flow: row wrap;
     margin: 0;
   }
-  /* line 119, src/scss/theme/components/_card.scss */
+  /* line 120, src/scss/theme/components/_card.scss */
   .course-item .card-subtitle {
     flex: 0 0 100%;
   }
-  /* line 123, src/scss/theme/components/_card.scss */
+  /* line 124, src/scss/theme/components/_card.scss */
   .course-item .card-figure + .card-text {
     flex: 1;
   }
-  /* line 127, src/scss/theme/components/_card.scss */
+  /* line 128, src/scss/theme/components/_card.scss */
   .course-item .card-text {
     flex: 0 0 100%;
   }
-  /* line 131, src/scss/theme/components/_card.scss */
+  /* line 132, src/scss/theme/components/_card.scss */
   .course-item .card-footer {
     flex: 0 0 100%;
     margin-top: 0;
@@ -19434,14 +19435,14 @@ mark,
 }
 
 @media (min-width: 1000px) {
-  /* line 149, src/scss/theme/components/_card.scss */
+  /* line 150, src/scss/theme/components/_card.scss */
   .course-item .card-figure {
     flex: 0 0 20%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 162, src/scss/theme/components/_card.scss */
+  /* line 163, src/scss/theme/components/_card.scss */
   .card-footer {
     margin-top: auto;
   }
@@ -19492,54 +19493,78 @@ mark,
   width: 100%;
 }
 
-/* line 44, src/scss/theme/elements/_elements.scss */
+@media (max-width: 999.98px) {
+  /* line 44, src/scss/theme/elements/_elements.scss */
+  #header .mooc-lang-flag {
+    margin: 0 1rem 0 -2px;
+    position: relative;
+  }
+  /* line 49, src/scss/theme/elements/_elements.scss */
+  #header #mooc-my-mooc::after {
+    border: 0;
+    margin: 0;
+  }
+  /* line 54, src/scss/theme/elements/_elements.scss */
+  #header #mooc-my-mooc-menu {
+    border: 0;
+    border-top: 1px solid #dee2e6;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    position: fixed;
+    right: 0;
+    top: 3.5rem;
+  }
+}
+
+/* line 68, src/scss/theme/elements/_elements.scss */
 #header .mooc-lang-flag {
   margin: 0 0.5rem 0 -2px;
   position: relative;
 }
 
-/* line 70, src/scss/theme/elements/_elements.scss */
+/* line 94, src/scss/theme/elements/_elements.scss */
 #mooc-courses,
 #mooc-about-platform {
   padding: 2rem 0;
 }
 
-/* line 77, src/scss/theme/elements/_elements.scss */
+/* line 101, src/scss/theme/elements/_elements.scss */
 #mooc-courses footer,
 #mooc-about-platform footer {
   padding: 1rem 0 0;
 }
 
-/* line 81, src/scss/theme/elements/_elements.scss */
+/* line 105, src/scss/theme/elements/_elements.scss */
 #mooc-courses header,
 #mooc-about-platform header {
   padding: 0 0 1rem;
 }
 
 @media (min-width: 750px) {
-  /* line 70, src/scss/theme/elements/_elements.scss */
+  /* line 94, src/scss/theme/elements/_elements.scss */
   #mooc-courses,
   #mooc-about-platform {
     padding: 3rem 0;
   }
-  /* line 95, src/scss/theme/elements/_elements.scss */
+  /* line 119, src/scss/theme/elements/_elements.scss */
   #mooc-courses footer,
   #mooc-about-platform footer {
     padding: 1rem 0 0;
   }
-  /* line 99, src/scss/theme/elements/_elements.scss */
+  /* line 123, src/scss/theme/elements/_elements.scss */
   #mooc-courses header,
   #mooc-about-platform header {
     padding: 0 0 2rem;
   }
 }
 
-/* line 117, src/scss/theme/elements/_elements.scss */
+/* line 141, src/scss/theme/elements/_elements.scss */
 #mooc-main {
   position: relative;
 }
 
-/* line 120, src/scss/theme/elements/_elements.scss */
+/* line 144, src/scss/theme/elements/_elements.scss */
 #mooc-main::before {
   background-image: url(../assets/photo-keyboard.06fded964f3c.jpg);
   background-position: center center;
@@ -19552,19 +19577,19 @@ mark,
   top: 0;
 }
 
-/* line 133, src/scss/theme/elements/_elements.scss */
+/* line 157, src/scss/theme/elements/_elements.scss */
 #mooc-main #mooc-main-jumbotron {
   background: rgba(255, 255, 255, 0.75);
   position: relative;
   padding: 2rem 0;
 }
 
-/* line 142, src/scss/theme/elements/_elements.scss */
+/* line 166, src/scss/theme/elements/_elements.scss */
 #mooc-main #mooc-main-jumbotron header {
   padding: 0 0 1rem;
 }
 
-/* line 147, src/scss/theme/elements/_elements.scss */
+/* line 171, src/scss/theme/elements/_elements.scss */
 #mooc-main #mooc-main-jumbotron #mooc-main-header {
   font-size: 2.78091rem;
   letter-spacing: .02em;
@@ -19573,44 +19598,44 @@ mark,
   text-transform: uppercase;
 }
 
-/* line 155, src/scss/theme/elements/_elements.scss */
+/* line 179, src/scss/theme/elements/_elements.scss */
 #mooc-main #mooc-main-jumbotron #mooc-main-description {
   font-size: 1.42383rem;
 }
 
 @media (min-width: 750px) {
-  /* line 169, src/scss/theme/elements/_elements.scss */
+  /* line 193, src/scss/theme/elements/_elements.scss */
   #mooc-main #mooc-main-jumbotron #mooc-main-header {
     font-size: 3.47614rem;
   }
-  /* line 173, src/scss/theme/elements/_elements.scss */
+  /* line 197, src/scss/theme/elements/_elements.scss */
   #mooc-main #mooc-main-jumbotron #mooc-main-description {
     font-size: 1.77979rem;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 133, src/scss/theme/elements/_elements.scss */
+  /* line 157, src/scss/theme/elements/_elements.scss */
   #mooc-main #mooc-main-jumbotron {
     padding: 3rem 0;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 133, src/scss/theme/elements/_elements.scss */
+  /* line 157, src/scss/theme/elements/_elements.scss */
   #mooc-main #mooc-main-jumbotron {
     padding: 4rem 0;
   }
-  /* line 188, src/scss/theme/elements/_elements.scss */
+  /* line 212, src/scss/theme/elements/_elements.scss */
   #mooc-main #mooc-main-jumbotron #mooc-main-header {
     font-size: 4.34518rem;
   }
-  /* line 192, src/scss/theme/elements/_elements.scss */
+  /* line 216, src/scss/theme/elements/_elements.scss */
   #mooc-main #mooc-main-jumbotron #mooc-search-form {
     flex: 1;
     margin: 0 auto;
   }
-  /* line 196, src/scss/theme/elements/_elements.scss */
+  /* line 220, src/scss/theme/elements/_elements.scss */
   #mooc-main #mooc-main-jumbotron #mooc-search-form .input-group {
     background: rgba(0, 0, 0, 0.08);
     padding: 1rem;
@@ -19618,13 +19643,13 @@ mark,
 }
 
 @media (min-width: 1200px) {
-  /* line 217, src/scss/theme/elements/_elements.scss */
+  /* line 241, src/scss/theme/elements/_elements.scss */
   #mooc-courses .card-title.h2 {
     font-size: 1.26563rem;
   }
 }
 
-/* line 230, src/scss/theme/elements/_elements.scss */
+/* line 254, src/scss/theme/elements/_elements.scss */
 #mooc-about-platform .mooc-about-platform-item {
   display: flex;
   padding: 0 1rem 0 0;
@@ -19633,7 +19658,7 @@ mark,
   text-align: center;
 }
 
-/* line 240, src/scss/theme/elements/_elements.scss */
+/* line 264, src/scss/theme/elements/_elements.scss */
 #mooc-about-platform .mooc-about-platform-item .mooc-about-platform-figure {
   box-sizing: border-box;
   border-radius: 50%;
@@ -19644,7 +19669,7 @@ mark,
   width: 160px;
 }
 
-/* line 250, src/scss/theme/elements/_elements.scss */
+/* line 274, src/scss/theme/elements/_elements.scss */
 #mooc-about-platform .mooc-about-platform-item .mooc-about-platform-figure .img-fluid {
   height: 70%;
   left: 15%;
@@ -19654,7 +19679,7 @@ mark,
 }
 
 @media (min-width: 500px) {
-  /* line 230, src/scss/theme/elements/_elements.scss */
+  /* line 254, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     flex-flow: row wrap;
     margin: 0 auto 2rem;
@@ -19664,82 +19689,82 @@ mark,
 }
 
 @media (min-width: 750px) {
-  /* line 230, src/scss/theme/elements/_elements.scss */
+  /* line 254, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     max-width: 75%;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 230, src/scss/theme/elements/_elements.scss */
+  /* line 254, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     font-size: 1.125rem;
   }
-  /* line 281, src/scss/theme/elements/_elements.scss */
+  /* line 305, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item .mooc-about-platform-figure {
     margin-right: 2rem;
   }
-  /* line 285, src/scss/theme/elements/_elements.scss */
+  /* line 309, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item .card-title.h2 {
     font-size: 1.60181rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 230, src/scss/theme/elements/_elements.scss */
+  /* line 254, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .mooc-about-platform-item {
     max-width: 60%;
   }
 }
 
 @media (min-width: 500px) {
-  /* line 300, src/scss/theme/elements/_elements.scss */
+  /* line 324, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .row > div:nth-child(even) .mooc-about-platform-item {
     flex-direction: row-reverse;
     padding: 0 0 0 1rem;
   }
-  /* line 304, src/scss/theme/elements/_elements.scss */
+  /* line 328, src/scss/theme/elements/_elements.scss */
   #mooc-about-platform .row > div:nth-child(even) .mooc-about-platform-item .mooc-about-platform-figure {
     margin-left: 2rem;
     margin-right: 0;
   }
 }
 
-/* line 316, src/scss/theme/elements/_elements.scss */
+/* line 340, src/scss/theme/elements/_elements.scss */
 #footer {
   padding: 2rem 0;
 }
 
 @media (min-width: 750px) {
-  /* line 316, src/scss/theme/elements/_elements.scss */
+  /* line 340, src/scss/theme/elements/_elements.scss */
   #footer {
     padding: 3rem 0;
   }
 }
 
-/* line 343, src/scss/theme/elements/_elements.scss */
+/* line 367, src/scss/theme/elements/_elements.scss */
 #footer-map {
   display: flex;
   flex-direction: column;
 }
 
-/* line 350, src/scss/theme/elements/_elements.scss */
+/* line 374, src/scss/theme/elements/_elements.scss */
 #footer-map > div {
   margin-bottom: 1rem;
 }
 
-/* line 354, src/scss/theme/elements/_elements.scss */
+/* line 378, src/scss/theme/elements/_elements.scss */
 #footer-map .fa-facebook {
   color: #4267B2;
   font-size: 2.22473rem;
 }
 
-/* line 359, src/scss/theme/elements/_elements.scss */
+/* line 383, src/scss/theme/elements/_elements.scss */
 #footer-map ol, #footer-map ul {
   padding: 0;
 }
 
-/* line 363, src/scss/theme/elements/_elements.scss */
+/* line 387, src/scss/theme/elements/_elements.scss */
 #footer-map li {
   list-style: none;
   margin: 0 0 0.5rem;
@@ -19747,16 +19772,16 @@ mark,
 }
 
 @media (min-width: 750px) {
-  /* line 343, src/scss/theme/elements/_elements.scss */
+  /* line 367, src/scss/theme/elements/_elements.scss */
   #footer-map {
     flex-direction: row;
   }
-  /* line 379, src/scss/theme/elements/_elements.scss */
+  /* line 403, src/scss/theme/elements/_elements.scss */
   #footer-map > div {
     margin-left: 2rem;
     flex: 0 0 auto;
   }
-  /* line 384, src/scss/theme/elements/_elements.scss */
+  /* line 408, src/scss/theme/elements/_elements.scss */
   #footer-map #footer-1 {
     margin-left: 0;
     margin-right: auto;
@@ -19764,7 +19789,7 @@ mark,
   }
 }
 
-/* line 402, src/scss/theme/elements/_elements.scss */
+/* line 426, src/scss/theme/elements/_elements.scss */
 #footer-links {
   align-items: flex-start;
   border-top: 1px solid #dee2e6;
@@ -19773,32 +19798,32 @@ mark,
   padding-top: 1rem;
 }
 
-/* line 412, src/scss/theme/elements/_elements.scss */
+/* line 436, src/scss/theme/elements/_elements.scss */
 #footer-links > img {
   margin-bottom: 1rem;
   flex: 0 0 auto;
 }
 
 @media (min-width: 1000px) {
-  /* line 402, src/scss/theme/elements/_elements.scss */
+  /* line 426, src/scss/theme/elements/_elements.scss */
   #footer-links {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 2rem;
   }
-  /* line 433, src/scss/theme/elements/_elements.scss */
+  /* line 457, src/scss/theme/elements/_elements.scss */
   #footer-links > img {
     margin-bottom: 0;
   }
 }
 
-/* line 450, src/scss/theme/elements/_elements.scss */
+/* line 474, src/scss/theme/elements/_elements.scss */
 a:not(.btn):focus {
   color: #cf1930;
   outline: 0.2rem solid rgba(207, 25, 48, 0.5);
 }
 
-/* line 455, src/scss/theme/elements/_elements.scss */
+/* line 479, src/scss/theme/elements/_elements.scss */
 #skip-link {
   position: fixed;
   top: 0;
@@ -19806,7 +19831,7 @@ a:not(.btn):focus {
   z-index: 2000;
 }
 
-/* line 461, src/scss/theme/elements/_elements.scss */
+/* line 485, src/scss/theme/elements/_elements.scss */
 #skip-link .sr-only-focusable:focus {
   padding-bottom: 8px;
   padding-top: 8px;
@@ -19814,30 +19839,30 @@ a:not(.btn):focus {
   width: 100%;
 }
 
-/* line 472, src/scss/theme/elements/_elements.scss */
+/* line 496, src/scss/theme/elements/_elements.scss */
 #header #nav {
   display: flex;
   flex: 1;
 }
 
-/* line 479, src/scss/theme/elements/_elements.scss */
+/* line 503, src/scss/theme/elements/_elements.scss */
 #header .navbar-brand img {
   height: 22px;
   position: relative;
   top: -5px;
 }
 
-/* line 491, src/scss/theme/elements/_elements.scss */
+/* line 515, src/scss/theme/elements/_elements.scss */
 .btn .fa, .btn .fab, .btn .fad, .btn .fal, .btn .far, .btn .fas {
   font-size: calc(1em + -1px);
 }
 
-/* line 495, src/scss/theme/elements/_elements.scss */
+/* line 519, src/scss/theme/elements/_elements.scss */
 .btn .fa:first-child + span {
   display: none;
 }
 
-/* line 503, src/scss/theme/elements/_elements.scss */
+/* line 527, src/scss/theme/elements/_elements.scss */
 #mooc-search-form {
   flex: 1;
   /*
@@ -19846,21 +19871,21 @@ a:not(.btn):focus {
   */
 }
 
-/* line 510, src/scss/theme/elements/_elements.scss */
+/* line 534, src/scss/theme/elements/_elements.scss */
 #mooc-search-form .input-group {
   flex: 1;
 }
 
 @media (min-width: 500px) {
-  /* line 523, src/scss/theme/elements/_elements.scss */
+  /* line 547, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child {
     display: none;
   }
-  /* line 527, src/scss/theme/elements/_elements.scss */
+  /* line 551, src/scss/theme/elements/_elements.scss */
   #header .btn .fa:first-child + span {
     display: inline-block;
   }
-  /* line 535, src/scss/theme/elements/_elements.scss */
+  /* line 559, src/scss/theme/elements/_elements.scss */
   #mooc-search-form {
     /*
     .input-group {
@@ -19871,7 +19896,7 @@ a:not(.btn):focus {
 }
 
 @media (min-width: 750px) {
-  /* line 547, src/scss/theme/elements/_elements.scss */
+  /* line 571, src/scss/theme/elements/_elements.scss */
   #mooc-search-form {
     /*
     .input-group {
@@ -19906,21 +19931,24 @@ body {
 
 /* line 22, src/scss/template/_template.scss */
 #header {
+  background: #e83e8c;
   border-bottom: 0 solid #dee2e6;
+  display: flex;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* line 29, src/scss/template/_template.scss */
+/* line 30, src/scss/template/_template.scss */
 #header > .container {
   justify-content: flex-start;
+  flex: 1;
   padding-bottom: 0;
   padding-top: 0;
 }
 
-/* line 39, src/scss/template/_template.scss */
+/* line 41, src/scss/template/_template.scss */
 #main {
   border-bottom: 1px solid #dee2e6;
   display: flex;
@@ -19928,12 +19956,12 @@ body {
   flex-grow: 1;
 }
 
-/* line 50, src/scss/template/_template.scss */
+/* line 52, src/scss/template/_template.scss */
 #main-content {
   flex: 1;
 }
 
-/* line 54, src/scss/template/_template.scss */
+/* line 56, src/scss/template/_template.scss */
 #main-content .row {
   display: flex;
   flex-wrap: wrap;
@@ -19941,17 +19969,17 @@ body {
   margin-left: -8px;
 }
 
-/* line 62, src/scss/template/_template.scss */
+/* line 64, src/scss/template/_template.scss */
 #sidebar {
   border-top: 1px solid #dee2e6;
 }
 
-/* line 72, src/scss/template/_template.scss */
+/* line 74, src/scss/template/_template.scss */
 #footer {
   margin-top: auto;
 }
 
-/* line 82, src/scss/template/_template.scss */
+/* line 84, src/scss/template/_template.scss */
 .container:first-of-type {
   /*
     padding-bottom: 3rem;
@@ -19962,38 +19990,38 @@ body {
 }
 
 @media (min-width: 750px) {
-  /* line 106, src/scss/template/_template.scss */
+  /* line 108, src/scss/template/_template.scss */
   #main-content {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
   }
-  /* line 111, src/scss/template/_template.scss */
+  /* line 113, src/scss/template/_template.scss */
   #main-content > .container {
     align-items: stretch;
     display: flex;
     flex-grow: 1;
     flex-flow: row nowrap;
   }
-  /* line 117, src/scss/template/_template.scss */
+  /* line 119, src/scss/template/_template.scss */
   #main-content > .container #center {
     flex-grow: 1;
   }
-  /* line 121, src/scss/template/_template.scss */
+  /* line 123, src/scss/template/_template.scss */
   #main-content > .container #sidebar {
     border-top: 0;
     border-right: 1px solid #dee2e6;
     flex: 0 0 250px;
     order: -1;
   }
-  /* line 127, src/scss/template/_template.scss */
+  /* line 129, src/scss/template/_template.scss */
   #main-content > .container #sidebar.right {
     order: unset;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 150, src/scss/template/_template.scss */
+  /* line 152, src/scss/template/_template.scss */
   #main-content > .container #sidebar.right {
     border-left: 1px solid #dee2e6;
     border-right: 0;
