@@ -1,18 +1,17 @@
 @include media-breakpoint-up(xs) {
-  html {
-    height: 100vh;
+  html, body {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    min-height: 100vh;
   }
 
   body {
-    align-items: stretch;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: stretch;
+    flex: 1;
+    padding-top: $mooc-navbar-height;
   }
 
   #page {
-    align-items: stretch;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -20,11 +19,13 @@
   }
 
   #header {
-    background: $pink;
+    //background: $pink;
     border-bottom: 0 solid $gray-300;
     display: flex;
-    position: sticky;
+    height: $mooc-navbar-height;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
 
     > .container {
@@ -32,8 +33,6 @@
       flex: 1;
       padding-bottom: 0;
       padding-top: 0;
-      //padding-left: $grid-vertical-padding;
-      //padding-right: $grid-vertical-padding;
     }
 
   }
@@ -43,7 +42,7 @@
     border-bottom: 1px solid $gray-300;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex: 1;
 
     &-title {
       //background: $blue;

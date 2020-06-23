@@ -172,7 +172,7 @@
         font-size: $display1-size;
         letter-spacing: .02em;
         margin-bottom: $spacer;
-        text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.13);
+        text-shadow: .05em .05em 0 rgba(0, 0, 0, 0.13);
         text-transform: uppercase;
       }
 
@@ -234,6 +234,9 @@
 // Elementy sekcji "Nowe kursy" na stronie glownej serwisu
 
 #mooc-courses {
+
+  display: flex;
+  flex-direction: column;
 
   // viewport witdth >= 1200 (desktop)
   @include media-breakpoint-up(xl) {
