@@ -41,33 +41,33 @@
                              class="dropdown-menu dropdown-menu-right"
                              aria-labelledby="mooc-my-mooc"
                              role="menu">
-                            <div class="dropdown-header" role="heading" level="6">Moje konto</div>
+                            <div class="dropdown-header" role="heading" aria-level="6">Moje konto</div>
                             <a class="dropdown-item" href="b.html">Zaloguj się</a>
                             <a class="dropdown-item" href="c.html">Zarejestruj się</a>
                             <div class="dropdown-divider"></div>
-                            <div class="dropdown-header" role="heading" level="6">Katalog kursów</div>
+                            <div class="dropdown-header" role="heading" aria-level="6">Katalog kursów</div>
                             <a class="dropdown-item" href="b.html">Budownictwo</a>
                             <a class="dropdown-item" href="c.html">Elektronika</a>
                             <a class="dropdown-item" href="d.html">Mechanika</a>
                             <div class="dropdown-divider"></div>
-                            <div class="dropdown-header" role="heading" level="6">Język interfejsu</div>
+                            <div class="dropdown-header" role="heading" aria-level="6">Wybierz język</div>
                             <a class="dropdown-item"
-                               href="b.html"
-                               aria-label="Ustaw język interfejsu strony na polski">
+                               href="b.html">
+                                <span class="sr-only" lang="pl">Zmień język na</span>
                                 <img class="mooc-lang-flag"
                                      src="https://img.icons8.com/color/32/000000/poland-circular.png"
-                                     aria-hidden="true"
-                                     alt="Język polski"
-                                     height="32">polski
+                                     aria-hidden="true" alt=""
+                                     height="32">
+                                <span lang="pl">polski</span>
                             </a>
                             <a class="dropdown-item"
-                               href="c.html"
-                               aria-label="Set the website interface language to English">
+                               href="c.html">
+                                <span class="sr-only" lang="en">Change language to</span>
                                 <img class="mooc-lang-flag"
                                      src="https://img.icons8.com/color/32/000000/great-britain-circular.png"
-                                     aria-hidden="true"
-                                     alt="English language"
-                                     height="32">English
+                                     aria-hidden="true" alt=""
+                                     height="32">
+                                <span lang="en">English</span>
                             </a>
                         </div>
 
@@ -92,7 +92,7 @@
                     <form id="mooc-search-form" class="form-inline" role="search" aria-label="Wyszukuj bezpłatne kursy online na platformie Nawojka">
                         <div class="input-group input-group-lg">
                             <input id="mooc-search-course-name" type="search" class="form-control border-dark"
-                                   aria-label="Nazwa kursu lub słowa kluczowe opisujące kurs">
+                                   aria-label="Wpisz nazwę kursu lub słowa kluczowe opisujące kurs" placeholder="Jakiego kursu szukasz?">
                             <div class="input-group-append">
                                 <button class="btn btn-primary border-dark" type="submit" id="course-search-button">
                                     <span>Wyszukaj</span>
@@ -293,9 +293,9 @@
                 <p>Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat i dla każdego zarejestrowanego użytkownika.</p>
                 <h4 class="h5">Navoica w mediach społecznościowych</h4>
                 <p>
-                    <a href="https://www.facebook.com/Polski-MOOC-295767534600329/" target="_blank"
-                       aria-label="Strona Navoica - Polski MOOC na portalu Facebook.com (otwiera się w nowym oknie)">
-                        <em aria-hidden="true" class="fab fa-facebook" title="Strona na portalu Facebook.com (otwiera się w nowym oknie)"></em>
+                    <a href="https://www.facebook.com/Polski-MOOC-295767534600329/" target="_blank">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sr-only">Navoica - Polski MOOC na portalu Facebook.com (otwiera się w nowym oknie)</span>
                     </a>
                 </p>
             </div>
